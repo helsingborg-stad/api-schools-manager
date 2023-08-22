@@ -49,6 +49,9 @@ dist
 # test coverage files
 coverage
 
+# wp-content folder containing plugins installed via composer
+wp-content
+
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
@@ -58,5 +61,5 @@ coverage
 !.editorconfig
 !.github
 
-# wp-content folder containing plugins installed via composer
-wp-content
+# devcontainer
+!.devcontainer
