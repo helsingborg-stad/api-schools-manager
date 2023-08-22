@@ -1,0 +1,49 @@
+{
+  "name": "helsingborg-stad/api-schools-manager",
+  "description": "Creates a api that may be used to manage schools",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "scripts": {
+    "test": "./vendor/bin/phpunit --testdox",
+    "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
+    "minimal": "./vendor/bin/phpunit"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Thor Brink",
+      "email": "thor.brink@helsingborg.se"
+    },
+    {
+      "name": "Anna Johansson",
+      "email": "anna.johansson4@helsingborg.se"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SchoolsManager\\": "source/php/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.2",
+    "helsingborg-stad/acf-export-manager": ">=1.0.0",
+    "firebase/php-jwt": "^6.4",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^6.2"
+  },
+  "require-dev": {
+    "codedungeon/phpunit-result-printer": "^0.32.0",
+    "phpunit/phpunit": "^9.6"
+  },
+  "config": {
+    "allow-plugins": {
+      "pivvenit/acf-pro-installer": true,
+      "composer/installers": true
+    }
+  }
+}
