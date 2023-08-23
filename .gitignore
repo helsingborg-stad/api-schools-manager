@@ -63,3 +63,6 @@ wp-content
 
 # devcontainer
 !.devcontainer
+
+# .vscode settings
+!.vscode
