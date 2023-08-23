@@ -4,9 +4,10 @@
   "type": "wordpress-plugin",
   "license": "MIT",
   "scripts": {
-    "test": "./vendor/bin/phpunit --testdox",
+    "test": "XDEBUG_MODE=off ./vendor/bin/phpunit --testdox",
     "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
-    "minimal": "./vendor/bin/phpunit"
+    "minimal": "./vendor/bin/phpunit",
+    "setup-tests": "./tests/install-wp-tests.sh"
   },
   "repositories": [
     {
@@ -31,14 +32,14 @@
   },
   "minimum-stability": "stable",
   "require": {
-    "php": ">=8.2",
+    "php": ">=8.0",
     "helsingborg-stad/acf-export-manager": ">=1.0.0",
     "firebase/php-jwt": "^6.4",
     "advanced-custom-fields/advanced-custom-fields-pro": "^6.2"
   },
   "require-dev": {
     "codedungeon/phpunit-result-printer": "^0.32.0",
-    "phpunit/phpunit": "^9.6"
+    "yoast/phpunit-polyfills": "1.1"
   },
   "config": {
     "allow-plugins": {

@@ -29,7 +29,9 @@
 			],
 			"settings": {
 				"intelephense.environment.includePaths": [
-					"/var/www/html"
+					"/var/www/html/wp-includes",
+					"/var/www/html/wp-admin",
+					"/tmp/wordpress-tests-lib"
 				]
 			}
 		},
@@ -41,17 +43,18 @@
 			"settings": {
 				"intelephense.environment.includePaths": [
 					"/var/www/html/wp-includes",
-					"/var/www/html/wp-admin"
+					"/var/www/html/wp-admin",
+					"/tmp/wordpress-tests-lib"
 				],
 				"intelephense.environment.phpVersion": "8.2"
 			}
 		}
 	},
 	"features": {
-		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "curl,nano,bash-completion",
-			"upgradePackages": true
-		},
+		// "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+		// 	"packages": "curl,nano,bash-completion,subversion,mariadb-client",
+		// 	"upgradePackages": true
+		// },
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
 			"version": "16"
