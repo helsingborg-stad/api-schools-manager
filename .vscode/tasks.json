@@ -24,5 +24,12 @@
 			"group": "test",
 			"problemMatcher": []
 		},
+		{
+			"label": "install acf plugin",
+			"type": "shell",
+			"command": "$(pwd)/.vscode/tasks/install-acf-plugin.sh",
+			"group": "test",
+			"problemMatcher": []
+		}
 	]
 }
