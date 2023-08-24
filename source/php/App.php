@@ -4,6 +4,8 @@ namespace SchoolsManager;
 
 use SchoolsManager\API\Api;
 use SchoolsManager\API\Auth\JWTAuthentication;
+use SchoolsManager\PostType\Person\Person;
+use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\School\School as School;
 use SchoolsManager\PostType\School\SchoolConfiguration;
 
@@ -26,5 +28,8 @@ class App
         //Post types
         $school = new School(...array_values(SchoolConfiguration::getPostTypeArgs()));
         $school->addHooks();
+        
+        $person = new Person(...array_values(PersonConfiguration::getPostTypeArgs()));
+        $person->addHooks();
     }
 }

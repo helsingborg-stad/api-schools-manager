@@ -9,6 +9,7 @@ class Icon
   private static $iconsPath = SCHOOLS_MANAGER_PATH . "assets/icons/";
   private static $iconsList = [
     'school' => 'school.svg',
+    'people' => 'people.svg'
   ]; 
   private static $base64Prefix = 'data:image/svg+xml;base64,';
 
