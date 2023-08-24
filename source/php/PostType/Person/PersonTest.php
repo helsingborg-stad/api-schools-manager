@@ -10,4 +10,9 @@ class PersonTest extends TestCase
     {
         $this->assertContains(self::POST_TYPE, get_post_types());
     }
+
+    public function testRestApiDisabledOnPostType()
+    {
+        $this->assertFalse(get_post_type_object(self::POST_TYPE)->show_in_rest);
+    }
 }
