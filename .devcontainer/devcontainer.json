@@ -32,7 +32,8 @@
 					"/var/www/html/wp-includes",
 					"/var/www/html/wp-admin",
 					"/tmp/wordpress-tests-lib"
-				]
+				],
+				"intelephense.environment.phpVersion": "8.2"
 			}
 		},
 		"codespaces": {
