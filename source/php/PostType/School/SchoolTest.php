@@ -1,8 +1,6 @@
 <?php
 
-use Yoast\PHPUnitPolyfills\TestCases\TestCase;
-
-class SchoolTest extends TestCase
+class SchoolTest extends WP_UnitTestCase
 {
     private const POST_TYPE = 'school';
 

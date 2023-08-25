@@ -24,7 +24,7 @@ class SchoolConfiguration
                 'supports' => array('title', 'revisions', 'thumbnail'),
                 'show_in_rest' => true,
                 'capability_type' => 'post',
-                'map_meta_cap' => true
+                'map_meta_cap' => true,
             ]
         ];
     }
