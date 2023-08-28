@@ -25,11 +25,25 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "php:lint",
+			"type": "shell",
+			"command": "composer run php:lint",
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
+			"label": "php:fix",
+			"type": "shell",
+			"command": "composer run php:fix",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
 			"label": "install acf plugin",
 			"type": "shell",
 			"command": "$(pwd)/.vscode/tasks/install-acf-plugin.sh",
 			"group": "test",
 			"problemMatcher": []
-		}
+		},
 	]
 }

@@ -7,7 +7,9 @@
     "test": "XDEBUG_MODE=off ./vendor/bin/phpunit --testdox",
     "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
     "minimal": "./vendor/bin/phpunit",
-    "setup-tests": "./tests/install-wp-tests.sh"
+    "setup-tests": "./tests/install-wp-tests.sh",
+    "php:lint": "./vendor/bin/phpcs -s",
+    "php:fix": "./vendor/bin/phpcbf"
   },
   "authors": [
     {
@@ -32,12 +34,15 @@
   },
   "require-dev": {
     "codedungeon/phpunit-result-printer": "^0.32.0",
-    "yoast/phpunit-polyfills": "1.1"
+    "yoast/phpunit-polyfills": "1.1",
+    "squizlabs/php_codesniffer": "^3.7",
+    "wp-coding-standards/wpcs": "^3.0"
   },
   "config": {
     "allow-plugins": {
       "composer/installers": true,
-      "pivvenit/acf-pro-installer": true
+      "pivvenit/acf-pro-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   }
 }
