@@ -4,7 +4,7 @@
   "type": "wordpress-plugin",
   "license": "MIT",
   "scripts": {
-    "test": "XDEBUG_MODE=off ./vendor/bin/phpunit --testdox",
+    "test": "XDEBUG_MODE=debug ./vendor/bin/phpunit --testdox",
     "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
     "minimal": "./vendor/bin/phpunit",
     "setup-tests": "./tests/install-wp-tests.sh",
