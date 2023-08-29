@@ -9,9 +9,9 @@
 <p>
   Creates a api that may be used to manage schools
   <br />
-  <a href="https://github.com/helsingborg-stad/api-schools-manager/issues">Report Bug</a>
+  <a href="https://github.com/helsingborg-stad/api-school-manager/issues">Report Bug</a>
   ·
-  <a href="https://github.com/helsingborg-stad/api-schools-manager/issues">Request Feature</a>
+  <a href="https://github.com/helsingborg-stad/api-school-manager/issues">Request Feature</a>
 </p>
 
 ## Table of Contents
@@ -30,70 +30,37 @@
 
 ## About Schools Manager
 
-[![Schools Manager Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-
 ### Built With
 
 * PHP
-* NPM
-* Webpack
-* Modularity
+* WordPress
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+### Development environment (VS Code Devcontainer)
 
-This is an example of how to list things you need to use the software and how to install them (mac os).
-* composer
-```sh
-brew install composer
-```
-* npm
-```sh
-brew install node
-```
-### Installation
+#### Prerequisites
 
-1. Clone the repo
-```sh
-git clone https://github.com/helsingborg-stad/api-schools-manager.git
-```
-2. Install and build NPM packages
-```sh
-npm install && npm run build
-```
-3. Install composer packages
-```sh
-composer install
-```
+* Docker
+* VS Code
 
-## Usage
+#### Installation of development environment.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Install VS Code.
+1. Install the extension [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.1scode-remote-extensionpack).
+1. Clone this repo.
+1. Open the folder in VS Code.
+1. Open the command palette (cmd + shift + p).
+1. Type `Remote-Containers: Reopen in Container` and select this alternative.
+1. Wait for the container to build.
+1. Run composer install in the VS Code integrated terminal.
+1. Run the provided VS Code Task `install acf pro`. This will download and install ACF Pro, which is required for this WordPress plugin to work.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-## Deploy
-
-Instructions for deploys.
-
+#### Running test suite.
 
 ## Constants
-
-### Google Maps API
-Google Maps API key with **Maps JavaScript API** enabled.
-
-```
-define('GOOGLE_API_KEY', 'xyz');
-```
-
-## Roadmap
-
-See the [open issues][issues-url] for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -116,14 +83,13 @@ Distributed under the [MIT License][license-url].
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/api-schools-manager.svg?style=flat-square
-[contributors-url]: https://github.com/helsingborg-stad/api-schools-manager/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/helsingborg-stad/api-schools-manager.svg?style=flat-square
-[forks-url]: https://github.com/helsingborg-stad/api-schools-manager/network/members
-[stars-shield]: https://img.shields.io/github/stars/helsingborg-stad/api-schools-manager.svg?style=flat-square
-[stars-url]: https://github.com/helsingborg-stad/api-schools-manager/stargazers
-[issues-shield]: https://img.shields.io/github/issues/helsingborg-stad/api-schools-manager.svg?style=flat-square
-[issues-url]: https://github.com/helsingborg-stad/api-schools-manager/issues
-[license-shield]: https://img.shields.io/github/license/helsingborg-stad/api-schools-manager.svg?style=flat-square
-[license-url]: https://raw.githubusercontent.com/helsingborg-stad/api-schools-manager/master/LICENSE
-[product-screenshot]: images/screenshot.png
+[contributors-shield]: https://img.shields.io/github/contributors/helsingborg-stad/api-school-manager
+[contributors-url]: https://github.com/helsingborg-stad/api-school-manager/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/helsingborg-stad/api-school-manager.svg?style=flat-square
+[forks-url]: https://github.com/helsingborg-stad/api-school-manager/network/members
+[stars-shield]: https://img.shields.io/github/stars/helsingborg-stad/api-school-manager.svg?style=flat-square
+[stars-url]: https://github.com/helsingborg-stad/api-school-manager/stargazers
+[issues-shield]: https://img.shields.io/github/issues/helsingborg-stad/api-school-manager.svg?style=flat-square
+[issues-url]: https://github.com/helsingborg-stad/api-school-manager/issues
+[license-shield]: https://img.shields.io/github/license/helsingborg-stad/api-school-manager.svg?style=flat-square
+[license-url]: https://github.com/helsingborg-stad/api-school-manager/blob/main/LICENSE
