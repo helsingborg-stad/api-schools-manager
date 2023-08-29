@@ -1,7 +1,7 @@
 
 # Workflow for running smoke tests for pull requests etc.
 
-name: Pre merge tests
+name: Test
 
 on:
   pull_request:
@@ -12,21 +12,38 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      mariadb:
+        image: mariadb:10.4
+        ports:
+          - '3306:3306'
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test
+        options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
+
     steps:
     - uses: actions/checkout@v2
-
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '16'
 
     - name: Setup PHP with composer v2
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'
+        php-version: '8.2'
         tools: composer:v2
 
     - name: Install composer dependencies.
       run: composer install
 
+    - name: Verify MariaDB connection
+      env:
+        PORT: ${{ job.services.mariadb.ports[3306] }}
+      run: |
+        while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
+          sleep 1
+        done
+
+    - name: Run php lint
+      run: composer run php:lint
+    
     - name: Run unit tests
-      run: composer test
+      run: composer run setup-tests test root root mariadb && composer run test
