@@ -1,5 +1,9 @@
 <?php
 
+namespace SchoolsManager\PostType\Person;
+
+use WP_UnitTestCase;
+
 class PersonTest extends WP_UnitTestCase
 {
     private const POST_TYPE = 'person';

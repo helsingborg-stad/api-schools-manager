@@ -4,16 +4,17 @@ namespace SchoolsManager;
 
 use SchoolsManager\API\Api;
 use SchoolsManager\API\Auth\JWTAuthentication;
+use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
-use SchoolsManager\PostType\School\School as School;
+use SchoolsManager\PostType\School\School;
 use SchoolsManager\PostType\School\SchoolConfiguration;
 
 class App
 {
     public function __construct()
     {
-        add_action('plugins_loaded', array($this, 'init'));
+        add_action('plugins_loaded', array( $this, 'init' ));
     }
 
     public function init()
@@ -28,8 +29,12 @@ class App
         //Post types
         $school = new School(...array_values(SchoolConfiguration::getPostTypeArgs()));
         $school->addHooks();
-        
+
         $person = new Person(...array_values(PersonConfiguration::getPostTypeArgs()));
         $person->addHooks();
+
+        //Meta boxes
+        $schoolPagesMetaBox = new SchoolPagesMetaBox();
+        $schoolPagesMetaBox->addHooks();
     }
 }

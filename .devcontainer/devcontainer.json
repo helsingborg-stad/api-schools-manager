@@ -25,7 +25,8 @@
 			"extensions": [
 				"xdebug.php-debug",
 				"ms-azuretools.vscode-docker",
-				"ritwickdey.liveserver"
+				"ritwickdey.liveserver",
+				"valeryanm.vscode-phpsab"
 			],
 			"settings": {
 				"intelephense.environment.includePaths": [
@@ -33,13 +34,26 @@
 					"/var/www/html/wp-admin",
 					"/tmp/wordpress-tests-lib"
 				],
-				"intelephense.environment.phpVersion": "8.2"
+				"intelephense.environment.phpVersion": "8.2",
+				"php.validate.run": "onSave",
+				"phpsab.fixerEnable": true,
+				"phpsab.snifferShowSources": true,
+				"phpsab.executablePathCS": "./vendor/bin/phpcs",
+				"phpsab.allowedAutoRulesets": [
+					"phpcs.xml"
+				],
+				"editor.defaultFormatter": "valeryanm.vscode-phpsab",
+				"[php]": {
+					"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+				}
 			}
 		},
 		"codespaces": {
 			"extensions": [
 				"xdebug.php-debug",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"ritwickdey.liveserver",
+				"valeryanm.vscode-phpsab"
 			],
 			"settings": {
 				"intelephense.environment.includePaths": [
@@ -47,15 +61,22 @@
 					"/var/www/html/wp-admin",
 					"/tmp/wordpress-tests-lib"
 				],
-				"intelephense.environment.phpVersion": "8.2"
+				"intelephense.environment.phpVersion": "8.2",
+				"php.validate.run": "onSave",
+				"phpsab.fixerEnable": true,
+				"phpsab.snifferShowSources": true,
+				"phpsab.executablePathCS": "./vendor/bin/phpcs",
+				"phpsab.allowedAutoRulesets": [
+					"phpcs.xml"
+				],
+				"editor.defaultFormatter": "valeryanm.vscode-phpsab",
+				"[php]": {
+					"editor.defaultFormatter": "valeryanm.vscode-phpsab"
+				}
 			}
 		}
 	},
 	"features": {
-		// "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-		// 	"packages": "curl,nano,bash-completion,subversion,mariadb-client",
-		// 	"upgradePackages": true
-		// },
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
 			"version": "16"
