@@ -61,5 +61,8 @@ jobs:
           sleep 1
         done
     
+    - name: Install WP Test Suite
+      run: composer run setup-tests test root root 127.0.0.1 latest false false
+    
     - name: Run unit tests
-      run: composer run setup-tests test root root mariadb latest false false && composer run test
+      run: composer run test
