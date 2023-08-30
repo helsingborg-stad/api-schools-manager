@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ $# -lt 3 ]; then
-	echo "usage: $0 <db-name> <db-user> <db-pass> [db-host] [wp-version] [skip-database-creation]"
+	echo "usage: $0 <db-name> <db-user> <db-pass> [db-host] [wp-version] [skip-database-creation] [install-acf-plugin]"
 	exit 1
 fi
 
@@ -11,6 +11,7 @@ DB_PASS=$3
 DB_HOST=${4-localhost}
 WP_VERSION=${5-latest}
 SKIP_DB_CREATE=${6-false}
+INSTALL_ACF_PLUGIN=${7-true}
 
 TMPDIR=${TMPDIR-/tmp}
 TMPDIR=$(echo $TMPDIR | sed -e "s/\/$//")
@@ -177,6 +178,11 @@ install_db() {
 }
 
 install_acf() {
+	
+	if [ ${INSTALL_ACF_PLUGIN} = "false" ]; then
+		return 0
+	fi
+
 	REPO_NAME="wp-paid-plugins"
 	if [ ! -f "${TMPDIR}/advanced-custom-fields-pro/acf.php" ]
 	then
