@@ -28,16 +28,16 @@ jobs:
         php-version: '8.2'
         tools: composer:v2
 
-    - name: Get composer cache directory path
+    - name: Get Composer Cache Directory
       id: composer-cache
-      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-    - name: Cache dependencies
-      uses: actions/cache@v3
+      run: |
+        echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+    - uses: actions/cache@v3
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-        restore-keys: ${{ runner.os }}-composer-
+        restore-keys: |
+          ${{ runner.os }}-composer-
 
     - name: Install dependencies
       run: composer install --prefer-dist
@@ -62,7 +62,7 @@ jobs:
         done
     
     - name: Install WP Test Suite
-      run: composer run setup-tests test root root 127.0.0.1 latest false false
+      run: composer run setup-tests test root root 127.0.0.1 latest true false
     
     - name: Run unit tests
       run: composer run test
