@@ -5,28 +5,13 @@
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
 
-<h3>Schools Manager</h3>
-<p>
-  Creates a api that may be used to manage schools
-  <br />
-  <a href="https://github.com/helsingborg-stad/api-school-manager/issues">Report Bug</a>
-  ·
-  <a href="https://github.com/helsingborg-stad/api-school-manager/issues">Request Feature</a>
-</p>
+# Schools Manager
 
-## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [About Schools Manager](#about-Schools Manager)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Deploy](#deploy)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+  A WordPress plugin that creates a api that may be used to manage schools.
+  
+  [Report Bug](https://github.com/helsingborg-stad/api-school-manager/issues)
+  ·
+  [Request Feature](https://github.com/helsingborg-stad/api-school-manager/issues)
 
 ## About Schools Manager
 
@@ -58,7 +43,13 @@ To get a local copy up and running follow these simple steps.
 1. Run composer install in the VS Code integrated terminal.
 1. Run the provided VS Code Task `install acf pro`. This will download and install ACF Pro, which is required for this WordPress plugin to work.
 
-#### Running test suite.
+## Tests
+
+### Setup test environment.
+Run `./tests/bin/install-wp-tests.sh <db-name> <db-user> <db-pass> [db-host] [wp-version] [skip-database-creation]` in the terminal.
+
+### Run tests
+Run `composer test` in the terminal.
 
 ## Constants
 
