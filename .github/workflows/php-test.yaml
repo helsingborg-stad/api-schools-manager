@@ -66,3 +66,6 @@ jobs:
     
     - name: Run unit tests
       run: composer run test
+      with:
+        env:
+          XDEBUG_MODE: off
