@@ -42,6 +42,17 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist
 
+    - name: Download ACF Pro plugin
+      uses: actions/checkout@v3
+      with: 
+        repository: ${{ secrets.PAID_PLUGINS_REPO }}
+        token: ${{ secrets.HBG_GH_TOKEN }}
+        path: wp-paid-plugins
+
+    - name: Place ACF plugin in /tmp folder
+      run: unzip wp-paid-plugins/acf.zip -d /tmp && rm -rf /tmp/wp-paid-plugins
+      shell: bash
+
     - name: Verify MariaDB connection
       env:
         PORT: ${{ job.services.mariadb.ports[3306] }}
@@ -51,4 +62,4 @@ jobs:
         done
     
     - name: Run unit tests
-      run: composer run setup-tests test root root mariadb && composer run test
+      run: composer run setup-tests test root root mariadb latest false false && composer run test
