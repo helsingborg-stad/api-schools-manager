@@ -14,7 +14,7 @@
   "extra": {
     "hooks": {
         "commit-msg": [
-            "grep -qE '^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)'"
+            "./bin/commit-msg.sh $1"
         ]
     }
   },
