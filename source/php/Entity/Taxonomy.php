@@ -47,7 +47,9 @@ class Taxonomy implements TermInterface
 
         $this->args['labels'] = $labels;
 
-        register_taxonomy($this->slug, $this->postTypes, $this->args);
+        add_action( 'init', function(){
+            register_taxonomy($this->slug, $this->postTypes, $this->args);
+        });
 
         return $this->slug;
     }
