@@ -60,6 +60,7 @@ wp-content
 !.gitignore
 !.editorconfig
 !.github
+!.gitattributes
 
 # devcontainer
 !.devcontainer
