@@ -6,10 +6,12 @@ use SchoolsManager\Helper\Icon as Icon;
 
 class SchoolConfiguration
 {
+    public const POST_TYPE_SLUG = 'school';
+
     public static function getPostTypeArgs(): array
     {
         return [
-            'slug' => 'school',
+            'slug' => self::POST_TYPE_SLUG,
             'namePlural' => __('schools', ASM_TEXT_DOMAIN),
             'nameSingular' => __('school', ASM_TEXT_DOMAIN),
             'args' => [

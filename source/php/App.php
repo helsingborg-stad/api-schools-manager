@@ -3,7 +3,8 @@
 namespace SchoolsManager;
 
 use SchoolsManager\API\Api;
-use SchoolsManager\API\Auth\JWTAuthentication;
+use SchoolsManager\API\Fields\FieldsRegistrar;
+use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
@@ -19,12 +20,13 @@ class App
 
     public function init()
     {
+        $apiFields          = [new SchoolPagesField()];
+        $apiFieldsRegistrar = new FieldsRegistrar($apiFields);
+
         //General
-        new Api();
+        new Api($apiFieldsRegistrar);
         $admin = new Admin();
         $admin->addHooks();
-
-        $JWTAuthentication = new JWTAuthentication(defined('SCHOOLS_MANAGER_JWT_SECRET_KEY') ? constant('SCHOOLS_MANAGER_JWT_SECRET_KEY') : '');
 
         //Post types
         $school = new School(...array_values(SchoolConfiguration::getPostTypeArgs()));
