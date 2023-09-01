@@ -35,7 +35,11 @@ add_action('acf/init', function () {
     $acfExportManager = new \AcfExportManager\AcfExportManager();
     $acfExportManager->setTextdomain('api-schools-manager');
     $acfExportManager->setExportFolder(SCHOOLS_MANAGER_PATH . 'source/php/AcfFields/');
-    $acfExportManager->autoExport(array());
+    $acfExportManager->autoExport(array(
+        // School fields
+        'post-type-school' => 'group_64eb537eeaaa0'
+    ));
+    
     $acfExportManager->import();
 });
 
