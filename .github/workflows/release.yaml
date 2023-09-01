@@ -9,8 +9,8 @@ on:
 
 jobs:
   build:
+    if: ${{ !contains(github.event.head_commit.message, 'update package file versions') }}
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'build: update package file versions') }}
     permissions:
       contents: write
     steps:
