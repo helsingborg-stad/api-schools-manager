@@ -10,19 +10,34 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, build: update package file versions') }}
     permissions:
       contents: write
     steps:
+      
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
+      
       - name: Git Version
         id: version
         uses: codacy/git-version@2.7.1
         with:
           release-branch: main
+      
+      - name: Update package file versions
+        run: php -f updatePackageVersion.php ${{ steps.version.outputs.version }}
+      
+      - name: Commit package file versions
+        run: |
+          git config --local user.email ""
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "build: update package file versions to ${{ steps.version.outputs.version }}"
+          git push
+      
       - uses: ncipollo/release-action@v1
         with:
           generateReleaseNotes: true
