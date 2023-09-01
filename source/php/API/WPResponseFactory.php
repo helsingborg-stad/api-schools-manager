@@ -15,6 +15,7 @@ class WPResponseFactory
      * @param array      $data
      * @return WP_Error
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public static function wp_error_response($error_code, string $message, array $data = []): WP_Error
     {
         return new WP_Error(
@@ -33,15 +34,15 @@ class WPResponseFactory
      * @param array  $optional_data
      * @return WP_REST_Response
      */
+    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
     public static function wp_rest_response(
         string $message,
-        array  $optional_data = []
-    ): WP_REST_Response
-    {
+        array $optional_data = []
+    ): WP_REST_Response {
         return new WP_REST_Response(
             array_merge(
                 array(
-                    'status' => 200,
+                    'status'  => 200,
                     'message' => $message,
                 ),
                 $optional_data
