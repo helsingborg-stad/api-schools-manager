@@ -11,6 +11,13 @@ use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\School\School;
 use SchoolsManager\PostType\School\SchoolConfiguration;
 
+use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
+use SchoolsManager\Taxonomy\Grade\Grade as Grade;
+use SchoolsManager\Taxonomy\SchoolType\SchoolType as SchoolType;
+use SchoolsManager\Taxonomy\Profile\Profile as Profile;
+use SchoolsManager\Taxonomy\Specialization\Specialization as Specialization;
+use SchoolsManager\Taxonomy\SchoolType\SchoolType as ProfessionalTitle;
+
 class App
 {
     public function __construct()
@@ -38,5 +45,58 @@ class App
         //Meta boxes
         $schoolPagesMetaBox = new SchoolPagesMetaBox();
         $schoolPagesMetaBox->addHooks();
+
+        // Taxonomies
+        // TODO Ensure native term meta boxes are hidden in Gutenberg to
+        // see https://github.com/WordPress/gutenberg/issues/13816#issuecomment-470137667
+        $taxonomies = [];
+        $sharedArguments = [
+            'meta_box_cb' => false
+        ];
+        $taxonomies[] = 
+            new SchoolType(
+                __('School types', ASM_TEXT_DOMAIN),
+                __('School type', ASM_TEXT_DOMAIN), 
+                'school_type', 
+                ['school'], 
+                array_merge($sharedArguments, [])
+            );
+        $taxonomies[] = 
+            new GeographicArea(
+                __('Areas', ASM_TEXT_DOMAIN),
+                __('Area', ASM_TEXT_DOMAIN), 
+                'area', 
+                ['school'], 
+                array_merge($sharedArguments, [])
+            );
+        $taxonomies[] = 
+            new Grade(
+                __('Grades', ASM_TEXT_DOMAIN),
+                __('Grade', ASM_TEXT_DOMAIN), 
+                'grade', 
+                ['school'], 
+                array_merge($sharedArguments, [])
+            );
+        $taxonomies[] = 
+            new Profile(
+                __('Profiles', ASM_TEXT_DOMAIN),
+                __('Profile', ASM_TEXT_DOMAIN), 
+                'profile', 
+                ['school'], 
+                array_merge($sharedArguments, [])
+            );
+
+        $taxonomies[] = 
+            new ProfessionalTitle(
+                __('Professional titles', ASM_TEXT_DOMAIN),
+                __('Professional title', ASM_TEXT_DOMAIN), 
+                'professional_title', 
+                ['person'], 
+                array_merge($sharedArguments, [])
+            );
+        foreach ($taxonomies as $taxonomy) {
+            $taxonomy->registerTaxonomy();
+        }
+        
     }
 }
