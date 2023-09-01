@@ -28,7 +28,9 @@ load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)
 require_once SCHOOLS_MANAGER_PATH . 'Public.php';
 
 // Register the autoloader
-require __DIR__ . '/vendor/autoload.php';
+if (file_exists(SCHOOLS_MANAGER_PATH . 'vendor/autoload.php')) {
+    require SCHOOLS_MANAGER_PATH . '/vendor/autoload.php';
+}
 
 // Acf auto import and export
 add_action('acf/init', function () {
