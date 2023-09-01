@@ -36,8 +36,7 @@
   "minimum-stability": "stable",
   "require": {
     "php": ">=8.0",
-    "helsingborg-stad/acf-export-manager": ">=1.0.0",
-    "firebase/php-jwt": "^6.4"
+    "helsingborg-stad/acf-export-manager": ">=1.0.0"
   },
   "require-dev": {
     "codedungeon/phpunit-result-printer": "^0.32.0",
