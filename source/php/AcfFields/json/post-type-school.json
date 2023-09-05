@@ -7,7 +7,7 @@
             "label": "School type",
             "name": "school_type",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,36 +16,17 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "school_type",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "select",
-            "allow_null": 0,
-            "bidirectional": 0,
+            "choices": {
+                "pre_school": "Preschool",
+                "elementary_school": "Elementary school"
+            },
+            "default_value": false,
+            "return_format": "value",
             "multiple": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_64f18a2a386d3",
-            "label": "Open hours",
-            "name": "open_hours",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_64eb537fd98b9",
@@ -105,7 +86,7 @@
         },
         {
             "key": "field_64eb5438d98bb",
-            "label": "Number of students",
+            "label": "Number of students\/children",
             "name": "number_of_students",
             "aria-label": "",
             "type": "number",
@@ -133,13 +114,20 @@
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64f18af6386d6",
+                        "operator": "==",
+                        "value": "pre_school"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "acfe_save_meta": 0,
             "default_value": "",
             "min": "",
             "max": "",
@@ -181,7 +169,15 @@
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64f18af6386d6",
+                        "operator": "==",
+                        "value": "elementary_school"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -199,26 +195,32 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_64f1a461d02c1",
+            "key": "field_64f6c4b10ecf3",
             "label": "Open hours",
             "name": "open_hours",
             "aria-label": "",
-            "type": "clone",
+            "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64f18af6386d6",
+                        "operator": "==",
+                        "value": "pre_school"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "field_64f18a2a386d3"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_64f1963941741",
@@ -228,7 +230,15 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64f18af6386d6",
+                        "operator": "==",
+                        "value": "elementary_school"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -295,7 +305,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -315,7 +325,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -324,6 +334,40 @@
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 1
+        },
+        {
+            "key": "field_64f1abedcbdf8",
+            "label": "Link Instagram",
+            "name": "link_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_64f1ac0bcbdf9",
+            "label": "Link Facebook",
+            "name": "link_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_64f19916c71bc",
@@ -342,8 +386,26 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_64f60e4f396e7",
+                    "label": "About Us",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
                     "key": "field_64f19a40c71be",
-                    "label": "About us",
+                    "label": "",
                     "name": "about_us",
                     "aria-label": "",
                     "type": "wysiwyg",
@@ -369,8 +431,26 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_64f19b0dc71c0",
+                    "key": "field_64f60e77396e8",
                     "label": "How we work",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_64f19b0dc71c0",
+                    "label": "",
                     "name": "how_we_work",
                     "aria-label": "",
                     "type": "wysiwyg",
@@ -389,8 +469,26 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_64f19b20c71c1",
+                    "key": "field_64f60e82396e9",
                     "label": "Optional rows",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_64f19b20c71c1",
+                    "label": "",
                     "name": "optional",
                     "aria-label": "",
                     "type": "repeater",
@@ -406,8 +504,8 @@
                     "pagination": 0,
                     "min": 0,
                     "max": 0,
-                    "collapsed": "",
-                    "button_label": "L\u00e4gg till rad",
+                    "collapsed": "field_64f19b8bc71c3",
+                    "button_label": "L\u00e4gg till",
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
@@ -447,8 +545,8 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
+                            "toolbar": "basic",
+                            "media_upload": 0,
                             "delay": 0,
                             "parent_repeater": "field_64f19b20c71c1"
                         }
@@ -457,11 +555,11 @@
             ]
         },
         {
-            "key": "field_64f1abedcbdf8",
-            "label": "Link Instagram",
-            "name": "link_instagram",
+            "key": "field_64f6c13a6c30b",
+            "label": "Visiting addresses",
+            "name": "visiting_addresses",
             "aria-label": "",
-            "type": "url",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -470,15 +568,42 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "field_64f6bff16c30a",
+            "button_label": "L\u00e4gg till ytterligare adress",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64f6bff16c30a",
+                    "label": "Address",
+                    "name": "address",
+                    "aria-label": "",
+                    "type": "google_map",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "center_lat": "56.043398530874754",
+                    "center_lng": "12.707579121882867",
+                    "zoom": "",
+                    "height": 200,
+                    "parent_repeater": "field_64f6c13a6c30b"
+                }
+            ]
         },
         {
-            "key": "field_64f1ac0bcbdf9",
-            "label": "Link Facebook",
-            "name": "link_facebook",
+            "key": "field_64f6c5b50ecf4",
+            "label": "Contacts",
+            "name": "contacts",
             "aria-label": "",
-            "type": "url",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -487,8 +612,70 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "L\u00e4gg till rad",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64f6c7160ecf7",
+                    "label": "Professional title",
+                    "name": "professional_title",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "professional_title",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "field_type": "select",
+                    "allow_null": 1,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_64f6c5b50ecf4"
+                },
+                {
+                    "key": "field_64f6c6760ecf5",
+                    "label": "Person",
+                    "name": "person",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "person"
+                    ],
+                    "post_status": [
+                        "publish"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "bidirectional": 0,
+                    "ui": 1,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_64f6c5b50ecf4"
+                }
+            ]
         }
     ],
     "location": [
@@ -502,8 +689,8 @@
     ],
     "menu_order": 0,
     "position": "side",
-    "style": "seamless",
-    "label_placement": "left",
+    "style": "default",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
