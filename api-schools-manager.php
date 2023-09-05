@@ -4,7 +4,7 @@
  * Plugin Name:       Schools Manager
  * Plugin URI:        https://github.com/helsingborg-stad/api-schools-manager
  * Description:       Creates a api that may be used to manage schools
- * Version:           1.0.0
+ * Version: 0.1.6
  * Author:            Thor Brink @ Helsingborg Stad
  * Author URI:        https://github.com/helsingborg-stad
  * License:           MIT
@@ -28,7 +28,9 @@ load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)
 require_once SCHOOLS_MANAGER_PATH . 'Public.php';
 
 // Register the autoloader
-require __DIR__ . '/vendor/autoload.php';
+if (file_exists(SCHOOLS_MANAGER_PATH . 'vendor/autoload.php')) {
+    require SCHOOLS_MANAGER_PATH . '/vendor/autoload.php';
+}
 
 // Acf auto import and export
 add_action('acf/init', function () {

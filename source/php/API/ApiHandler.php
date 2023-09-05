@@ -19,7 +19,7 @@ class ApiHandler
     public function extractSourceFromRequest(WP_REST_Request $request): string
     {
         $referer = $_SERVER['HTTP_REFERER'] ?? '';
-        $source = __('External form submission', ASM_TEXT_DOMAIN);
+        $source  = __('External form submission', ASM_TEXT_DOMAIN);
 
         if ($referer) {
             // Check if the referer matches the WordPress site URL
@@ -27,7 +27,7 @@ class ApiHandler
                 $source = __('Internally created user', ASM_TEXT_DOMAIN);
             } else {
                 $parsedSource = parse_url($referer, PHP_URL_HOST);
-                $source = $parsedSource ? $parsedSource : $referer;
+                $source       = $parsedSource ? $parsedSource : $referer;
             }
         }
 

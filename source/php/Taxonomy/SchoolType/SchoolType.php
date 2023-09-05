@@ -4,6 +4,6 @@ namespace SchoolsManager\Taxonomy\SchoolType;
 
 use SchoolsManager\Entity\Taxonomy;
 
-class SchoolType extends Taxonomy {
-     
+class SchoolType extends Taxonomy
+{
 }

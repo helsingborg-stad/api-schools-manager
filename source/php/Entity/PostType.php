@@ -11,17 +11,22 @@ class PostType implements PostTypeInterface
     public string $nameSingular;
     public array $labels;
     public array $args;
-    public array $tableColumns = array();
-    public array $tableSortableColumns = array();
+    public array $tableColumns                = array();
+    public array $tableSortableColumns        = array();
     public array $tableColumnsContentCallback = array();
 
-    public function __construct(string $slug, string $namePlural, string $nameSingular, array $args = array(), array $labels = array())
-    {
-        $this->slug = $slug;
-        $this->namePlural = $namePlural;
+    public function __construct(
+        string $slug,
+        string $namePlural,
+        string $nameSingular,
+        array $args = array(),
+        array $labels = array()
+    ) {
+        $this->slug         = $slug;
+        $this->namePlural   = $namePlural;
         $this->nameSingular = $nameSingular;
-        $this->args = $args;
-        $this->labels = $labels;
+        $this->args         = $args;
+        $this->labels       = $labels;
     }
 
     /**
@@ -42,29 +47,32 @@ class PostType implements PostTypeInterface
      */
     public function registerPostType(): void
     {
+        $nameSingular = __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN);
+        $namePlural   = __(strtolower($this->namePlural), ASM_TEXT_DOMAIN);
+
         $labels = array_merge(
             array(
-                'name' => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN),
-                'singular_name' => __(ucfirst($this->nameSingular), ASM_TEXT_DOMAIN),
-                'add_new' => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'add_new_item' => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'edit_item' => sprintf(__('Edit %s', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'new_item' => sprintf(__('New %s', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'view_item' => sprintf(__('View %s', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'search_items' => sprintf(__('Search %s', ASM_TEXT_DOMAIN), __(strtolower($this->namePlural), ASM_TEXT_DOMAIN)),
-                'not_found' => sprintf(__('No %s found', ASM_TEXT_DOMAIN), __(strtolower($this->namePlural), ASM_TEXT_DOMAIN)),
-                'not_found_in_trash' => sprintf(__('No %s found in trash', ASM_TEXT_DOMAIN), __(strtolower($this->namePlural), ASM_TEXT_DOMAIN)),
-                'parent_item_colon' => sprintf(__('Parent %s:', ASM_TEXT_DOMAIN), __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN)),
-                'menu_name' => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN)
+                'name'               => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN),
+                'singular_name'      => __(ucfirst($this->nameSingular), ASM_TEXT_DOMAIN),
+                'add_new'            => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), $nameSingular),
+                'add_new_item'       => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), $nameSingular),
+                'edit_item'          => sprintf(__('Edit %s', ASM_TEXT_DOMAIN), $nameSingular),
+                'new_item'           => sprintf(__('New %s', ASM_TEXT_DOMAIN), $nameSingular),
+                'view_item'          => sprintf(__('View %s', ASM_TEXT_DOMAIN), $nameSingular),
+                'search_items'       => sprintf(__('Search %s', ASM_TEXT_DOMAIN), $namePlural),
+                'not_found'          => sprintf(__('No %s found', ASM_TEXT_DOMAIN), $namePlural),
+                'not_found_in_trash' => sprintf(__('No %s found in trash', ASM_TEXT_DOMAIN), $namePlural),
+                'parent_item_colon'  => sprintf(__('Parent %s:', ASM_TEXT_DOMAIN), $nameSingular),
+                'menu_name'          => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN)
             ),
             $this->labels
         );
 
         $mergedArgs = array_merge(
             array(
-                'labels' => $labels,
+                'labels'  => $labels,
                 'rewrite' => array(
-                    'slug' => $this->slug,
+                    'slug'       => $this->slug,
                     'with_front' => false
                 ),
             ),

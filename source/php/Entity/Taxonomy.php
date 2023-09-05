@@ -19,17 +19,17 @@ class Taxonomy implements TermInterface
 
     public function __construct($namePlural, $nameSingular, $slug, $postTypes, $args)
     {
-        $this->namePlural = $namePlural;
+        $this->namePlural   = $namePlural;
         $this->nameSingular = $nameSingular;
-        $this->slug = $slug;
-        $this->postTypes = $postTypes;
-        $this->args = array_merge(
+        $this->slug         = $slug;
+        $this->postTypes    = $postTypes;
+        $this->args         = array_merge(
             $this->defaultArgs,
             $args
         );
     }
 
-    public function registerTaxonomy() : string
+    public function registerTaxonomy(): string
     {
         $labels = array(
             'name'              => $this->namePlural,
@@ -47,7 +47,7 @@ class Taxonomy implements TermInterface
 
         $this->args['labels'] = $labels;
 
-        add_action( 'init', function(){
+        add_action('init', function () {
             register_taxonomy($this->slug, $this->postTypes, $this->args);
         });
 
@@ -72,7 +72,8 @@ class Taxonomy implements TermInterface
         if (!taxonomy_exists($this->slug)) {
             return new WP_Error(
                 'invalid_taxonomy',
-                'The provided taxonomy does not exist.');
+                'The provided taxonomy does not exist.'
+            );
         }
 
         $terms = $this->validateTerms($terms);
@@ -85,7 +86,7 @@ class Taxonomy implements TermInterface
             }
 
             $default_args = [
-                'slug' => $term_slug,
+                'slug'        => $term_slug,
                 'description' => $term['description'] ?? '',
             ];
 

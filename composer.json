@@ -1,56 +1,57 @@
 {
-  "name": "helsingborg-stad/api-schools-manager",
-  "description": "Creates a api that may be used to manage schools",
-  "type": "wordpress-plugin",
-  "license": "MIT",
-  "scripts": {
-    "test": "XDEBUG_MODE=debug ./vendor/bin/phpunit --testdox",
-    "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
-    "minimal": "./vendor/bin/phpunit",
-    "setup-tests": "./tests/install-wp-tests.sh",
-    "php:lint": "./vendor/bin/phpcs -s",
-    "php:fix": "./vendor/bin/phpcbf"
-  },
-  "extra": {
-    "hooks": {
-        "commit-msg": [
-            "./bin/commit-msg.sh $1"
-        ]
-    }
-  },
-  "authors": [
-    {
-      "name": "Thor Brink",
-      "email": "thor.brink@helsingborg.se"
+    "name": "helsingborg-stad\/api-schools-manager",
+    "description": "Creates a api that may be used to manage schools",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "scripts": {
+        "test": "XDEBUG_MODE=debug .\/vendor\/bin\/phpunit --testdox",
+        "coverage": "XDEBUG_MODE=coverage .\/vendor\/bin\/phpunit --testdox",
+        "minimal": ".\/vendor\/bin\/phpunit",
+        "setup-tests": ".\/tests\/install-wp-tests.sh",
+        "php:lint": ".\/vendor\/bin\/phpcs -s",
+        "php:fix": ".\/vendor\/bin\/phpcbf"
     },
-    {
-      "name": "Anna Johansson",
-      "email": "anna.johansson4@helsingborg.se"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "SchoolsManager\\": "source/php/"
-    }
-  },
-  "minimum-stability": "stable",
-  "require": {
-    "php": ">=8.0",
-    "helsingborg-stad/acf-export-manager": ">=1.0.0"
-  },
-  "require-dev": {
-    "codedungeon/phpunit-result-printer": "^0.32.0",
-    "yoast/phpunit-polyfills": "1.1",
-    "squizlabs/php_codesniffer": "^3.7",
-    "wp-coding-standards/wpcs": "^3.0",
-    "phpcompatibility/phpcompatibility-wp": "*",
-    "brainmaestro/composer-git-hooks": "^2.8"
-  },
-  "config": {
-    "allow-plugins": {
-      "composer/installers": true,
-      "pivvenit/acf-pro-installer": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  }
+    "extra": {
+        "hooks": {
+            "commit-msg": [
+                ".\/bin\/commit-msg.sh $1"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Thor Brink",
+            "email": "thor.brink@helsingborg.se"
+        },
+        {
+            "name": "Anna Johansson",
+            "email": "anna.johansson4@helsingborg.se"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SchoolsManager\\": "source\/php\/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.0",
+        "helsingborg-stad\/acf-export-manager": ">=1.0.0"
+    },
+    "require-dev": {
+        "codedungeon\/phpunit-result-printer": "^0.32.0",
+        "yoast\/phpunit-polyfills": "1.1",
+        "squizlabs\/php_codesniffer": "^3.7",
+        "wp-coding-standards\/wpcs": "^3.0",
+        "phpcompatibility\/phpcompatibility-wp": "*",
+        "brainmaestro\/composer-git-hooks": "^2.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer\/installers": true,
+            "pivvenit\/acf-pro-installer": true,
+            "dealerdirect\/phpcodesniffer-composer-installer": true
+        }
+    },
+    "version": "0.1.6"
 }
