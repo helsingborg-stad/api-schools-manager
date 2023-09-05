@@ -2,68 +2,32 @@
 
 namespace SchoolsManager\Entity\API\Fields\Test;
 
+use Mockery;
 use SchoolsManager\API\Fields\SchoolPagesField;
-use SchoolsManager\PostType\School\SchoolConfiguration;
-use WP_REST_Request;
+use WP_Mock;
 
-class SchoolPagesFieldTest extends \WP_UnitTestCase
+class SchoolPagesFieldTest extends \PHPUnit\Framework\TestCase
 {
-    protected string $endpoint                     = '/wp/v2/' . SchoolConfiguration::POST_TYPE_SLUG;
-    protected int $schoolId                        = 0;
-    protected ?SchoolPagesField $schooldPagesField = null;
-
-    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-    public function set_up(): void
+    public function testSchoolPagesQueriesPagesBySchoolId()
     {
-        $this->schooldPagesField = new SchoolPagesField();
-        $this->schooldPagesField->register();
+        $schoolID         = 123;
+        $schoolObject     = ['id' => $schoolID];
+        $schoolPagesField = new SchoolPagesField();
+        $wpRestRequest    = Mockery::mock('WP_REST_Request');
+        $getPostsArgs     = [
+            'post_type'      => 'page',
+            'fields'         => 'ids',
+            'posts_per_page' => -1,
+            'meta_key'       => 'parent_school',
+            'meta_value'     => $schoolID,
+        ];
 
-        $this->schoolId = $this::factory()->post->create(
-            array(
-                'post_type' => SchoolConfiguration::POST_TYPE_SLUG,
-                'post_name' => 'test'
-            )
-        );
+        WP_Mock::userFunction('get_posts', [
+            'times'  => 1,
+            'args'   => [$getPostsArgs],
+            'return' => []
+        ]);
 
-        parent::set_up();
-    }
-
-    public function testFieldIsArray()
-    {
-        $response  = $this->makeRequest();
-        $data      = $response->get_data();
-        $fieldData = $data[0][$this->schooldPagesField->attribute];
-
-        $this->assertIsArray($fieldData);
-    }
-
-    public function testFieldContainsPageIds()
-    {
-        $pageId    = $this->createPageAndSetParentSchool($this->schoolId);
-        $response  = $this->makeRequest();
-        $data      = $response->get_data();
-        $fieldData = $data[0][$this->schooldPagesField->attribute];
-
-        $this->assertContains($pageId, $fieldData);
-    }
-
-    private function makeRequest()
-    {
-        $request = new WP_REST_Request('GET', $this->endpoint);
-        return rest_get_server()->dispatch($request);
-    }
-
-    private function createPageAndSetParentSchool($schoolId): int
-    {
-        $pageId = $this::factory()->post->create(
-            array(
-                'post_type' => 'page',
-                'post_name' => 'test-page'
-            )
-        );
-
-        update_field('parent_school', $schoolId, $pageId);
-
-        return $pageId;
+        $this->assertSame([], $schoolPagesField->getCallback($schoolObject, 'pages', $wpRestRequest));
     }
 }

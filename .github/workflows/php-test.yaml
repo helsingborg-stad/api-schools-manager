@@ -14,16 +14,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    services:
-      mariadb:
-        image: mariadb:10.4
-        ports:
-          - '3306:3306'
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: test
-        options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=2s --health-retries=3
-
     steps:
     - uses: actions/checkout@v2
 
@@ -47,27 +37,5 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist
 
-    - name: Download ACF Pro plugin
-      uses: actions/checkout@v3
-      with: 
-        repository: ${{ secrets.PAID_PLUGINS_REPO }}
-        token: ${{ secrets.HBG_GH_TOKEN }}
-        path: wp-paid-plugins
-
-    - name: Place ACF plugin in /tmp folder
-      run: unzip wp-paid-plugins/acf.zip -d /tmp && rm -rf /tmp/wp-paid-plugins
-      shell: bash
-
-    - name: Verify MariaDB connection
-      env:
-        PORT: ${{ job.services.mariadb.ports[3306] }}
-      run: |
-        while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
-          sleep 1
-        done
-    
-    - name: Install WP Test Suite
-      run: composer run setup-tests test root root 127.0.0.1 latest true false
-    
     - name: Run unit tests
       run: composer run test

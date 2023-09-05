@@ -13,13 +13,15 @@ abstract class MetaBox
     public string $priority               = MetaBoxPriority::DEFAULT;
     public null|array $callbackArgs       = null;
     protected $callback                   = null;
+    private MetaBoxCallbackRendererInterface $callbackRenderer;
 
     /**
      * Constructor
      */
-    public function __construct()
+    public function __construct(MetaBoxCallbackRendererInterface $callbackRenderer)
     {
-        $this->callback = array( $this, 'callback' );
+        $this->callbackRenderer = $callbackRenderer;
+        $this->callback         = array( $this, 'callback' );
     }
 
     public function addHooks(): void
@@ -45,5 +47,8 @@ abstract class MetaBox
      *
      * @return void
      */
-    abstract public function callback(): void;
+    public function callback()
+    {
+        $this->callbackRenderer->render();
+    }
 }
