@@ -28,7 +28,7 @@ class SchoolPagesMetaBoxCallbackTest extends \PHPUnit\Framework\TestCase
         WP_Mock::userFunction('get_edit_post_link')->once()->andReturn('');
 
         $this->expectOutputRegex('/\<a href="" title="Foo"\>Foo\<\/a\>/');
-        
+
         $sut = new SchoolPagesMetaBoxCallback();
         $sut->render();
     }
