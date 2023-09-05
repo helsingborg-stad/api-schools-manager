@@ -45,9 +45,6 @@ To get a local copy up and running follow these simple steps.
 
 ## Tests
 
-### Setup test environment.
-Run `./tests/bin/install-wp-tests.sh <db-name> <db-user> <db-pass> [db-host] [wp-version] [skip-database-creation]` in the terminal.
-
 ### Run tests
 Run `composer test` in the terminal.
 
