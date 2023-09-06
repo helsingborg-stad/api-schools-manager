@@ -153,7 +153,7 @@ class App
             return $response;
     }
 
-    public function useGoogleApiKeyIfDefined()
+    public function useGoogleApiKeyIfDefined(): void
     {
         if (defined('GOOGLE_API_KEY')) {
             \acf_update_setting('google_api_key', \GOOGLE_API_KEY);

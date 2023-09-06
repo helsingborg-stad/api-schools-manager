@@ -18,6 +18,13 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "php:test:debug",
+			"type": "shell",
+			"command": "composer run test:debug",
+			"group": "test",
+			"problemMatcher": []
+		},
+		{
 			"label": "php:coverage",
 			"type": "shell",
 			"command": "composer run coverage",
