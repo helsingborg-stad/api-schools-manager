@@ -24,7 +24,7 @@ jobs:
     - name: Setup PHP with composer v2
       uses: shivammathur/setup-php@v2
       with:
-        php-version: php-version: ${{ matrix.php-versions }}
+        php-version: ${{ matrix.php-versions }}
         tools: composer:v2
 
     - name: Get Composer Cache Directory
