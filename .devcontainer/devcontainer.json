@@ -39,6 +39,7 @@
 				"phpsab.fixerEnable": true,
 				"phpsab.snifferShowSources": true,
 				"phpsab.executablePathCS": "./vendor/bin/phpcs",
+				"editor.formatOnSave": true,
 				"phpsab.allowedAutoRulesets": [
 					"phpcs.xml"
 				],

@@ -117,9 +117,15 @@ class App
         $taxonomies = [];
 
         foreach ($taxonomyConfigurations as $config) {
-            list($class, $plural, $singular, $slug, $postType, $uniqueArgs) = $config;
-            $args                                                           = array_merge($sharedArguments, $uniqueArgs);
-            $taxonomies[]                                                   = new $class($plural, $singular, $slug, $postType, $args);
+            list($class,
+            $plural,
+            $singular,
+            $slug,
+            $postType,
+            $uniqueArgs
+            )             = $config;
+            $args         = array_merge($sharedArguments, $uniqueArgs);
+            $taxonomies[] = new $class($plural, $singular, $slug, $postType, $args);
         }
 
         foreach ($taxonomies as $taxonomy) {
