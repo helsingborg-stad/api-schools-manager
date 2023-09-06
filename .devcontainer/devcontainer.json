@@ -87,7 +87,8 @@
 		"symlink-plugin": "ln -s \"$(pwd)\" \"/var/www/html/wp-content/plugins/$(basename \"$PWD\")\"",
 		"symlink-wp-config-local": "ln -s \"$(pwd)/.devcontainer/wp-config-local.php\" /var/www/html/wp-config-local.php",
 		"symlink-wp-config": "ln -s \"$(pwd)/.devcontainer/wp-config.php\" /var/www/html/wp-config.php",
-		"start-apache": "service apache2 start"
+		"start-apache": "service apache2 start",
+		"install-acf-plugin": "bash ./.vscode/tasks/install-acf-plugin.sh"
 	},
 	"waitFor": "postCreateCommand",
 	"remoteUser": "vscode"
