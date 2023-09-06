@@ -1,6 +1,6 @@
 [{
     "key": "group_64eb537eeaaa0",
-    "title": "School",
+    "title": "School info",
     "fields": [
         {
             "key": "field_64f18af6386d6",
@@ -57,9 +57,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64eb5425d98ba",
-            "label": "General images",
-            "name": "general_images",
+            "key": "field_64f85c7aec4f2",
+            "label": "Other Images",
+            "name": "images",
             "aria-label": "",
             "type": "gallery",
             "instructions": "",
@@ -73,7 +73,7 @@
             "return_format": "array",
             "library": "all",
             "min": "",
-            "max": 10,
+            "max": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -82,7 +82,52 @@
             "max_size": "",
             "mime_types": "",
             "insert": "append",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_64f85f1829313",
+            "label": "Videos",
+            "name": "videos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_64f85ca6ec4f4",
+            "button_label": "Add video",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_64f85f1829314",
+                    "label": "",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64f85f1829313"
+                }
+            ]
         },
         {
             "key": "field_64eb5438d98bb",
@@ -556,8 +601,8 @@
         },
         {
             "key": "field_64f6c13a6c30b",
-            "label": "Visiting addresses",
-            "name": "visiting_addresses",
+            "label": "Visiting address",
+            "name": "visiting_address",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -695,6 +740,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "show_in_rest": 0
+    "show_in_rest": 1
 }]
 

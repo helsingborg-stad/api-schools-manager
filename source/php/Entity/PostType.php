@@ -70,8 +70,9 @@ class PostType implements PostTypeInterface
 
         $mergedArgs = array_merge(
             array(
-                'labels'  => $labels,
-                'rewrite' => array(
+                'labels'       => $labels,
+                'show_in_rest' => true,
+                'rewrite'      => array(
                     'slug'       => $this->slug,
                     'with_front' => false
                 ),
