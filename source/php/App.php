@@ -15,7 +15,6 @@ use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade as Grade;
 use SchoolsManager\Taxonomy\SchoolType\SchoolType as SchoolType;
 use SchoolsManager\Taxonomy\Profile\Profile as Profile;
-use SchoolsManager\Taxonomy\Specialization\Specialization as Specialization;
 use SchoolsManager\Taxonomy\SchoolType\SchoolType as ProfessionalTitle;
 
 class App
@@ -23,7 +22,11 @@ class App
     public function __construct()
     {
         add_action('plugins_loaded', array( $this, 'init' ));
+        add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
+
+        add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
     }
+
 
     public function init()
     {
@@ -50,55 +53,110 @@ class App
         $schoolPagesMetaBox->addHooks();
 
         // Taxonomies
-        // TODO Ensure native term meta boxes are hidden in Gutenberg to
-        // see https://github.com/WordPress/gutenberg/issues/13816#issuecomment-470137667
-        $taxonomies      = [];
         $sharedArguments = [
-            'meta_box_cb' => false
+        'meta_box_cb' => false
         ];
-        $taxonomies[]    =
-            new SchoolType(
-                __('School types', ASM_TEXT_DOMAIN),
-                __('School type', ASM_TEXT_DOMAIN),
-                'school_type',
-                ['school'],
-                array_merge($sharedArguments, [])
-            );
-        $taxonomies[]    =
-            new GeographicArea(
-                __('Areas', ASM_TEXT_DOMAIN),
-                __('Area', ASM_TEXT_DOMAIN),
-                'area',
-                ['school'],
-                array_merge($sharedArguments, [])
-            );
-        $taxonomies[]    =
-            new Grade(
-                __('Grades', ASM_TEXT_DOMAIN),
-                __('Grade', ASM_TEXT_DOMAIN),
-                'grade',
-                ['school'],
-                array_merge($sharedArguments, [])
-            );
-        $taxonomies[]    =
-            new Profile(
-                __('Profiles', ASM_TEXT_DOMAIN),
-                __('Profile', ASM_TEXT_DOMAIN),
-                'profile',
-                ['school'],
-                array_merge($sharedArguments, [])
-            );
 
-        $taxonomies[] =
-            new ProfessionalTitle(
-                __('Professional titles', ASM_TEXT_DOMAIN),
-                __('Professional title', ASM_TEXT_DOMAIN),
-                'professional_title',
-                ['person'],
-                array_merge($sharedArguments, [])
-            );
+        $taxonomyConfigurations = [
+        [
+            SchoolType::class,
+            __('School types', ASM_TEXT_DOMAIN),
+            __('School type', ASM_TEXT_DOMAIN),
+            'school_type',
+            ['school'],
+            []
+        ],
+        [
+            GeographicArea::class,
+            __('Areas', ASM_TEXT_DOMAIN),
+            __('Area', ASM_TEXT_DOMAIN),
+            'area',
+            ['school'],
+            []
+        ],
+        [
+            Grade::class,
+            __(
+                'Grades',
+                ASM_TEXT_DOMAIN
+            ),
+            __(
+                'Grade',
+                ASM_TEXT_DOMAIN
+            ),
+            'grade',
+            ['school'],
+            []
+        ],
+        [
+            Profile::class,
+            __(
+                'Profiles',
+                ASM_TEXT_DOMAIN
+            ),
+            __(
+                'Profile',
+                ASM_TEXT_DOMAIN
+            ),
+            'profile',
+            ['school'],
+            []
+        ],
+        [
+            ProfessionalTitle::class,
+            __(
+                'Professional titles',
+                ASM_TEXT_DOMAIN
+            ),
+            __(
+                'Professional title',
+                ASM_TEXT_DOMAIN
+            ),
+            'professional_title',
+            ['person'],
+            []
+        ]
+        ];
+
+        $taxonomies = [];
+
+        foreach ($taxonomyConfigurations as $config) {
+            list($class,
+            $plural,
+            $singular,
+            $slug,
+            $postType,
+            $uniqueArgs
+            )             = $config;
+            $args         = array_merge($sharedArguments, $uniqueArgs);
+            $taxonomies[] = new $class($plural, $singular, $slug, $postType, $args);
+        }
+
         foreach ($taxonomies as $taxonomy) {
             $taxonomy->registerTaxonomy();
+        }
+    }
+
+    public function respectMetaBoxCbInGutenberg($response, $taxonomy, $request)
+    {
+        $context = ! empty($request['context']) ? $request['context'] : 'view';
+
+            // Context is edit in the editor
+        if ($context === 'edit' && $taxonomy->meta_box_cb === false) {
+            $data_response = $response->get_data();
+
+            $data_response['visibility']['show_ui'] = false;
+
+            $response->set_data($data_response);
+        }
+
+            return $response;
+    }
+
+    public function useGoogleApiKeyIfDefined(): void
+    {
+        if (defined('GOOGLE_API_KEY')) {
+            \acf_update_setting('google_api_key', \GOOGLE_API_KEY);
         }
     }
 }

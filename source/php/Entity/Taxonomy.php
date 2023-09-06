@@ -23,10 +23,10 @@ class Taxonomy implements TermInterface
         $this->nameSingular = $nameSingular;
         $this->slug         = $slug;
         $this->postTypes    = $postTypes;
-        $this->args         = array_merge(
-            $this->defaultArgs,
-            $args
-        );
+            $this->args     = array_merge(
+                $this->defaultArgs,
+                $args
+            );
     }
 
     public function registerTaxonomy(): string
