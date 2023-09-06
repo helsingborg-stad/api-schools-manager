@@ -17,4 +17,14 @@ class Url
 
         return rtrim($currentURL, "/");
     }
+
+    public static function isRest(): bool
+    {
+        return strpos(self::current(), rtrim(rest_url(), "/")) !== false;
+    }
+
+    public static function isAnyPageButRest(): bool
+    {
+        return Url::current() == rtrim(home_url(), "/");
+    }
 }

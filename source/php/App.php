@@ -6,6 +6,7 @@ use SchoolsManager\API\Api;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
+use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\School\School;
@@ -30,7 +31,9 @@ class App
         $apiFieldsRegistrar = new FieldsRegistrar($apiFields);
 
         //General
-        new Api($apiFieldsRegistrar);
+        $api = new Api($apiFieldsRegistrar);
+        $api->addHooks();
+
         $admin = new Admin();
         $admin->addHooks();
 
@@ -42,7 +45,8 @@ class App
         $person->addHooks();
 
         //Meta boxes
-        $schoolPagesMetaBox = new SchoolPagesMetaBox();
+        $schoolPagesCallbackRenderer = new SchoolPagesMetaBoxCallback();
+        $schoolPagesMetaBox          = new SchoolPagesMetaBox($schoolPagesCallbackRenderer);
         $schoolPagesMetaBox->addHooks();
 
         // Taxonomies
