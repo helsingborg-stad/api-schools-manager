@@ -3,42 +3,32 @@
 namespace SchoolsManager\Entity\API\Test;
 namespace SchoolsManager\Entity\API;
 
+use Mockery;
+use WP_Mock;
+
 class SUT extends Field
 {
-    public function getCallback(
-        string | array $object,
-        string $field_name,
-        \WP_REST_Request $request
-    ): ?\WP_REST_Response {
-        return null;
-    }
-
-    public function updateCallback(
-        string | array $object,
-        string $field_name,
-        \WP_REST_Request $request
-    ): ?\WP_REST_Response {
-        return null;
-    }
 }
 
 // phpcs:ignore PSR1.Classes.ClassDeclaration.MultipleClasses
-class FieldTest extends \WP_UnitTestCase
+class FieldTest extends \PHPUnit\Framework\TestCase
 {
     protected $sut = null;
 
-    // phpcs:ignore PSR1.Methods.CamelCapsMethodName.NotCamelCaps
-    public function set_up(): void
+    public static function setUpBeforeClass(): void
+    {
+        Mockery::mock('WP_Error');
+    }
+
+    public function setUp(): void
     {
         $this->sut = new SUT();
-        parent::set_up();
     }
 
     public function testRegisterReturnsErrorIfNoPropsAreSet()
     {
         $result = $this->sut->register();
-
-        $this->assertWPError($result);
+        $this->assertInstanceOf('WP_Error', $result);
     }
 
     public function testRegisterReturnsErrorIfObjectTypeNotSet()
@@ -46,7 +36,7 @@ class FieldTest extends \WP_UnitTestCase
         $this->sut->attribute = 'test';
         $result               = $this->sut->register();
 
-        $this->assertWPError($result);
+        $this->assertInstanceOf('WP_Error', $result);
     }
 
     public function testRegisterReturnsErrorIfAttributeNotSet()
@@ -54,14 +44,27 @@ class FieldTest extends \WP_UnitTestCase
         $this->sut->objectType = 'test';
         $result                = $this->sut->register();
 
-        $this->assertWPError($result);
+        $this->assertInstanceOf('WP_Error', $result);
+    }
+
+    public function testRegisterReturnsReturnsErrorIfFieldRegistrationFails()
+    {
+        $this->sut->objectType = 'test';
+        $this->sut->attribute  = 'test';
+
+        WP_Mock::userFunction('register_rest_field')->once()->andThrow('error');
+        $result = $this->sut->register();
+
+        $this->assertInstanceOf('WP_Error', $result);
     }
 
     public function testRegisterReturnsTrueIfPropsAreSet()
     {
         $this->sut->objectType = 'test';
         $this->sut->attribute  = 'test';
-        $result                = $this->sut->register();
+
+        WP_Mock::userFunction('register_rest_field')->once()->withAnyArgs();
+        $result = $this->sut->register();
 
         $this->assertTrue($result);
     }

@@ -2,18 +2,21 @@
 
 namespace SchoolsManager\MetaBox\Test;
 
+use Mockery;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
-use WP_UnitTestCase;
+use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
 
-class SchoolPagesMetaBoxTest extends WP_UnitTestCase
+class SchoolPagesMetaBoxTest extends \PHPUnit\Framework\TestCase
 {
-    public function testRegistersMetabox()
+    use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+
+    public function testCallsRenderOnSchoolPagesMetaBoxCallback()
     {
-        $sut = new SchoolPagesMetaBox();
-        $sut->addHooks();
+        $metaBoxCallbackRender = Mockery::spy(SchoolPagesMetaBoxCallback::class);
+        $sut                   = new SchoolPagesMetaBox($metaBoxCallbackRender);
 
-        do_action('add_meta_boxes');
+        $sut->callback();
 
-        $this->assertNotEmpty($GLOBALS['wp_meta_boxes'][$sut->screen][$sut->context][$sut->priority][$sut->id]);
+        $metaBoxCallbackRender->shouldHaveReceived('render')->times(1);
     }
 }

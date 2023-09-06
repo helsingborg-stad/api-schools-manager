@@ -1,39 +1,30 @@
 <?php
-/**
- * PHPUnit bootstrap file.
- *
- * @package Api_School_Manager
- */
 
-$_tests_dir = getenv( 'WP_TESTS_DIR' );
+// First we need to load the composer autoloader, so we can use WP Mock
 
-if ( ! $_tests_dir ) {
-	$_tests_dir = rtrim( sys_get_temp_dir(), '/\\' ) . '/wordpress-tests-lib';
-}
+use tad\FunctionMocker\FunctionMocker;
 
-// Forward custom PHPUnit Polyfills configuration to PHPUnit bootstrap file.
-$_phpunit_polyfills_path = getenv( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH' );
-if ( false !== $_phpunit_polyfills_path ) {
-	define( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH', $_phpunit_polyfills_path );
-}
+require_once dirname(__DIR__) . '/vendor/autoload.php';
 
-if ( ! file_exists( "{$_tests_dir}/includes/functions.php" ) ) {
-	echo "Could not find {$_tests_dir}/includes/functions.php, have you run bin/install-wp-tests.sh ?" . PHP_EOL; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	exit( 1 );
-}
+// Bootstrap Patchwork
+WP_Mock::setUsePatchwork(true);
 
-// Give access to tests_add_filter() function.
-require_once "{$_tests_dir}/includes/functions.php";
+// Bootstrap WP_Mock to initialize built-in features
+WP_Mock::bootstrap();
 
-/**
- * Manually load the plugin being tested.
- */
-function _manually_load_plugin() {
-	require sys_get_temp_dir() . '/advanced-custom-fields-pro/acf.php';
-	require dirname( dirname( __FILE__ ) ) . '/api-schools-manager.php';
-}
+WP_Mock::userFunction('plugin_dir_path')->andReturn('./');
+WP_Mock::userFunction('plugins_url')->andReturn('foo');
+WP_Mock::userFunction('load_plugin_textdomain')->andReturn('foo');
+WP_Mock::userFunction('plugin_basename')->andReturn('foo');
+WP_Mock::userFunction('is_wp_error', [
+    'return' => function ($object) {
+        return $object instanceof WP_Error;
+    }
+]);
 
-tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );
+FunctionMocker::init([
+    'include' => [dirname(__DIR__)]
+]);
 
-// Start up the WP testing environment.
-require "{$_tests_dir}/includes/bootstrap.php";
+// Optional step
+require_once dirname(__DIR__) . '/api-schools-manager.php';

@@ -2,16 +2,34 @@
 
 namespace SchoolsManager\MetaBox\Test;
 
-use WP_UnitTestCase;
+use Mockery;
+use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
+use WP_Mock;
 
-class SchoolPagesMetaBoxCallbackTest extends WP_UnitTestCase
+class SchoolPagesMetaBoxCallbackTest extends \PHPUnit\Framework\TestCase
 {
-    public function testRenderOutputsMarkup()
+    public function testRenderShouldInformThatNoPagesAreAssociated()
     {
-        $this->expectOutputRegex('/<p>.*<\/p>/');
-        $this->expectOutputRegex('/<ul>.*<\/ul>/');
+        WP_Mock::userFunction('get_posts')->once()->andReturn([]);
 
-        $schoolPagesMetaBoxCallback = new \SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback();
-        $schoolPagesMetaBoxCallback->render();
+        $this->expectOutputRegex('/No pages are associated with this school yet/');
+
+        $sut = new SchoolPagesMetaBoxCallback();
+        $sut->render();
+    }
+
+    public function testRenderListsPagesIfPagesAreAssociated()
+    {
+        $page             = Mockery::mock('WP_Post');
+        $page->ID         = 1;
+        $page->post_title = 'Foo';
+
+        WP_Mock::userFunction('get_posts')->once()->andReturn([$page]);
+        WP_Mock::userFunction('get_edit_post_link')->once()->andReturn('');
+
+        $this->expectOutputRegex('/\<a href="" title="Foo"\>Foo\<\/a\>/');
+
+        $sut = new SchoolPagesMetaBoxCallback();
+        $sut->render();
     }
 }

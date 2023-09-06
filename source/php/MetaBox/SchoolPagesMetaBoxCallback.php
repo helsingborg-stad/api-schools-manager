@@ -3,8 +3,9 @@
 namespace SchoolsManager\MetaBox;
 
 use WP_Post;
+use SchoolsManager\Entity\MetaBox\MetaBoxCallbackRendererInterface;
 
-class SchoolPagesMetaBoxCallback
+class SchoolPagesMetaBoxCallback implements MetaBoxCallbackRendererInterface
 {
     private array $pagePosts = array();
 

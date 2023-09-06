@@ -3,6 +3,7 @@
 namespace SchoolsManager\API;
 
 use SchoolsManager\Entity\API\FieldsRegistrarInterface;
+use SchoolsManager\Helper\ExitCaller;
 use SchoolsManager\Helper\Url;
 
 class Api
@@ -11,17 +12,20 @@ class Api
 
     public function __construct(FieldsRegistrarInterface $fieldsRegistrar)
     {
-        add_action('template_redirect', array($this, 'redirectToApi'));
-
         $this->fieldsRegistrar = $fieldsRegistrar;
         $this->fieldsRegistrar->registerFields();
+    }
+
+    public function addHooks()
+    {
+        add_action('template_redirect', array($this, 'redirectToApi'));
     }
 
     /**
      * Force the usage of WordPress api
      * @return void
      */
-    public static function redirectToApi()
+    public function redirectToApi()
     {
         if (php_sapi_name() === 'cli') {
             return;
@@ -31,9 +35,9 @@ class Api
             return;
         }
 
-        if (strpos(Url::current(), rtrim(rest_url(), "/")) === false && Url::current() == rtrim(home_url(), "/")) {
+        if (!Url::isRest() && Url::isAnyPageButRest()) {
             wp_redirect(rest_url());
-            exit;
+            ExitCaller::exit();
         }
     }
 }

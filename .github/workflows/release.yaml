@@ -21,29 +21,7 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
-      - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v0
+      - name: Create Release and bump version files
+        uses: helsingborg-stad/release-wp-plugin-action@1.0
         with:
-          versionSpec: '5.x'
-
-      - name: Determine Version
-        id: gitversion
-        uses: gittools/actions/gitversion/execute@v0
-        with:
-          useConfigFile: true
-      
-      - name: Update package file versions
-        run: php -f updatePackageVersion.php ${{ steps.gitversion.outputs.semVer }}
-      
-      - name: Commit package file versions
-        run: |
-          git config --local user.email ""
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "build: update package file versions to ${{ steps.gitversion.outputs.semVer }}"
-          git push
-      
-      - uses: ncipollo/release-action@v1
-        with:
-          generateReleaseNotes: true
-          tag: ${{ steps.gitversion.outputs.semVer }}
+          php-version: 8.2

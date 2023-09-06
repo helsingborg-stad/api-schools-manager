@@ -3,8 +3,6 @@
 namespace SchoolsManager\Entity\API;
 
 use WP_Error;
-use WP_REST_Request;
-use WP_REST_Response;
 
 abstract class Field implements FieldInterface
 {

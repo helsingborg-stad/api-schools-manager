@@ -4,7 +4,7 @@
  * Plugin Name:       Schools Manager
  * Plugin URI:        https://github.com/helsingborg-stad/api-schools-manager
  * Description:       Creates a api that may be used to manage schools
- * Version: 0.1.6
+ * Version: 0.1.9
  * Author:            Thor Brink @ Helsingborg Stad
  * Author URI:        https://github.com/helsingborg-stad
  * License:           MIT

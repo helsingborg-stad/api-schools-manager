@@ -8,7 +8,7 @@ use SchoolsManager\Entity\MetaBox\MetaBoxPriority;
 
 class SchoolPagesMetaBox extends MetaBox
 {
-    public function __construct()
+    public function __construct(SchoolPagesMetaBoxCallback $callbackRenderer)
     {
         $this->id           = 'school_pages';
         $this->title        = 'Pages';
@@ -17,12 +17,6 @@ class SchoolPagesMetaBox extends MetaBox
         $this->priority     = MetaBoxPriority::DEFAULT;
         $this->callbackArgs = null;
 
-        parent::__construct();
-    }
-
-    public function callback(): void
-    {
-        $callback = new SchoolPagesMetaBoxCallback();
-        $callback->render();
+        parent::__construct($callbackRenderer);
     }
 }
