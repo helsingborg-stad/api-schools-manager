@@ -31,7 +31,8 @@ class App
 
 
     /**
-     * Initializes the App by registering the API, Admin, Post Types, Meta Boxes and Taxonomies.
+     * Initializes the App by registering the API,
+     * Admin, Post Types, Meta Boxes and Taxonomies.
      *
      * @return void
      */
@@ -145,7 +146,9 @@ class App
     }
 
     /**
-     * This method is used to modify the response object for the REST API request to respect the meta box callback in Gutenberg.
+     * This method is used to modify the response object
+     * for the REST API request to respect the meta box
+     * callback in Gutenberg.
      *
      * @param WP_REST_Response $response The response object for the REST API request.
      * @param WP_Taxonomy $taxonomy The taxonomy object.
@@ -172,7 +175,8 @@ class App
     /**
      * Sets the Google API key if it is defined.
      *
-     * If the constant 'GOOGLE_API_KEY' is defined, this method sets the Google API key using the 'acf_update_setting' function.
+     * If the constant 'GOOGLE_API_KEY' is defined,
+     * this method sets the Google API key using the 'acf_update_setting' function.
      *
      * @return void
      */
