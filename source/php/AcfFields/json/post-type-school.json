@@ -5,7 +5,7 @@
         {
             "key": "field_64f18af6386d6",
             "label": "School type",
-            "name": "school_type",
+            "name": "type_of_school",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -108,23 +108,20 @@
             "sub_fields": [
                 {
                     "key": "field_64f85f1829314",
-                    "label": "",
-                    "name": "",
+                    "label": "Video",
+                    "name": "url",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "oembed",
                     "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "width": "",
+                    "height": "",
                     "parent_repeater": "field_64f85f1829313"
                 }
             ]
@@ -413,6 +410,26 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_64fed7664e639",
+            "label": "Custom excerpt",
+            "name": "custom_excerpt",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_64f19916c71bc",
@@ -712,7 +729,7 @@
                         "publish"
                     ],
                     "taxonomy": "",
-                    "return_format": "id",
+                    "return_format": "object",
                     "multiple": 0,
                     "allow_null": 0,
                     "bidirectional": 0,
