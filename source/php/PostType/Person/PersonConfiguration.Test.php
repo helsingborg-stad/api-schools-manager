@@ -11,8 +11,8 @@ class PersonConfigurationTest extends \PHPUnit\Framework\TestCase
         self::$postTypeArgs = \SchoolsManager\PostType\Person\PersonConfiguration::getPostTypeArgs()['args'];
     }
 
-    public function testPostTypeIsDisabledInRest()
+    public function testPostTypeIsEnabledInRest()
     {
-        $this->assertFalse(self::$postTypeArgs['show_in_rest']);
+        $this->assertTrue(self::$postTypeArgs['show_in_rest']);
     }
 }
