@@ -6,10 +6,10 @@ on:
     branches: [main]
     types: 
       - completed
+  workflow_dispatch:
 
 jobs:
   build:
-    if: ${{ !contains(github.event.head_commit.message, 'update package file versions') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
