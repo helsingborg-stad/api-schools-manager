@@ -13,7 +13,6 @@ use SchoolsManager\PostType\School\School;
 use SchoolsManager\PostType\School\SchoolConfiguration;
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade as Grade;
-use SchoolsManager\Taxonomy\SchoolType\SchoolType as SchoolType;
 use SchoolsManager\Taxonomy\Profile\Profile as Profile;
 use SchoolsManager\Taxonomy\JobTitle\JobTitle as JobTitle;
 
@@ -66,14 +65,6 @@ class App
         ];
 
         $taxonomyConfigurations = [
-        [
-            SchoolType::class,
-            __('School types', ASM_TEXT_DOMAIN),
-            __('School type', ASM_TEXT_DOMAIN),
-            'school_type',
-            ['school'],
-            []
-        ],
         [
             GeographicArea::class,
             __('Areas', ASM_TEXT_DOMAIN),

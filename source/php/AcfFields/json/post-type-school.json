@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_64f18af6386d6",
-            "label": "School type",
+            "label": "Type of school",
             "name": "type_of_school",
             "aria-label": "",
             "type": "select",
@@ -684,8 +684,8 @@
             "sub_fields": [
                 {
                     "key": "field_64f6c7160ecf7",
-                    "label": "Professional title",
-                    "name": "professional_title",
+                    "label": "Job title",
+                    "name": "job_title",
                     "aria-label": "",
                     "type": "taxonomy",
                     "instructions": "",
@@ -696,10 +696,10 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "professional_title",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
+                    "taxonomy": "job_title",
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 1,
                     "return_format": "object",
                     "field_type": "select",
                     "allow_null": 1,

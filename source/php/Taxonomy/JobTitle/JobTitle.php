@@ -1,6 +1,6 @@
 <?php
 
-namespace SchoolsManager\Taxonomy\ProfessionalTitle;
+namespace SchoolsManager\Taxonomy\JobTitle;
 
 use SchoolsManager\Entity\Taxonomy;
 
