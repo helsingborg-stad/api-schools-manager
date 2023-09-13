@@ -15,7 +15,7 @@ use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade as Grade;
 use SchoolsManager\Taxonomy\SchoolType\SchoolType as SchoolType;
 use SchoolsManager\Taxonomy\Profile\Profile as Profile;
-use SchoolsManager\Taxonomy\SchoolType\SchoolType as ProfessionalTitle;
+use SchoolsManager\Taxonomy\JobTitle\JobTitle as JobTitle;
 
 class App
 {
@@ -111,16 +111,16 @@ class App
             []
         ],
         [
-            ProfessionalTitle::class,
+            JobTitle::class,
             __(
-                'Professional titles',
+                'Job titles',
                 ASM_TEXT_DOMAIN
             ),
             __(
-                'Professional title',
+                'Job title',
                 ASM_TEXT_DOMAIN
             ),
-            'professional_title',
+            'job_title',
             ['person'],
             []
         ]
