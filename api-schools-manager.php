@@ -39,9 +39,11 @@ add_action('acf/init', function () {
     $acfExportManager->setExportFolder(SCHOOLS_MANAGER_PATH . 'source/php/AcfFields/');
     $acfExportManager->autoExport(array(
         // School fields
-        'post-type-school' => 'group_64eb537eeaaa0'
+        'elementary-school-data' => 'group_651e694d7a010',
+        'pre-school-data'        => 'group_651e669808174',
+        'page-fields'            => 'group_64e84e2b7a8c4',
     ));
-    
+
     $acfExportManager->import();
 });
 

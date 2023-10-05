@@ -2,37 +2,11 @@
 
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
-    'key'                   => 'group_64eb537eeaaa0',
-    'title'                 => __('School info', 'api-schools-manager'),
+    'key'                   => 'group_651e694d7a010',
+    'title'                 => __('Elementary school data', 'api-schools-manager'),
     'fields'                => array(
        0  => array(
-           'key'               => 'field_64f18af6386d6',
-           'label'             => __('School type', 'api-schools-manager'),
-           'name'              => 'type_of_school',
-           'aria-label'        => '',
-           'type'              => 'select',
-           'instructions'      => '',
-           'required'          => 0,
-           'conditional_logic' => 0,
-           'wrapper'           => array(
-               'width' => '',
-               'class' => '',
-               'id'    => '',
-           ),
-           'choices'           => array(
-               'pre_school'        => __('Preschool', 'api-schools-manager'),
-               'elementary_school' => __('Elementary school', 'api-schools-manager'),
-           ),
-           'default_value'     => false,
-           'return_format'     => 'value',
-           'multiple'          => 0,
-           'allow_null'        => 0,
-           'ui'                => 1,
-           'ajax'              => 0,
-           'placeholder'       => '',
-       ),
-       1  => array(
-           'key'               => 'field_64eb537fd98b9',
+           'key'               => 'field_651e694d7b36f',
            'label'             => __('Facade images', 'api-schools-manager'),
            'name'              => 'facade_images',
            'aria-label'        => '',
@@ -59,8 +33,8 @@ if (function_exists('acf_add_local_field_group')) {
            'insert'            => 'append',
            'preview_size'      => 'medium',
        ),
-       2  => array(
-           'key'               => 'field_64f85c7aec4f2',
+       1  => array(
+           'key'               => 'field_651e694d7b3b7',
            'label'             => __('Other Images', 'api-schools-manager'),
            'name'              => 'images',
            'aria-label'        => '',
@@ -87,8 +61,8 @@ if (function_exists('acf_add_local_field_group')) {
            'insert'            => 'append',
            'preview_size'      => 'thumbnail',
        ),
-       3  => array(
-           'key'               => 'field_64f85f1829313',
+       2  => array(
+           'key'               => 'field_651e694d7b3ff',
            'label'             => __('Videos', 'api-schools-manager'),
            'name'              => 'videos',
            'aria-label'        => '',
@@ -110,7 +84,7 @@ if (function_exists('acf_add_local_field_group')) {
            'rows_per_page'     => 20,
            'sub_fields'        => array(
                0 => array(
-                   'key'               => 'field_64f85f1829314',
+                   'key'               => 'field_651e694d7ddfc',
                    'label'             => __('Video', 'api-schools-manager'),
                    'name'              => 'url',
                    'aria-label'        => '',
@@ -125,12 +99,12 @@ if (function_exists('acf_add_local_field_group')) {
                    ),
                    'width'             => '',
                    'height'            => '',
-                   'parent_repeater'   => 'field_64f85f1829313',
+                   'parent_repeater'   => 'field_651e694d7b3ff',
                ),
            ),
        ),
-       4  => array(
-           'key'               => 'field_64eb5438d98bb',
+       3  => array(
+           'key'               => 'field_651e694d7b44d',
            'label'             => __('Number of students/children', 'api-schools-manager'),
            'name'              => 'number_of_students',
            'aria-label'        => '',
@@ -151,8 +125,8 @@ if (function_exists('acf_add_local_field_group')) {
            'prepend'           => '',
            'append'            => '',
        ),
-       5  => array(
-           'key'               => 'field_64eb5479d98bc',
+       4  => array(
+           'key'               => 'field_651e694d7b494',
            'label'             => __('Number of units', 'api-schools-manager'),
            'name'              => 'number_of_units',
            'aria-label'        => '',
@@ -162,7 +136,7 @@ if (function_exists('acf_add_local_field_group')) {
            'conditional_logic' => array(
                0 => array(
                    0 => array(
-                       'field'    => 'field_64f18af6386d6',
+                       'field'    => 'field_651e694d7b326',
                        'operator' => '==',
                        'value'    => 'pre_school',
                    ),
@@ -181,8 +155,8 @@ if (function_exists('acf_add_local_field_group')) {
            'prepend'           => '',
            'append'            => '',
        ),
-       6  => array(
-           'key'                  => 'field_64eb54e2d98bd',
+       5  => array(
+           'key'                  => 'field_651e694d7b4dc',
            'label'                => __('Area', 'api-schools-manager'),
            'name'                 => 'area',
            'aria-label'           => '',
@@ -207,8 +181,8 @@ if (function_exists('acf_add_local_field_group')) {
            'bidirectional_target' => array(
            ),
        ),
-       7  => array(
-           'key'                  => 'field_64eb54f8d98be',
+       6  => array(
+           'key'                  => 'field_651e694d7b523',
            'label'                => __('Grades', 'api-schools-manager'),
            'name'                 => 'grades',
            'aria-label'           => '',
@@ -218,7 +192,7 @@ if (function_exists('acf_add_local_field_group')) {
            'conditional_logic'    => array(
                0 => array(
                    0 => array(
-                       'field'    => 'field_64f18af6386d6',
+                       'field'    => 'field_651e694d7b326',
                        'operator' => '==',
                        'value'    => 'elementary_school',
                    ),
@@ -241,8 +215,8 @@ if (function_exists('acf_add_local_field_group')) {
            'bidirectional_target' => array(
            ),
        ),
-       8  => array(
-           'key'               => 'field_64f6c4b10ecf3',
+       7  => array(
+           'key'               => 'field_651e694d7b56b',
            'label'             => __('Open hours', 'api-schools-manager'),
            'name'              => 'open_hours',
            'aria-label'        => '',
@@ -252,7 +226,7 @@ if (function_exists('acf_add_local_field_group')) {
            'conditional_logic' => array(
                0 => array(
                    0 => array(
-                       'field'    => 'field_64f18af6386d6',
+                       'field'    => 'field_651e694d7b326',
                        'operator' => '==',
                        'value'    => 'pre_school',
                    ),
@@ -269,8 +243,8 @@ if (function_exists('acf_add_local_field_group')) {
            'prepend'           => '',
            'append'            => '',
        ),
-       9  => array(
-           'key'               => 'field_64f1963941741',
+       8  => array(
+           'key'               => 'field_651e694d7b5b3',
            'label'             => __('Open hours (leisure center)', 'api-schools-manager'),
            'name'              => 'open_hours_leisure_center',
            'aria-label'        => '',
@@ -280,7 +254,7 @@ if (function_exists('acf_add_local_field_group')) {
            'conditional_logic' => array(
                0 => array(
                    0 => array(
-                       'field'    => 'field_64f18af6386d6',
+                       'field'    => 'field_651e694d7b326',
                        'operator' => '==',
                        'value'    => 'elementary_school',
                    ),
@@ -297,8 +271,8 @@ if (function_exists('acf_add_local_field_group')) {
            'prepend'           => '',
            'append'            => '',
        ),
-       10 => array(
-           'key'               => 'field_64f19467b446c',
+       9  => array(
+           'key'               => 'field_651e694d7b5fb',
            'label'             => __('Specialization', 'api-schools-manager'),
            'name'              => 'specialization',
            'aria-label'        => '',
@@ -317,8 +291,8 @@ if (function_exists('acf_add_local_field_group')) {
            'prepend'           => '',
            'append'            => '',
        ),
-       11 => array(
-           'key'                  => 'field_64f1970b784f6',
+       10 => array(
+           'key'                  => 'field_651e694d7b647',
            'label'                => __('Profile', 'api-schools-manager'),
            'name'                 => 'profile',
            'aria-label'           => '',
@@ -343,8 +317,8 @@ if (function_exists('acf_add_local_field_group')) {
            'bidirectional_target' => array(
            ),
        ),
-       12 => array(
-           'key'               => 'field_64f198b7c71ba',
+       11 => array(
+           'key'               => 'field_651e694d7b68f',
            'label'             => __('Own chef', 'api-schools-manager'),
            'name'              => 'own_chef',
            'aria-label'        => '',
@@ -363,8 +337,8 @@ if (function_exists('acf_add_local_field_group')) {
            'ui_off_text'       => '',
            'ui'                => 1,
        ),
-       13 => array(
-           'key'               => 'field_64f198f6c71bb',
+       12 => array(
+           'key'               => 'field_651e694d7b6d6',
            'label'             => __('Own library', 'api-schools-manager'),
            'name'              => 'own_library',
            'aria-label'        => '',
@@ -383,8 +357,8 @@ if (function_exists('acf_add_local_field_group')) {
            'ui_off_text'       => '',
            'ui'                => 1,
        ),
-       14 => array(
-           'key'               => 'field_64f1abedcbdf8',
+       13 => array(
+           'key'               => 'field_651e694d7b71f',
            'label'             => __('Link Instagram', 'api-schools-manager'),
            'name'              => 'link_instagram',
            'aria-label'        => '',
@@ -400,8 +374,8 @@ if (function_exists('acf_add_local_field_group')) {
            'default_value'     => '',
            'placeholder'       => '',
        ),
-       15 => array(
-           'key'               => 'field_64f1ac0bcbdf9',
+       14 => array(
+           'key'               => 'field_651e694d7b766',
            'label'             => __('Link Facebook', 'api-schools-manager'),
            'name'              => 'link_facebook',
            'aria-label'        => '',
@@ -417,8 +391,8 @@ if (function_exists('acf_add_local_field_group')) {
            'default_value'     => '',
            'placeholder'       => '',
        ),
-       16 => array(
-           'key'               => 'field_64fed7664e639',
+       15 => array(
+           'key'               => 'field_651e694d7b7ad',
            'label'             => __('Custom excerpt', 'api-schools-manager'),
            'name'              => 'custom_excerpt',
            'aria-label'        => '',
@@ -437,8 +411,8 @@ if (function_exists('acf_add_local_field_group')) {
            'media_upload'      => 0,
            'delay'             => 0,
        ),
-       17 => array(
-           'key'               => 'field_64f19916c71bc',
+       16 => array(
+           'key'               => 'field_651e694d7b7f4',
            'label'             => __('Information', 'api-schools-manager'),
            'name'              => 'information',
            'aria-label'        => '',
@@ -454,7 +428,7 @@ if (function_exists('acf_add_local_field_group')) {
            'layout'            => 'block',
            'sub_fields'        => array(
                0 => array(
-                   'key'               => 'field_64f60e4f396e7',
+                   'key'               => 'field_651e694d850b6',
                    'label'             => __('About Us', 'api-schools-manager'),
                    'name'              => '',
                    'aria-label'        => '',
@@ -472,7 +446,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'endpoint'          => 0,
                ),
                1 => array(
-                   'key'               => 'field_64f19a40c71be',
+                   'key'               => 'field_651e694d85100',
                    'label'             => '',
                    'name'              => 'about_us',
                    'aria-label'        => '',
@@ -482,7 +456,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'conditional_logic' => array(
                        0 => array(
                            0 => array(
-                               'field'    => 'field_64f18af6386d6',
+                               'field'    => 'field_651e694d7b326',
                                'operator' => '!=empty',
                            ),
                        ),
@@ -499,7 +473,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'delay'             => 0,
                ),
                2 => array(
-                   'key'               => 'field_64f60e77396e8',
+                   'key'               => 'field_651e694d85149',
                    'label'             => __('How we work', 'api-schools-manager'),
                    'name'              => '',
                    'aria-label'        => '',
@@ -517,7 +491,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'endpoint'          => 0,
                ),
                3 => array(
-                   'key'               => 'field_64f19b0dc71c0',
+                   'key'               => 'field_651e694d85191',
                    'label'             => '',
                    'name'              => 'how_we_work',
                    'aria-label'        => '',
@@ -537,7 +511,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'delay'             => 0,
                ),
                4 => array(
-                   'key'               => 'field_64f60e82396e9',
+                   'key'               => 'field_651e694d851da',
                    'label'             => __('Optional rows', 'api-schools-manager'),
                    'name'              => '',
                    'aria-label'        => '',
@@ -555,7 +529,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'endpoint'          => 0,
                ),
                5 => array(
-                   'key'               => 'field_64f19b20c71c1',
+                   'key'               => 'field_651e694d85222',
                    'label'             => '',
                    'name'              => 'optional',
                    'aria-label'        => '',
@@ -577,7 +551,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'rows_per_page'     => 20,
                    'sub_fields'        => array(
                        0 => array(
-                           'key'               => 'field_64f19b8bc71c3',
+                           'key'               => 'field_651e694d8799b',
                            'label'             => __('Heading', 'api-schools-manager'),
                            'name'              => 'heading',
                            'aria-label'        => '',
@@ -595,10 +569,10 @@ if (function_exists('acf_add_local_field_group')) {
                            'placeholder'       => '',
                            'prepend'           => '',
                            'append'            => '',
-                           'parent_repeater'   => 'field_64f19b20c71c1',
+                           'parent_repeater'   => 'field_651e694d85222',
                        ),
                        1 => array(
-                           'key'               => 'field_64f19b75c71c2',
+                           'key'               => 'field_651e694d879e5',
                            'label'             => __('Content', 'api-schools-manager'),
                            'name'              => 'content',
                            'aria-label'        => '',
@@ -616,14 +590,14 @@ if (function_exists('acf_add_local_field_group')) {
                            'toolbar'           => 'basic',
                            'media_upload'      => 0,
                            'delay'             => 0,
-                           'parent_repeater'   => 'field_64f19b20c71c1',
+                           'parent_repeater'   => 'field_651e694d85222',
                        ),
                    ),
                ),
            ),
        ),
-       18 => array(
-           'key'               => 'field_64f6c13a6c30b',
+       17 => array(
+           'key'               => 'field_651e694d7b83b',
            'label'             => __('Visiting address', 'api-schools-manager'),
            'name'              => 'visiting_address',
            'aria-label'        => '',
@@ -645,7 +619,7 @@ if (function_exists('acf_add_local_field_group')) {
            'rows_per_page'     => 20,
            'sub_fields'        => array(
                0 => array(
-                   'key'               => 'field_64f6bff16c30a',
+                   'key'               => 'field_651e694d89981',
                    'label'             => __('Address', 'api-schools-manager'),
                    'name'              => 'address',
                    'aria-label'        => '',
@@ -662,12 +636,12 @@ if (function_exists('acf_add_local_field_group')) {
                    'center_lng'        => '12.707579121882867',
                    'zoom'              => '',
                    'height'            => 200,
-                   'parent_repeater'   => 'field_64f6c13a6c30b',
+                   'parent_repeater'   => 'field_651e694d7b83b',
                ),
            ),
        ),
-       19 => array(
-           'key'               => 'field_64f6c5b50ecf4',
+       18 => array(
+           'key'               => 'field_651e694d7b89a',
            'label'             => __('Contacts', 'api-schools-manager'),
            'name'              => 'contacts',
            'aria-label'        => '',
@@ -689,7 +663,7 @@ if (function_exists('acf_add_local_field_group')) {
            'rows_per_page'     => 20,
            'sub_fields'        => array(
                0 => array(
-                   'key'                  => 'field_64f6c7160ecf7',
+                   'key'                  => 'field_651e694d8adbd',
                    'label'                => __('Professional title', 'api-schools-manager'),
                    'name'                 => 'professional_title',
                    'aria-label'           => '',
@@ -713,10 +687,10 @@ if (function_exists('acf_add_local_field_group')) {
                    'multiple'             => 0,
                    'bidirectional_target' => array(
                    ),
-                   'parent_repeater'      => 'field_64f6c5b50ecf4',
+                   'parent_repeater'      => 'field_651e694d7b89a',
                ),
                1 => array(
-                   'key'                  => 'field_64f6c6760ecf5',
+                   'key'                  => 'field_651e694d8ae0b',
                    'label'                => __('Person', 'api-schools-manager'),
                    'name'                 => 'person',
                    'aria-label'           => '',
@@ -743,12 +717,12 @@ if (function_exists('acf_add_local_field_group')) {
                    'ui'                   => 1,
                    'bidirectional_target' => array(
                    ),
-                   'parent_repeater'      => 'field_64f6c5b50ecf4',
+                   'parent_repeater'      => 'field_651e694d7b89a',
                ),
            ),
        ),
-       20 => array(
-           'key'               => 'field_64faa70961cb9',
+       19 => array(
+           'key'               => 'field_651e694d7b8ed',
            'label'             => __('Call to action: Application', 'api-schools-manager'),
            'name'              => '',
            'aria-label'        => '',
@@ -765,8 +739,8 @@ if (function_exists('acf_add_local_field_group')) {
            'multi_expand'      => 0,
            'endpoint'          => 0,
        ),
-       21 => array(
-           'key'               => 'field_64faa512774db',
+       20 => array(
+           'key'               => 'field_651e694d7b93a',
            'label'             => '',
            'name'              => 'cta_application',
            'aria-label'        => '',
@@ -782,7 +756,7 @@ if (function_exists('acf_add_local_field_group')) {
            'layout'            => 'block',
            'sub_fields'        => array(
                0 => array(
-                   'key'               => 'field_64faa62f774de',
+                   'key'               => 'field_651e694d8cdfc',
                    'label'             => __('Description', 'api-schools-manager'),
                    'name'              => 'description',
                    'aria-label'        => '',
@@ -802,7 +776,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'append'            => '',
                ),
                1 => array(
-                   'key'               => 'field_64faa55e774dc',
+                   'key'               => 'field_651e694d8ce45',
                    'label'             => __('Apply here', 'api-schools-manager'),
                    'name'              => 'cta_apply_here',
                    'aria-label'        => '',
@@ -818,7 +792,7 @@ if (function_exists('acf_add_local_field_group')) {
                    'return_format'     => 'array',
                ),
                2 => array(
-                   'key'               => 'field_64faa5e6774dd',
+                   'key'               => 'field_651e694d8ce8c',
                    'label'             => __('How to apply', 'api-schools-manager'),
                    'name'              => 'cta_how_to_apply',
                    'aria-label'        => '',
@@ -835,8 +809,8 @@ if (function_exists('acf_add_local_field_group')) {
                ),
            ),
        ),
-       22 => array(
-           'key'               => 'field_64faa7b7c1982',
+       21 => array(
+           'key'               => 'field_651e694d7b983',
            'label'             => __('end call to action accordion', 'api-schools-manager'),
            'name'              => '',
            'aria-label'        => '',
@@ -859,7 +833,7 @@ if (function_exists('acf_add_local_field_group')) {
            0 => array(
                'param'    => 'post_type',
                'operator' => '==',
-               'value'    => 'school',
+               'value'    => 'elementary-school',
            ),
        ),
     ),

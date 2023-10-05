@@ -5,12 +5,13 @@ namespace SchoolsManager;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
+use SchoolsManager\Entity\PostType;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
+use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
-use SchoolsManager\PostType\School\School;
-use SchoolsManager\PostType\School\SchoolConfiguration;
+use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade as Grade;
 use SchoolsManager\Taxonomy\SchoolType\SchoolType as SchoolType;
@@ -23,9 +24,7 @@ class App
     {
         add_action('plugins_loaded', array( $this, 'init' ));
         add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
-
         add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
-
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
     }
 
@@ -48,9 +47,21 @@ class App
         $admin = new Admin();
         $admin->addHooks();
 
-        //Post types
-        $school = new School(...array_values(SchoolConfiguration::getPostTypeArgs()));
-        $school->addHooks();
+        /**
+         * Post type: Pre school
+         */
+        $preSchoolPostTypeConfiguration = new PreSchoolConfiguration();
+        $preSchoolPostTypeArgs          = $preSchoolPostTypeConfiguration->getPostTypeArgs();
+        $preSchoolPostType              = new PostType(...array_values($preSchoolPostTypeArgs));
+        $preSchoolPostType->addHooks();
+
+        /**
+         * Post type: Elementary school
+         */
+        $elementarySchoolPostTypeConfiguration = new ElementarySchoolConfiguration();
+        $elementarySchoolPostTypeArgs          = $elementarySchoolPostTypeConfiguration->getPostTypeArgs();
+        $elementarySchoolPostType              = new PostType(...array_values($elementarySchoolPostTypeArgs));
+        $elementarySchoolPostType->addHooks();
 
         $person = new Person(...array_values(PersonConfiguration::getPostTypeArgs()));
         $person->addHooks();
