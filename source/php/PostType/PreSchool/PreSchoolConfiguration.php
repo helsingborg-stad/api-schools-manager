@@ -1,21 +1,21 @@
 <?php
 
-namespace SchoolsManager\PostType\School;
+namespace SchoolsManager\PostType\PreSchool;
 
 use SchoolsManager\Helper\Icon as Icon;
 
-class SchoolConfiguration
+class PreSchoolConfiguration
 {
-    public const POST_TYPE_SLUG = 'school';
+    public const POST_TYPE_SLUG = 'pre-school';
 
-    public static function getPostTypeArgs(): array
+    public function getPostTypeArgs(): array
     {
         return [
             'slug'         => self::POST_TYPE_SLUG,
-            'namePlural'   => __('schools', ASM_TEXT_DOMAIN),
-            'nameSingular' => __('school', ASM_TEXT_DOMAIN),
+            'namePlural'   => __('Pre schools', ASM_TEXT_DOMAIN),
+            'nameSingular' => __('Pre school', ASM_TEXT_DOMAIN),
             'args'         => [
-                'description'         => __('Schools', ASM_TEXT_DOMAIN),
+                'description'         => __('Pre schools', ASM_TEXT_DOMAIN),
                 'menu_icon'           => Icon::get('school'),
                 'publicly_queryable'  => true,
                 'show_ui'             => true,

@@ -9,17 +9,13 @@ class SchoolPagesMetaBoxCallback implements MetaBoxCallbackRendererInterface
 {
     private array $pagePosts = array();
 
-    public function __construct()
-    {
-        $this->getPages();
-    }
-
-    private function getPages()
+    private function getPages(int $postID)
     {
         $this->pagePosts = get_posts(
             array(
-                'post_type' => 'page',
-                'meta_key'  => 'parent_school',
+                'post_type'  => 'page',
+                'meta_key'   => 'parent_school',
+                'meta_value' => $postID,
             )
         );
     }
@@ -66,6 +62,7 @@ class SchoolPagesMetaBoxCallback implements MetaBoxCallbackRendererInterface
 
     public function render(): void
     {
+        $this->getPages(get_the_ID());
         $this->printDescription();
         $this->printPageEditLinksListMarkup();
     }
