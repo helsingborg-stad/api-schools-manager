@@ -17,7 +17,8 @@
                 "id": ""
             },
             "post_type": [
-                "school"
+                "pre-school",
+                "elementary-school"
             ],
             "post_status": "",
             "taxonomy": "",

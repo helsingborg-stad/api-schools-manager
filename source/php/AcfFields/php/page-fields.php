@@ -20,7 +20,8 @@ if (function_exists('acf_add_local_field_group')) {
                'id'    => '',
            ),
            'post_type'            => array(
-               0 => 'school',
+               0 => 'pre-school',
+               1 => 'elementary-school',
            ),
            'post_status'          => '',
            'taxonomy'             => '',
