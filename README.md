@@ -5,7 +5,7 @@
 [![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
 ![PHP Version](https://img.shields.io/badge/PHP->=8.1-blue)
-![Unit Tests](https://github.com/helsingborg-stad/api-schools-manager/actions/workflows/php-test.yaml/badge.svg)
+![Unit Tests](https://github.com/helsingborg-stad/api-schools-manager/actions/workflows/php-test.yaml/badge.svg?branch=$GIT_BRANCH)
 
 
 # Schools Manager
