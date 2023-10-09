@@ -102,43 +102,13 @@
         },
         {
             "key": "field_651e694d7b44d",
-            "label": "Number of students\/children",
+            "label": "Number of students",
             "name": "number_of_students",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_651e694d7b494",
-            "label": "Number of units",
-            "name": "number_of_units",
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e694d7b326",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -211,34 +181,6 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_651e694d7b56b",
-            "label": "Open hours",
-            "name": "open_hours",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e694d7b326",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_651e694d7b5b3",
             "label": "Open hours (leisure center)",
             "name": "open_hours_leisure_center",
@@ -271,7 +213,7 @@
             "label": "Specialization",
             "name": "specialization",
             "aria-label": "",
-            "type": "text",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -280,11 +222,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "taxonomy": "specialization",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         },
         {
             "key": "field_651e694d7b647",
@@ -631,6 +578,27 @@
                     "zoom": "",
                     "height": 200,
                     "parent_repeater": "field_651e694d7b83b"
+                },
+                {
+                    "key": "field_6523fed15e46d",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "wpautop",
+                    "parent_repeater": "field_651e694d7b83b"
                 }
             ]
         },
@@ -830,7 +798,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
