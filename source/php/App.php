@@ -5,17 +5,22 @@ namespace SchoolsManager;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
+
 use SchoolsManager\Entity\PostType;
+
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
+
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
-use SchoolsManager\Taxonomy\GeographicArea\GeographicArea as GeographicArea;
-use SchoolsManager\Taxonomy\Grade\Grade as Grade;
-use SchoolsManager\Taxonomy\Profile\Profile as Profile;
-use SchoolsManager\Taxonomy\JobTitle\JobTitle as JobTitle;
+
+use SchoolsManager\Taxonomy\GeographicArea\GeographicArea;
+use SchoolsManager\Taxonomy\Grade\Grade;
+use SchoolsManager\Taxonomy\Profile\Profile;
+use SchoolsManager\Taxonomy\JobTitle\JobTitle;
+use SchoolsManager\Taxonomy\Specialization\Specialization;
 
 class App
 {
@@ -81,7 +86,15 @@ class App
             __('Areas', ASM_TEXT_DOMAIN),
             __('Area', ASM_TEXT_DOMAIN),
             'area',
-            ['school'],
+            ['elementary-school', 'pre-school'],
+            []
+        ],
+        [
+            Specialization::class,
+            __('Specializations', ASM_TEXT_DOMAIN),
+            __('Specialization', ASM_TEXT_DOMAIN),
+            'specialization',
+            ['elementary-school', 'pre-school'],
             []
         ],
         [
@@ -95,7 +108,7 @@ class App
                 ASM_TEXT_DOMAIN
             ),
             'grade',
-            ['school'],
+            ['elementary-school'],
             []
         ],
         [
@@ -109,7 +122,7 @@ class App
                 ASM_TEXT_DOMAIN
             ),
             'profile',
-            ['school'],
+            ['elementary-school', 'pre-school'],
             []
         ],
         [
