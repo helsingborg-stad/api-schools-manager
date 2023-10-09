@@ -2,7 +2,7 @@ name: Set tag and release
 
 on:
   workflow_run:
-    workflows: ["PHP Test"]
+    workflows: ["Unit Tests"]
     branches: [main]
     types: 
       - completed

@@ -1,35 +1,9 @@
 [{
-    "key": "group_64eb537eeaaa0",
-    "title": "School info",
+    "key": "group_651e669808174",
+    "title": "Preschool data",
     "fields": [
         {
-            "key": "field_64f18af6386d6",
-            "label": "Type of school",
-            "name": "type_of_school",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "pre_school": "Preschool",
-                "elementary_school": "Elementary school"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 1,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_64eb537fd98b9",
+            "key": "field_651e6698096e0",
             "label": "Facade images",
             "name": "facade_images",
             "aria-label": "",
@@ -57,7 +31,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64f85c7aec4f2",
+            "key": "field_651e669809730",
             "label": "Other Images",
             "name": "images",
             "aria-label": "",
@@ -85,7 +59,7 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_64f85f1829313",
+            "key": "field_651e669809780",
             "label": "Videos",
             "name": "videos",
             "aria-label": "",
@@ -107,7 +81,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64f85f1829314",
+                    "key": "field_651e66980bba0",
                     "label": "Video",
                     "name": "url",
                     "aria-label": "",
@@ -122,12 +96,12 @@
                     },
                     "width": "",
                     "height": "",
-                    "parent_repeater": "field_64f85f1829313"
+                    "parent_repeater": "field_651e669809780"
                 }
             ]
         },
         {
-            "key": "field_64eb5438d98bb",
+            "key": "field_651e6698097ca",
             "label": "Number of students\/children",
             "name": "number_of_students",
             "aria-label": "",
@@ -149,7 +123,7 @@
             "append": ""
         },
         {
-            "key": "field_64eb5479d98bc",
+            "key": "field_651e669809811",
             "label": "Number of units",
             "name": "number_of_units",
             "aria-label": "",
@@ -159,7 +133,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_64f18af6386d6",
+                        "field": "field_651e66980968f",
                         "operator": "==",
                         "value": "pre_school"
                     }
@@ -179,7 +153,7 @@
             "append": ""
         },
         {
-            "key": "field_64eb54e2d98bd",
+            "key": "field_651e669809859",
             "label": "Area",
             "name": "area",
             "aria-label": "",
@@ -204,7 +178,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_64eb54f8d98be",
+            "key": "field_651e6698098a1",
             "label": "Grades",
             "name": "grades",
             "aria-label": "",
@@ -214,7 +188,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_64f18af6386d6",
+                        "field": "field_651e66980968f",
                         "operator": "==",
                         "value": "elementary_school"
                     }
@@ -237,7 +211,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_64f6c4b10ecf3",
+            "key": "field_651e6698098e9",
             "label": "Open hours",
             "name": "open_hours",
             "aria-label": "",
@@ -247,7 +221,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_64f18af6386d6",
+                        "field": "field_651e66980968f",
                         "operator": "==",
                         "value": "pre_school"
                     }
@@ -265,7 +239,7 @@
             "append": ""
         },
         {
-            "key": "field_64f1963941741",
+            "key": "field_651e669809931",
             "label": "Open hours (leisure center)",
             "name": "open_hours_leisure_center",
             "aria-label": "",
@@ -275,7 +249,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_64f18af6386d6",
+                        "field": "field_651e66980968f",
                         "operator": "==",
                         "value": "elementary_school"
                     }
@@ -293,7 +267,7 @@
             "append": ""
         },
         {
-            "key": "field_64f19467b446c",
+            "key": "field_651e669809978",
             "label": "Specialization",
             "name": "specialization",
             "aria-label": "",
@@ -313,7 +287,7 @@
             "append": ""
         },
         {
-            "key": "field_64f1970b784f6",
+            "key": "field_651e6698099bf",
             "label": "Profile",
             "name": "profile",
             "aria-label": "",
@@ -338,7 +312,7 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_64f198b7c71ba",
+            "key": "field_651e669809a09",
             "label": "Own chef",
             "name": "own_chef",
             "aria-label": "",
@@ -358,7 +332,7 @@
             "ui": 1
         },
         {
-            "key": "field_64f198f6c71bb",
+            "key": "field_651e669809a51",
             "label": "Own library",
             "name": "own_library",
             "aria-label": "",
@@ -378,7 +352,7 @@
             "ui": 1
         },
         {
-            "key": "field_64f1abedcbdf8",
+            "key": "field_651e669809a99",
             "label": "Link Instagram",
             "name": "link_instagram",
             "aria-label": "",
@@ -395,7 +369,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_64f1ac0bcbdf9",
+            "key": "field_651e669809ae2",
             "label": "Link Facebook",
             "name": "link_facebook",
             "aria-label": "",
@@ -412,7 +386,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_64fed7664e639",
+            "key": "field_651e669809b2b",
             "label": "Custom excerpt",
             "name": "custom_excerpt",
             "aria-label": "",
@@ -432,7 +406,7 @@
             "delay": 0
         },
         {
-            "key": "field_64f19916c71bc",
+            "key": "field_651e669809b74",
             "label": "Information",
             "name": "information",
             "aria-label": "",
@@ -448,7 +422,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64f60e4f396e7",
+                    "key": "field_651e669812780",
                     "label": "About Us",
                     "name": "",
                     "aria-label": "",
@@ -466,7 +440,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_64f19a40c71be",
+                    "key": "field_651e6698127c9",
                     "label": "",
                     "name": "about_us",
                     "aria-label": "",
@@ -476,7 +450,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_64f18af6386d6",
+                                "field": "field_651e66980968f",
                                 "operator": "!=empty"
                             }
                         ]
@@ -493,7 +467,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_64f60e77396e8",
+                    "key": "field_651e669812812",
                     "label": "How we work",
                     "name": "",
                     "aria-label": "",
@@ -511,7 +485,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_64f19b0dc71c0",
+                    "key": "field_651e66981285a",
                     "label": "",
                     "name": "how_we_work",
                     "aria-label": "",
@@ -531,7 +505,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_64f60e82396e9",
+                    "key": "field_651e6698128a1",
                     "label": "Optional rows",
                     "name": "",
                     "aria-label": "",
@@ -549,7 +523,7 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_64f19b20c71c1",
+                    "key": "field_651e6698128ea",
                     "label": "",
                     "name": "optional",
                     "aria-label": "",
@@ -571,7 +545,7 @@
                     "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_64f19b8bc71c3",
+                            "key": "field_651e6698150c2",
                             "label": "Heading",
                             "name": "heading",
                             "aria-label": "",
@@ -589,10 +563,10 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "parent_repeater": "field_64f19b20c71c1"
+                            "parent_repeater": "field_651e6698128ea"
                         },
                         {
-                            "key": "field_64f19b75c71c2",
+                            "key": "field_651e66981510b",
                             "label": "Content",
                             "name": "content",
                             "aria-label": "",
@@ -610,14 +584,14 @@
                             "toolbar": "basic",
                             "media_upload": 0,
                             "delay": 0,
-                            "parent_repeater": "field_64f19b20c71c1"
+                            "parent_repeater": "field_651e6698128ea"
                         }
                     ]
                 }
             ]
         },
         {
-            "key": "field_64f6c13a6c30b",
+            "key": "field_651e669809bbb",
             "label": "Visiting address",
             "name": "visiting_address",
             "aria-label": "",
@@ -639,7 +613,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64f6bff16c30a",
+                    "key": "field_651e669816f70",
                     "label": "Address",
                     "name": "address",
                     "aria-label": "",
@@ -656,12 +630,12 @@
                     "center_lng": "12.707579121882867",
                     "zoom": "",
                     "height": 200,
-                    "parent_repeater": "field_64f6c13a6c30b"
+                    "parent_repeater": "field_651e669809bbb"
                 }
             ]
         },
         {
-            "key": "field_64f6c5b50ecf4",
+            "key": "field_651e669809c03",
             "label": "Contacts",
             "name": "contacts",
             "aria-label": "",
@@ -683,9 +657,9 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64f6c7160ecf7",
-                    "label": "Job title",
-                    "name": "job_title",
+                    "key": "field_651e6698183ec",
+                    "label": "Professional title",
+                    "name": "professional_title",
                     "aria-label": "",
                     "type": "taxonomy",
                     "instructions": "",
@@ -696,20 +670,20 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "job_title",
-                    "add_term": 1,
-                    "save_terms": 1,
-                    "load_terms": 1,
+                    "taxonomy": "professional_title",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
                     "return_format": "object",
                     "field_type": "select",
                     "allow_null": 1,
                     "bidirectional": 0,
                     "multiple": 0,
                     "bidirectional_target": [],
-                    "parent_repeater": "field_64f6c5b50ecf4"
+                    "parent_repeater": "field_651e669809c03"
                 },
                 {
-                    "key": "field_64f6c6760ecf5",
+                    "key": "field_651e669818435",
                     "label": "Person",
                     "name": "person",
                     "aria-label": "",
@@ -735,12 +709,12 @@
                     "bidirectional": 0,
                     "ui": 1,
                     "bidirectional_target": [],
-                    "parent_repeater": "field_64f6c5b50ecf4"
+                    "parent_repeater": "field_651e669809c03"
                 }
             ]
         },
         {
-            "key": "field_64faa70961cb9",
+            "key": "field_651e669809c4a",
             "label": "Call to action: Application",
             "name": "",
             "aria-label": "",
@@ -758,7 +732,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_64faa512774db",
+            "key": "field_651e669809c92",
             "label": "",
             "name": "cta_application",
             "aria-label": "",
@@ -774,7 +748,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_64faa62f774de",
+                    "key": "field_651e66981a2f9",
                     "label": "Description",
                     "name": "description",
                     "aria-label": "",
@@ -794,7 +768,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_64faa55e774dc",
+                    "key": "field_651e66981a343",
                     "label": "Apply here",
                     "name": "cta_apply_here",
                     "aria-label": "",
@@ -810,7 +784,7 @@
                     "return_format": "array"
                 },
                 {
-                    "key": "field_64faa5e6774dd",
+                    "key": "field_651e66981a38e",
                     "label": "How to apply",
                     "name": "cta_how_to_apply",
                     "aria-label": "",
@@ -828,7 +802,7 @@
             ]
         },
         {
-            "key": "field_64faa7b7c1982",
+            "key": "field_651e669809cda",
             "label": "end call to action accordion",
             "name": "",
             "aria-label": "",
@@ -851,12 +825,12 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "school"
+                "value": "pre-school"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
