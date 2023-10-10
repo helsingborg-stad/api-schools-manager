@@ -31,9 +31,9 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_651e669809730",
-            "label": "Other Images",
-            "name": "images",
+            "key": "field_6525096062249",
+            "label": "Gallery",
+            "name": "gallery",
             "aria-label": "",
             "type": "gallery",
             "instructions": "",
@@ -59,51 +59,9 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_651e669809780",
-            "label": "Videos",
-            "name": "videos",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "field_64f85ca6ec4f4",
-            "button_label": "Add video",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_651e66980bba0",
-                    "label": "Video",
-                    "name": "url",
-                    "aria-label": "",
-                    "type": "oembed",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "width": "",
-                    "height": "",
-                    "parent_repeater": "field_651e669809780"
-                }
-            ]
-        },
-        {
             "key": "field_651e6698097ca",
-            "label": "Number of students\/children",
-            "name": "number_of_students",
+            "label": "Number of children",
+            "name": "number_of_children",
             "aria-label": "",
             "type": "number",
             "instructions": "",
@@ -178,39 +136,6 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_651e6698098a1",
-            "label": "Grades",
-            "name": "grades",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "elementary_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "grade",
-            "add_term": 0,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "checkbox",
-            "bidirectional": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "bidirectional_target": []
-        },
-        {
             "key": "field_651e6698098e9",
             "label": "Open hours",
             "name": "open_hours",
@@ -239,57 +164,9 @@
             "append": ""
         },
         {
-            "key": "field_651e669809931",
-            "label": "Open hours (leisure center)",
-            "name": "open_hours_leisure_center",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "elementary_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_651e669809978",
             "label": "Specialization",
             "name": "specialization",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_651e6698099bf",
-            "label": "Profile",
-            "name": "profile",
             "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
@@ -300,16 +177,36 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "profile",
+            "taxonomy": "specialization",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "id",
-            "field_type": "multi_select",
-            "allow_null": 1,
+            "field_type": "checkbox",
             "bidirectional": 0,
             "multiple": 0,
+            "allow_null": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_651e6698099bf",
+            "label": "Profile",
+            "name": "profile",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_651e669809a09",

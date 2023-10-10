@@ -32,8 +32,8 @@
         },
         {
             "key": "field_651e694d7b3b7",
-            "label": "Other Images",
-            "name": "images",
+            "label": "Gallery",
+            "name": "gallery",
             "aria-label": "",
             "type": "gallery",
             "instructions": "",
@@ -59,11 +59,11 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_651e694d7b3ff",
-            "label": "Videos",
-            "name": "videos",
+            "key": "field_6525096062249",
+            "label": "Gallery (copy)",
+            "name": "gallery_copy",
             "aria-label": "",
-            "type": "repeater",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -72,33 +72,19 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "field_64f85ca6ec4f4",
-            "button_label": "Add video",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_651e694d7ddfc",
-                    "label": "Video",
-                    "name": "url",
-                    "aria-label": "",
-                    "type": "oembed",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "width": "",
-                    "height": "",
-                    "parent_repeater": "field_651e694d7b3ff"
-                }
-            ]
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "thumbnail"
         },
         {
             "key": "field_651e694d7b44d",
