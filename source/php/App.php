@@ -112,20 +112,6 @@ class App
             []
         ],
         [
-            Profile::class,
-            __(
-                'Profiles',
-                ASM_TEXT_DOMAIN
-            ),
-            __(
-                'Profile',
-                ASM_TEXT_DOMAIN
-            ),
-            'profile',
-            ['elementary-school', 'pre-school'],
-            []
-        ],
-        [
             JobTitle::class,
             __(
                 'Job titles',
