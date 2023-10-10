@@ -116,9 +116,8 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_651e694d7b326",
-                        "operator": "==",
-                        "value": "elementary_school"
+                        "field": "field_651e694d7b36f",
+                        "operator": "!=empty"
                     }
                 ]
             ],
@@ -128,7 +127,7 @@
                 "id": ""
             },
             "taxonomy": "grade",
-            "add_term": 0,
+            "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "id",
@@ -207,8 +206,8 @@
             },
             "taxonomy": "profile",
             "add_term": 1,
-            "save_terms": 0,
-            "load_terms": 0,
+            "save_terms": 1,
+            "load_terms": 1,
             "return_format": "id",
             "field_type": "checkbox",
             "bidirectional": 0,
