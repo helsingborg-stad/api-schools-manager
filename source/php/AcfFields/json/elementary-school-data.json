@@ -59,34 +59,6 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_6525096062249",
-            "label": "Gallery (copy)",
-            "name": "gallery_copy",
-            "aria-label": "",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "thumbnail"
-        },
-        {
             "key": "field_651e694d7b44d",
             "label": "Number of students",
             "name": "number_of_students",
@@ -224,7 +196,7 @@
             "label": "Profile",
             "name": "profile",
             "aria-label": "",
-            "type": "taxonomy",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -233,16 +205,11 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "profile",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "multi_select",
-            "allow_null": 1,
-            "bidirectional": 0,
-            "multiple": 0,
-            "bidirectional_target": []
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         },
         {
             "key": "field_651e694d7b68f",
