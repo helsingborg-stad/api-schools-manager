@@ -586,7 +586,7 @@
                     "label": "Professional title",
                     "name": "professional_title",
                     "aria-label": "",
-                    "type": "taxonomy",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -595,16 +595,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "professional_title",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "object",
-                    "field_type": "select",
-                    "allow_null": 1,
-                    "bidirectional": 0,
-                    "multiple": 0,
-                    "bidirectional_target": [],
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_651e694d7b89a"
                 },
                 {
@@ -612,7 +607,7 @@
                     "label": "Person",
                     "name": "person",
                     "aria-label": "",
-                    "type": "relationship",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -624,19 +619,15 @@
                     "post_type": [
                         "person"
                     ],
-                    "post_status": "",
+                    "post_status": [
+                        "publish"
+                    ],
                     "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "post_type"
-                    ],
                     "return_format": "object",
-                    "min": "",
-                    "max": "",
-                    "elements": [
-                        "featured_image"
-                    ],
+                    "multiple": 0,
+                    "allow_null": 0,
                     "bidirectional": 0,
+                    "ui": 1,
                     "bidirectional_target": [],
                     "parent_repeater": "field_651e694d7b89a"
                 }

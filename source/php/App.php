@@ -129,20 +129,6 @@ class App
             ['elementary-school', 'pre-school'],
             []
         ],
-        [
-            JobTitle::class,
-            __(
-                'Job titles',
-                ASM_TEXT_DOMAIN
-            ),
-            __(
-                'Job title',
-                ASM_TEXT_DOMAIN
-            ),
-            'job_title',
-            ['person'],
-            []
-        ]
         ];
 
         $taxonomies = [];
