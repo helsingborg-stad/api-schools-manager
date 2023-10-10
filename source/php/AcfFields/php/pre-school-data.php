@@ -596,7 +596,7 @@
                     'label' => __('Person', 'api-schools-manager'),
                     'name' => 'person',
                     'aria-label' => '',
-                    'type' => 'post_object',
+                    'type' => 'relationship',
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
@@ -608,15 +608,19 @@
                     'post_type' => array(
                         0 => 'person',
                     ),
-                    'post_status' => array(
-                        0 => 'publish',
-                    ),
+                    'post_status' => '',
                     'taxonomy' => '',
+                    'filters' => array(
+                        0 => 'search',
+                        1 => 'post_type',
+                    ),
                     'return_format' => 'object',
-                    'multiple' => 0,
-                    'allow_null' => 0,
+                    'min' => '',
+                    'max' => '',
+                    'elements' => array(
+                        0 => 'featured_image',
+                    ),
                     'bidirectional' => 0,
-                    'ui' => 1,
                     'bidirectional_target' => array(
                     ),
                     'parent_repeater' => 'field_651e669809c03',

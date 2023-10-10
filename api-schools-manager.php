@@ -42,7 +42,8 @@ add_action('acf/init', function () {
         'elementary-school-data' => 'group_651e694d7a010',
         'pre-school-data'        => 'group_651e669808174',
         'page-fields'            => 'group_64e84e2b7a8c4',
-        'notice'                 => 'group_6524011f6f467'
+        'notice'                 => 'group_6524011f6f467',
+        'person-details'         => 'group_64e6f3b077aa6'
     ));
 
     $acfExportManager->import();

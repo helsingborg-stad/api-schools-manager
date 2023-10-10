@@ -26,9 +26,13 @@ class App
 {
     public function __construct()
     {
+        
         add_action('plugins_loaded', array( $this, 'init' ));
+
         add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
+        
         add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
+        
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
     }
 
