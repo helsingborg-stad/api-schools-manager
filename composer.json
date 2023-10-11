@@ -46,8 +46,7 @@
         "phpcompatibility\/phpcompatibility-wp": "*",
         "brainmaestro\/composer-git-hooks": "^2.8",
         "10up\/wp_mock": "^1.0",
-        "lucatume\/function-mocker": "^1.3",
-        "php-stubs\/acf-pro-stubs": "*"
+        "lucatume\/function-mocker": "^1.3"
     },
     "config": {
         "allow-plugins": {
