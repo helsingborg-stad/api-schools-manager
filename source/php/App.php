@@ -5,17 +5,13 @@ namespace SchoolsManager;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
-
 use SchoolsManager\Entity\PostType;
-
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
-
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
-
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade;
 use SchoolsManager\Taxonomy\Profile\Profile;
@@ -26,13 +22,13 @@ class App
 {
     public function __construct()
     {
-        
+
         add_action('plugins_loaded', array( $this, 'init' ));
 
         add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
-        
+
         add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
-        
+
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
     }
 
