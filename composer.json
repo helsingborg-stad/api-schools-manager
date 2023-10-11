@@ -46,7 +46,7 @@
         "brainmaestro\/composer-git-hooks": "^2.8",
         "10up\/wp_mock": "^1.0",
         "lucatume\/function-mocker": "^1.3",
-        "php-stubs/acf-pro-stubs": "*"
+        "php-stubs\/acf-pro-stubs": "*"
     },
     "config": {
         "allow-plugins": {
@@ -54,5 +54,5 @@
             "dealerdirect\/phpcodesniffer-composer-installer": true
         }
     },
-    "version": "0.4.16"
+    "version": "0.4.17"
 }
