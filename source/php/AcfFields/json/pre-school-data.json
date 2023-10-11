@@ -3,11 +3,11 @@
     "title": "Preschool data",
     "fields": [
         {
-            "key": "field_651e6698096e0",
+            "key": "field_652663fd8892e",
             "label": "Facade images",
             "name": "facade_images",
             "aria-label": "",
-            "type": "gallery",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,47 +16,116 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": 10,
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "medium"
+            "layout": "block",
+            "pagination": 1,
+            "rows_per_page": 1,
+            "min": 0,
+            "max": 6,
+            "collapsed": "field_6526601a277b4",
+            "button_label": "Add facade image",
+            "sub_fields": [
+                {
+                    "key": "field_652663fd8892f",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "focuspoint",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "preview_size": "large",
+                    "min_width": 1024,
+                    "min_height": 768,
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "parent_repeater": "field_652663fd8892e"
+                }
+            ]
         },
         {
-            "key": "field_6525096062249",
-            "label": "Gallery",
+            "key": "field_652663f98892c",
+            "label": "Image gallery",
             "name": "gallery",
             "aria-label": "",
-            "type": "gallery",
-            "instructions": "",
+            "type": "repeater",
+            "instructions": "Image gallery is only available if video is empty.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_652663d62efd2",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "thumbnail"
+            "layout": "block",
+            "pagination": 1,
+            "rows_per_page": 1,
+            "min": 0,
+            "max": 6,
+            "collapsed": "",
+            "button_label": "Add image",
+            "sub_fields": [
+                {
+                    "key": "field_652663f98892d",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "focuspoint",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "preview_size": "large",
+                    "min_width": 800,
+                    "min_height": 600,
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "parent_repeater": "field_652663f98892c"
+                }
+            ]
+        },
+        {
+            "key": "field_652663d62efd2",
+            "label": "Video",
+            "name": "video",
+            "aria-label": "",
+            "type": "oembed",
+            "instructions": "Video is only available if no image gallery is added.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_652663f98892c",
+                        "operator": "==empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
         },
         {
             "key": "field_651e6698097ca",

@@ -42,6 +42,49 @@
                 "source": "https://github.com/helsingborg-stad/acf-export-manager/tree/1.0.12"
             },
             "time": "2023-05-25T07:56:58+00:00"
+        },
+        {
+            "name": "ooksanen/acf-focuspoint",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/helsingborg-stad/acf-focuspoint.git",
+                "reference": "4f21d081bd08cce16d255ac1ad0eb0c1a710e001"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/helsingborg-stad/acf-focuspoint/zipball/4f21d081bd08cce16d255ac1ad0eb0c1a710e001",
+                "reference": "4f21d081bd08cce16d255ac1ad0eb0c1a710e001",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oskari Oksanen",
+                    "email": "hello@oskarioksanen.fi"
+                }
+            ],
+            "description": "Focuspoint field for ACF",
+            "support": {
+                "source": "https://github.com/helsingborg-stad/acf-focuspoint/tree/1.2.0"
+            },
+            "funding": [
+                {
+                    "type": "custom"
+                },
+                {
+                    "type": "custom"
+                },
+                {
+                    "url": "https://paypal.me/ooksanen\"] # Replace with up to 4 custom sponsorship URLs e.g.",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-07-02T08:38:20+00:00"
         }
     ],
     "packages-dev": [
