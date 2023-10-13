@@ -128,6 +128,38 @@
             "height": ""
         },
         {
+            "key": "field_651e694d7b523",
+            "label": "Grades",
+            "name": "grades",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651e694d7b36f",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "grade",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "checkbox",
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_651e694d7b44d",
             "label": "Number of students",
             "name": "number_of_students",
@@ -192,35 +224,28 @@
             "placeholder": ""
         },
         {
-            "key": "field_651e694d7b523",
-            "label": "Grades",
-            "name": "grades",
+            "key": "field_6528dbde39aab",
+            "label": "USP:s",
+            "name": "usp",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "",
+            "instructions": "Drag and drop the terms to set the order in which to display them.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e694d7b36f",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "grade",
+            "taxonomy": "usp",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "id",
-            "field_type": "checkbox",
+            "field_type": "multi_select",
+            "allow_null": 1,
             "bidirectional": 0,
             "multiple": 0,
-            "allow_null": 0,
             "bidirectional_target": []
         },
         {

@@ -205,6 +205,51 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_6528d90953367",
+            "label": "USP:s",
+            "name": "usp",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Drag and drop the terms to set the order in which to display them.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "usp",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_651e669809b2b",
+            "label": "Custom excerpt",
+            "name": "custom_excerpt",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Short description of the school, for example used in listings of schools.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_651e669809a99",
             "label": "Link Instagram",
             "name": "link_instagram",
@@ -239,24 +284,32 @@
             "placeholder": ""
         },
         {
-            "key": "field_651e669809b2b",
-            "label": "Custom excerpt",
-            "name": "custom_excerpt",
+            "key": "field_651e6698098e9",
+            "label": "Open hours",
+            "name": "open_hours",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651e66980968f",
+                        "operator": "==",
+                        "value": "pre_school"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "maxlength": "",
+            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_651e669809b74",
@@ -516,34 +569,6 @@
                     "parent_repeater": "field_651e669809bbb"
                 }
             ]
-        },
-        {
-            "key": "field_651e6698098e9",
-            "label": "Open hours",
-            "name": "open_hours",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
         },
         {
             "key": "field_651e669809c03",

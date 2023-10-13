@@ -73,10 +73,27 @@ class App
         $schoolPagesMetaBox          = new SchoolPagesMetaBox($schoolPagesCallbackRenderer);
         $schoolPagesMetaBox->addHooks();
 
-        // Taxonomies
+
+        // Arguments shared across all taxonomies
         $sharedArguments = [
-        'meta_box_cb' => false
+            'meta_box_cb' => false
         ];
+
+        /**
+         * $taxonomyConfigurations
+         *
+         * An array of taxonomy configurations.
+         *
+         * Each configuration is an array with the following elements:
+         * - The taxonomy class name.
+         * - The plural name of the taxonomy.
+         * - The singular name of the taxonomy.
+         * - The taxonomy slug.
+         * - An array of post types to which the taxonomy should be registered.
+         * - An array of additional arguments to be passed to the register_taxonomy() function.
+         *
+         * @var array
+         */
 
         $taxonomyConfigurations = [
         [
@@ -88,12 +105,12 @@ class App
             []
         ],
         [
-            Specialization::class,
-            __('Specializations', ASM_TEXT_DOMAIN),
-            __('Specialization', ASM_TEXT_DOMAIN),
-            'specialization',
+            Usp::class,
+            __('USPs', ASM_TEXT_DOMAIN),
+            __('USP', ASM_TEXT_DOMAIN),
+            'usp',
             ['elementary-school', 'pre-school'],
-            []
+            ['hierarchical' => true]
         ],
         [
             Grade::class,
@@ -107,20 +124,6 @@ class App
             ),
             'grade',
             ['elementary-school'],
-            []
-        ],
-        [
-            Profile::class,
-            __(
-                'Profiles',
-                ASM_TEXT_DOMAIN
-            ),
-            __(
-                'Profile',
-                ASM_TEXT_DOMAIN
-            ),
-            'profile',
-            ['elementary-school', 'pre-school'],
             []
         ],
         ];

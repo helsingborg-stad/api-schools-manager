@@ -209,6 +209,52 @@
             ),
         ),
         6 => array(
+            'key' => 'field_6528d90953367',
+            'label' => __('USP:s', 'api-schools-manager'),
+            'name' => 'usp',
+            'aria-label' => '',
+            'type' => 'taxonomy',
+            'instructions' => __('Drag and drop the terms to set the order in which to display them.', 'api-schools-manager'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'taxonomy' => 'usp',
+            'add_term' => 1,
+            'save_terms' => 1,
+            'load_terms' => 1,
+            'return_format' => 'id',
+            'field_type' => 'multi_select',
+            'allow_null' => 1,
+            'bidirectional' => 0,
+            'multiple' => 0,
+            'bidirectional_target' => array(
+            ),
+        ),
+        7 => array(
+            'key' => 'field_651e669809b2b',
+            'label' => __('Custom excerpt', 'api-schools-manager'),
+            'name' => 'custom_excerpt',
+            'aria-label' => '',
+            'type' => 'wysiwyg',
+            'instructions' => __('Short description of the school, for example used in listings of schools.', 'api-schools-manager'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'tabs' => 'all',
+            'toolbar' => 'basic',
+            'media_upload' => 0,
+            'delay' => 0,
+        ),
+        8 => array(
             'key' => 'field_651e669809a99',
             'label' => __('Link Instagram', 'api-schools-manager'),
             'name' => 'link_instagram',
@@ -225,7 +271,7 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        7 => array(
+        9 => array(
             'key' => 'field_651e669809ae2',
             'label' => __('Link Facebook', 'api-schools-manager'),
             'name' => 'link_facebook',
@@ -242,27 +288,35 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        8 => array(
-            'key' => 'field_651e669809b2b',
-            'label' => __('Custom excerpt', 'api-schools-manager'),
-            'name' => 'custom_excerpt',
+        10 => array(
+            'key' => 'field_651e6698098e9',
+            'label' => __('Open hours', 'api-schools-manager'),
+            'name' => 'open_hours',
             'aria-label' => '',
-            'type' => 'wysiwyg',
+            'type' => 'text',
             'instructions' => '',
             'required' => 0,
-            'conditional_logic' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_651e66980968f',
+                        'operator' => '==',
+                        'value' => 'pre_school',
+                    ),
+                ),
+            ),
             'wrapper' => array(
                 'width' => '',
                 'class' => '',
                 'id' => '',
             ),
             'default_value' => '',
-            'tabs' => 'all',
-            'toolbar' => 'basic',
-            'media_upload' => 0,
-            'delay' => 0,
+            'maxlength' => '',
+            'placeholder' => __('ex. "Vardagar 7:30 - 16"', 'api-schools-manager'),
+            'prepend' => '',
+            'append' => '',
         ),
-        9 => array(
+        11 => array(
             'key' => 'field_651e669809b74',
             'label' => __('Information', 'api-schools-manager'),
             'name' => 'information',
@@ -477,7 +531,7 @@
                 ),
             ),
         ),
-        10 => array(
+        12 => array(
             'key' => 'field_651e669809bbb',
             'label' => __('Visiting address', 'api-schools-manager'),
             'name' => 'visiting_address',
@@ -521,35 +575,7 @@
                 ),
             ),
         ),
-        11 => array(
-            'key' => 'field_651e6698098e9',
-            'label' => __('Open hours', 'api-schools-manager'),
-            'name' => 'open_hours',
-            'aria-label' => '',
-            'type' => 'text',
-            'instructions' => '',
-            'required' => 0,
-            'conditional_logic' => array(
-                0 => array(
-                    0 => array(
-                        'field' => 'field_651e66980968f',
-                        'operator' => '==',
-                        'value' => 'pre_school',
-                    ),
-                ),
-            ),
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'default_value' => '',
-            'maxlength' => '',
-            'placeholder' => __('ex. "Vardagar 7:30 - 16"', 'api-schools-manager'),
-            'prepend' => '',
-            'append' => '',
-        ),
-        12 => array(
+        13 => array(
             'key' => 'field_651e669809c03',
             'label' => __('Contacts', 'api-schools-manager'),
             'name' => 'contacts',
@@ -624,7 +650,7 @@
                 ),
             ),
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_651e669809c4a',
             'label' => __('Call to action: Application', 'api-schools-manager'),
             'name' => '',
@@ -642,7 +668,7 @@
             'multi_expand' => 0,
             'endpoint' => 0,
         ),
-        14 => array(
+        15 => array(
             'key' => 'field_651e669809c92',
             'label' => '',
             'name' => 'cta_application',
@@ -712,7 +738,7 @@
                 ),
             ),
         ),
-        15 => array(
+        16 => array(
             'key' => 'field_651e669809cda',
             'label' => __('end call to action accordion', 'api-schools-manager'),
             'name' => '',
