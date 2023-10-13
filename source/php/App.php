@@ -14,9 +14,7 @@ use SchoolsManager\PostType\Person\PersonConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade;
-use SchoolsManager\Taxonomy\Profile\Profile;
-use SchoolsManager\Taxonomy\JobTitle\JobTitle;
-use SchoolsManager\Taxonomy\Specialization\Specialization;
+use SchoolsManager\Taxonomy\Usp\Usp;
 
 class App
 {
