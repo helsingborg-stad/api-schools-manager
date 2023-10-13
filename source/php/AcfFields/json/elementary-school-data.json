@@ -21,7 +21,7 @@
             "rows_per_page": 1,
             "min": 0,
             "max": 6,
-            "collapsed": "field_6526601a277b4",
+            "collapsed": "",
             "button_label": "Add facade image",
             "sub_fields": [
                 {
@@ -31,16 +31,16 @@
                     "aria-label": "",
                     "type": "focuspoint",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "large",
-                    "min_width": 1024,
-                    "min_height": 768,
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
@@ -92,9 +92,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "large",
-                    "min_width": 800,
-                    "min_height": 600,
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
@@ -109,7 +109,7 @@
             "name": "video",
             "aria-label": "",
             "type": "oembed",
-            "instructions": "Video is only available if no image gallery is added.",
+            "instructions": "Video is only available if image gallery is empty.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -796,7 +796,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "excerpt"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 1
