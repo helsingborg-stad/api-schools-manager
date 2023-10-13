@@ -175,6 +175,23 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_651e694d7b71f",
+            "label": "Link Instagram",
+            "name": "link_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_651e694d7b523",
             "label": "Grades",
             "name": "grades",
@@ -205,141 +222,6 @@
             "multiple": 0,
             "allow_null": 0,
             "bidirectional_target": []
-        },
-        {
-            "key": "field_651e694d7b5b3",
-            "label": "Open hours (leisure center)",
-            "name": "open_hours_leisure_center",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e694d7b326",
-                        "operator": "==",
-                        "value": "elementary_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_651e694d7b5fb",
-            "label": "Specialization",
-            "name": "specialization",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "specialization",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "multi_select",
-            "allow_null": 1,
-            "bidirectional": 0,
-            "multiple": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_651e694d7b647",
-            "label": "Profile",
-            "name": "profile",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "profile",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "checkbox",
-            "bidirectional": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_651e694d7b68f",
-            "label": "Own chef",
-            "name": "own_chef",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_651e694d7b6d6",
-            "label": "Own library",
-            "name": "own_library",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_651e694d7b71f",
-            "label": "Link Instagram",
-            "name": "link_instagram",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
         },
         {
             "key": "field_651e694d7b766",
@@ -478,8 +360,8 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_651e694d851da",
-                    "label": "Optional rows",
+                    "key": "field_6528d3b9f5e33",
+                    "label": "Our leisure center",
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
@@ -492,6 +374,44 @@
                         "id": ""
                     },
                     "open": 0,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_6528d3b2f5e32",
+                    "label": "(copy)",
+                    "name": "how_we_work_copy",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_651e694d851da",
+                    "label": "Optional row",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 1,
                     "multi_expand": 1,
                     "endpoint": 0
                 },
@@ -562,6 +482,34 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_651e694d7b5b3",
+            "label": "Open hours (leisure center)",
+            "name": "open_hours_leisure_center",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651e694d7b326",
+                        "operator": "==",
+                        "value": "elementary_school"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_651e694d7b83b",

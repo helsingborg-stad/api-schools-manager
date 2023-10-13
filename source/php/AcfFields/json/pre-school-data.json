@@ -205,124 +205,6 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_651e6698098e9",
-            "label": "Open hours",
-            "name": "open_hours",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_651e669809978",
-            "label": "Specialization",
-            "name": "specialization",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "specialization",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "checkbox",
-            "bidirectional": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_651e6698099bf",
-            "label": "Profile",
-            "name": "profile",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "profile",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "id",
-            "field_type": "checkbox",
-            "bidirectional": 0,
-            "multiple": 0,
-            "allow_null": 0,
-            "bidirectional_target": []
-        },
-        {
-            "key": "field_651e669809a09",
-            "label": "Own chef",
-            "name": "own_chef",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
-            "key": "field_651e669809a51",
-            "label": "Own library",
-            "name": "own_library",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "ui": 1
-        },
-        {
             "key": "field_651e669809a99",
             "label": "Link Instagram",
             "name": "link_instagram",
@@ -406,7 +288,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "open": 0,
+                    "open": 1,
                     "multi_expand": 1,
                     "endpoint": 0
                 },
@@ -476,8 +358,8 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_651e6698128a1",
-                    "label": "Optional rows",
+                    "key": "field_6528d32730684",
+                    "label": "Orientation",
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
@@ -494,11 +376,49 @@
                     "endpoint": 0
                 },
                 {
-                    "key": "field_651e6698128ea",
+                    "key": "field_6528d32530683",
                     "label": "",
-                    "name": "optional",
+                    "name": "orientation",
                     "aria-label": "",
-                    "type": "repeater",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_651e6698128a1",
+                    "label": "Optional row",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 1,
+                    "multi_expand": 1,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_6527a08a5f2ac",
+                    "label": "",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -508,15 +428,9 @@
                         "id": ""
                     },
                     "layout": "block",
-                    "pagination": 0,
-                    "min": 0,
-                    "max": 0,
-                    "collapsed": "field_64f19b8bc71c3",
-                    "button_label": "L\u00e4gg till",
-                    "rows_per_page": 20,
                     "sub_fields": [
                         {
-                            "key": "field_651e6698150c2",
+                            "key": "field_6527a0965f2ad",
                             "label": "Heading",
                             "name": "heading",
                             "aria-label": "",
@@ -533,11 +447,10 @@
                             "maxlength": "",
                             "placeholder": "",
                             "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_651e6698128ea"
+                            "append": ""
                         },
                         {
-                            "key": "field_651e66981510b",
+                            "key": "field_6527a09f5f2ae",
                             "label": "Content",
                             "name": "content",
                             "aria-label": "",
@@ -554,8 +467,7 @@
                             "tabs": "all",
                             "toolbar": "basic",
                             "media_upload": 0,
-                            "delay": 0,
-                            "parent_repeater": "field_651e6698128ea"
+                            "delay": 0
                         }
                     ]
                 }
@@ -604,6 +516,34 @@
                     "parent_repeater": "field_651e669809bbb"
                 }
             ]
+        },
+        {
+            "key": "field_651e6698098e9",
+            "label": "Open hours",
+            "name": "open_hours",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651e66980968f",
+                        "operator": "==",
+                        "value": "pre_school"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_651e669809c03",
