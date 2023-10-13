@@ -52,5 +52,12 @@
 			"group": "test",
 			"problemMatcher": []
 		},
+		{
+			"label": "set nano as editor for git",
+			"type": "shell",
+			"command": "$(pwd)/.vscode/tasks/set-git-editor-nano.sh",
+			"group": "none",
+			"problemMatcher": []
+		},
 	]
 }
