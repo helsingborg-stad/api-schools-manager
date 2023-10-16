@@ -25,11 +25,11 @@
             "button_label": "Add facade image",
             "sub_fields": [
                 {
-                    "key": "field_6526601a277b4",
+                    "key": "field_652cd91f17dd0",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
-                    "type": "focuspoint",
+                    "type": "clone",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -38,13 +38,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "medium",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
+                    "clone": [
+                        "field_652cd8e1f84d2"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
                     "parent_repeater": "field_651e694d7b36f"
                 }
             ]
@@ -79,11 +79,11 @@
             "button_label": "Add image",
             "sub_fields": [
                 {
-                    "key": "field_65265e5fd4705",
+                    "key": "field_652ced5511e28",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
-                    "type": "focuspoint",
+                    "type": "clone",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -92,13 +92,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "medium",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
+                    "clone": [
+                        "field_652cd8e1f84d2"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
                     "parent_repeater": "field_651e694d7b3b7"
                 }
             ]
