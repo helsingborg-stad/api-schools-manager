@@ -3,7 +3,7 @@
     "title": "Preschool data",
     "fields": [
         {
-            "key": "field_652663fd8892e",
+            "key": "field_652960b541619",
             "label": "Facade images",
             "name": "facade_images",
             "aria-label": "",
@@ -21,50 +21,43 @@
             "rows_per_page": 1,
             "min": 0,
             "max": 6,
-            "collapsed": "field_6526601a277b4",
+            "collapsed": "",
             "button_label": "Add facade image",
             "sub_fields": [
                 {
-                    "key": "field_652663fd8892f",
+                    "key": "field_652960b54161a",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
                     "type": "focuspoint",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "large",
-                    "min_width": 1024,
-                    "min_height": 768,
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "parent_repeater": "field_652663fd8892e"
+                    "parent_repeater": "field_652960b541619"
                 }
             ]
         },
         {
-            "key": "field_652663f98892c",
+            "key": "field_652960ba4161b",
             "label": "Image gallery",
             "name": "gallery",
             "aria-label": "",
             "type": "repeater",
             "instructions": "Image gallery is only available if video is empty.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_652663d62efd2",
-                        "operator": "==empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -79,27 +72,27 @@
             "button_label": "Add image",
             "sub_fields": [
                 {
-                    "key": "field_652663f98892d",
+                    "key": "field_652960ba4161c",
                     "label": "Image",
                     "name": "image",
                     "aria-label": "",
                     "type": "focuspoint",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "preview_size": "large",
-                    "min_width": 800,
-                    "min_height": 600,
+                    "preview_size": "medium",
+                    "min_width": "",
+                    "min_height": "",
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "parent_repeater": "field_652663f98892c"
+                    "parent_repeater": "field_652960ba4161b"
                 }
             ]
         },
@@ -128,12 +121,12 @@
             "height": ""
         },
         {
-            "key": "field_651e6698097ca",
-            "label": "Number of children",
-            "name": "number_of_children",
+            "key": "field_651e669809b2b",
+            "label": "Custom excerpt",
+            "name": "custom_excerpt",
             "aria-label": "",
-            "type": "number",
-            "instructions": "",
+            "type": "wysiwyg",
+            "instructions": "Short description of the school, for example used in listings of schools.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -142,30 +135,20 @@
                 "id": ""
             },
             "default_value": "",
-            "min": "",
-            "max": "",
-            "placeholder": "",
-            "step": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
-            "key": "field_651e669809811",
-            "label": "Number of units",
-            "name": "number_of_units",
+            "key": "field_651e6698097ca",
+            "label": "Number of children",
+            "name": "number_of_children",
             "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -205,6 +188,36 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_651e669809811",
+            "label": "Number of units",
+            "name": "number_of_units",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_651e66980968f",
+                        "operator": "==",
+                        "value": "pre_school"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6528d90953367",
             "label": "USP:s",
             "name": "usp",
@@ -230,86 +243,56 @@
             "bidirectional_target": []
         },
         {
-            "key": "field_651e669809b2b",
-            "label": "Custom excerpt",
-            "name": "custom_excerpt",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "Short description of the school, for example used in listings of schools.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
-        },
-        {
-            "key": "field_651e669809a99",
-            "label": "Link Instagram",
-            "name": "link_instagram",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_651e669809ae2",
-            "label": "Link Facebook",
-            "name": "link_facebook",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_651e6698098e9",
+            "key": "field_65295aed43689",
             "label": "Open hours",
             "name": "open_hours",
             "aria-label": "",
-            "type": "text",
+            "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "ex. \"Vardagar 7:30 - 16\"",
-            "prepend": "",
-            "append": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65295aed4368a",
+                    "label": "Open",
+                    "name": "open",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "H:i",
+                    "return_format": "H:i"
+                },
+                {
+                    "key": "field_65295aed4368b",
+                    "label": "Close",
+                    "name": "close",
+                    "aria-label": "",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "H:i",
+                    "return_format": "H:i"
+                }
+            ]
         },
         {
             "key": "field_651e669809b74",
@@ -569,6 +552,40 @@
                     "parent_repeater": "field_651e669809bbb"
                 }
             ]
+        },
+        {
+            "key": "field_651e669809ae2",
+            "label": "Link Facebook",
+            "name": "link_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_651e669809a99",
+            "label": "Link Instagram",
+            "name": "link_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_651e669809c03",
