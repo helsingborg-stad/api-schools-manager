@@ -16,7 +16,7 @@ RUN chown -R vscode:vscode /var/www/html
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y mariadb-client curl nano bash-completion subversion \ 
+    && apt-get install -y mariadb-client curl nano bash-completion zip subversion \ 
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php-mysql driver

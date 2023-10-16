@@ -23,13 +23,26 @@ class App
 
         add_action('plugins_loaded', array( $this, 'init' ));
 
-        add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
-
         add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
 
+        add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
+
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
+
+        add_filter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
     }
 
+    public function displayContactMetaInMetaBox($title, $post, $field, $post_id)
+    {
+
+        if (is_admin()) {
+            $email = \get_field('e-mail', $post->ID);
+            if ($title) {
+                $title .= " ($email)";
+            }
+        }
+        return $title;
+    }
 
     /**
      * Initializes the App by registering the API,

@@ -656,7 +656,7 @@
             'pagination' => 0,
             'min' => 0,
             'max' => 0,
-            'collapsed' => 'field_64f6c6760ecf5',
+            'collapsed' => 'field_651e694d8ae0b',
             'button_label' => __('Add contact', 'api-schools-manager'),
             'rows_per_page' => 20,
             'sub_fields' => array(
