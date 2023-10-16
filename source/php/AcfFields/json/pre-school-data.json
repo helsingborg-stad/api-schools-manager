@@ -243,6 +243,26 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_652cfb47f60e9",
+            "label": "Visit Us",
+            "name": "visit_us",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_65295aed43689",
             "label": "Open hours",
             "name": "open_hours",

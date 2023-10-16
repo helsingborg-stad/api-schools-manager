@@ -248,6 +248,26 @@
             ),
         ),
         8 => array(
+            'key' => 'field_652cfb47f60e9',
+            'label' => __('Visit Us', 'api-schools-manager'),
+            'name' => 'visit_us',
+            'aria-label' => '',
+            'type' => 'wysiwyg',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'tabs' => 'all',
+            'toolbar' => 'basic',
+            'media_upload' => 0,
+            'delay' => 0,
+        ),
+        9 => array(
             'key' => 'field_65295aed43689',
             'label' => __('Open hours', 'api-schools-manager'),
             'name' => 'open_hours',
@@ -299,7 +319,7 @@
                 ),
             ),
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_651e669809b74',
             'label' => __('Information', 'api-schools-manager'),
             'name' => 'information',
@@ -514,7 +534,7 @@
                 ),
             ),
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_651e669809bbb',
             'label' => __('Visiting address', 'api-schools-manager'),
             'name' => 'visiting_address',
@@ -558,7 +578,7 @@
                 ),
             ),
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_651e669809ae2',
             'label' => __('Link Facebook', 'api-schools-manager'),
             'name' => 'link_facebook',
@@ -575,7 +595,7 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_651e669809a99',
             'label' => __('Link Instagram', 'api-schools-manager'),
             'name' => 'link_instagram',
@@ -592,7 +612,7 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_651e669809c03',
             'label' => __('Contacts', 'api-schools-manager'),
             'name' => 'contacts',
@@ -667,7 +687,7 @@
                 ),
             ),
         ),
-        14 => array(
+        15 => array(
             'key' => 'field_651e669809c4a',
             'label' => __('Call to action: Application', 'api-schools-manager'),
             'name' => '',
@@ -685,7 +705,7 @@
             'multi_expand' => 0,
             'endpoint' => 0,
         ),
-        15 => array(
+        16 => array(
             'key' => 'field_651e669809c92',
             'label' => '',
             'name' => 'cta_application',
@@ -755,7 +775,7 @@
                 ),
             ),
         ),
-        16 => array(
+        17 => array(
             'key' => 'field_651e669809cda',
             'label' => __('end call to action accordion', 'api-schools-manager'),
             'name' => '',
