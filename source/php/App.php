@@ -7,8 +7,11 @@ use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\Entity\PostType;
 use SchoolsManager\PostColumn\PostColumn;
+use SchoolsManager\PostColumn\PostColumnSolid;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
+use SchoolsManager\PostColumn\Columns\PageSchoolColumnRenderer;
+use SchoolsManager\PostColumn\Columns\PageSchoolColumnSorting;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\Person\Person;
 use SchoolsManager\PostType\Person\PersonConfiguration;
@@ -63,8 +66,26 @@ class App
         $admin = new Admin();
         $admin->addHooks();
 
-        // Custom post columns
-        new PostColumn();
+        /**
+         * Post columns
+         */
+
+        // Column renderers
+        $pageSchoolColumnRenderer = new PageSchoolColumnRenderer();
+
+        // Column sorting
+        $pageSchoolColumnSorting = new PageSchoolColumnSorting();
+
+        // Columns
+        $postColumn = new PostColumnSolid(
+            __('School', 'api-schools-manager'),
+            $pageSchoolColumnRenderer,
+            $pageSchoolColumnSorting
+        );
+
+        // Initialize post columns
+        $postColumn->addHooks();
+
         /**
          * Post type: Pre school
          */
