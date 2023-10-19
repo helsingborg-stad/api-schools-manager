@@ -435,8 +435,8 @@
                 ),
                 5 => array(
                     'key' => 'field_6528d3b2f5e32',
-                    'label' => __('(copy)', 'api-schools-manager'),
-                    'name' => 'how_we_work_copy',
+                    'label' => '',
+                    'name' => 'our_leisure_center',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
                     'instructions' => '',
