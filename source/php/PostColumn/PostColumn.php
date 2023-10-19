@@ -2,9 +2,27 @@
 
 namespace SchoolsManager\PostColumn;
 
+use WP_Query;
+
 class PostColumn
 {
-    public function __construct()
+    private string $columnTitle;
+    private string $columnId;
+    private PostColumnRendererInterface $postColumnRenderer;
+    private ?PostColumnSortingInterface $postColumnSorting;
+
+    public function __construct(
+        string $columnTitle,
+        PostColumnRendererInterface $postColumnRenderer,
+        ?PostColumnSortingInterface $postColumnSorting
+    ) {
+        $this->columnTitle        = $columnTitle;
+        $this->columnId           = $this->getColumnId();
+        $this->postColumnRenderer = $postColumnRenderer;
+        $this->postColumnSorting  = $postColumnSorting;
+    }
+
+    public function addHooks(): void
     {
         add_filter('manage_pages_columns', [$this, 'addCustomColumn']);
         add_action('manage_pages_custom_column', [$this, 'populateCustomColumn'], 10, 2);
@@ -12,67 +30,47 @@ class PostColumn
         add_action('pre_get_posts', [$this, 'handleSorting']);
     }
 
-    public function addCustomColumn($columns)
+    private function getColumnId(): string
     {
-        unset($columns['comments']);
+        if (!isset($this->columnId)) {
+            $this->columnId = strtolower(str_replace(' ', '_', $this->columnTitle));
+        }
 
-        $offset  = array_search('date', array_keys($columns));
-        $columns = array_slice($columns, 0, $offset, true) + ['parentSchoolTitle' => __('School', 'api-schools-manager')] + array_slice($columns, $offset, null, true);
-
-        return $columns;
+        return $this->columnId;
     }
 
-    public function populateCustomColumn($column, $postId)
+    public function addCustomColumn($columns)
     {
-        if ($column == 'parentSchoolTitle') {
-            $parentSchoolId = get_post_meta($postId, 'parent_school', true);
+        $column = [$this->columnId => $this->columnTitle];
 
-            if ($parentSchoolId) {
-                $parentSchool = get_post($parentSchoolId);
+        // Insert $column before the last element in $columns
+        return array_slice($columns, 0, -1, true) + $column + array_slice($columns, -1, 1, true);
+    }
 
-                if ($parentSchool) {
-                    $editLink = get_edit_post_link($parentSchoolId);
-                    echo '<a href="' . esc_url($editLink) . '">' . esc_html($parentSchool->post_title) . '</a>';
-                } else {
-                    echo '';
-                }
-            } else {
-                echo '';
-            }
+    public function populateCustomColumn($column, $postId): void
+    {
+        if ($column == $this->columnId) {
+            $this->postColumnRenderer->render($column, $postId);
         }
     }
 
     public function registerSortableColumn($columns)
     {
-        $columns['parentSchoolTitle'] = 'parentSchool';
+        if ($this->postColumnSorting !== null) {
+            $columns[$this->columnId] = $this->columnId;
+        }
+
         return $columns;
     }
 
-    public function handleSorting($query)
+    public function handleSorting(WP_Query $query)
     {
         if (!is_admin() || !$query->is_main_query()) {
             return;
         }
 
-        if ('parentSchool' === $query->get('orderby')) {
-            $order = $query->get('order') ?: 'ASC'; // get the order direction or default to 'ASC'
-
-            $query->set('meta_query', [
-                'relation' => 'OR',
-                [
-                    'key'     => 'parent_school',
-                    'compare' => 'EXISTS',
-                ],
-                [
-                    'key'     => 'parent_school',
-                    'compare' => 'NOT EXISTS',
-                ],
-            ]);
-
-            $query->set('orderby', [
-                'meta_value' => $order,
-                'title'      => $order, // secondary sorting by title, just in case the meta_value is the same
-            ]);
+        if ($this->postColumnSorting !== null) {
+            $query = $this->postColumnSorting->sort($query, $this->columnId);
         }
     }
 }

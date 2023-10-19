@@ -7,7 +7,6 @@ use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\Entity\PostType;
 use SchoolsManager\PostColumn\PostColumn;
-use SchoolsManager\PostColumn\PostColumnSolid;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
 use SchoolsManager\PostColumn\Columns\PageSchoolColumnRenderer;
