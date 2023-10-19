@@ -3,7 +3,7 @@
     <description>WordPress Coding Standard.</description>
     
     <file>./source/php</file>
-    <exclude-pattern type="relative">./source/php/AcfFields/json/*</exclude-pattern>
+    <exclude-pattern type="relative">AcfFields/*</exclude-pattern>
     
     <rule ref="PSR12"/>
     <rule ref="Generic.Formatting.MultipleStatementAlignment"/>
