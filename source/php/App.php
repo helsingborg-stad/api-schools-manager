@@ -6,6 +6,7 @@ use SchoolsManager\API\Api;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\Entity\PostType;
+use SchoolsManager\PostColumn\PostColumn;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
 use SchoolsManager\MetaBox\SchoolPagesMetaBoxCallback;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
@@ -62,6 +63,8 @@ class App
         $admin = new Admin();
         $admin->addHooks();
 
+        // Custom post columns
+        new PostColumn();
         /**
          * Post type: Pre school
          */
