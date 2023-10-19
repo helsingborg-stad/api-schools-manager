@@ -76,8 +76,8 @@ class App
         $pageSchoolColumnSorting = new PageSchoolColumnSorting();
 
         // Columns
-        $postColumn = new PostColumnSolid(
-            __('School', 'api-schools-manager'),
+        $postColumn = new PostColumn(
+            __('School', ASM_TEXT_DOMAIN),
             $pageSchoolColumnRenderer,
             $pageSchoolColumnSorting
         );
