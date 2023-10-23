@@ -11,6 +11,7 @@ class Admin
     {
         add_action('init', array($this, 'addOptionsPage'));
         add_action('after_setup_theme', array($this, 'themeSupport'));
+        add_action('enqueue_block_editor_assets', array($this, 'loadScriptInGutenbergEditor'));
 
         // Allow only specific block categories.
         add_filter('allowed_block_types_all', array($this, 'filterAllowedBlockTypes'), 100, 2);
@@ -34,13 +35,27 @@ class Admin
 
     public function filterAllowedBlockTypes($allowedBlocks, $blockEditorContext): array
     {
-        $allBlocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
+        $allowedBlockNames      = ['core/embed', 'core/image'];
+        $allowedBlockCategories = ['text'];
+        $allBlocks              = WP_Block_Type_Registry::get_instance()->get_all_registered();
 
         // Remove all categories but text.
-        $allowed = array_filter($allBlocks, function ($block) {
-            return $block->category === 'text';
-        });
+        $allowed = array_filter($allBlocks, fn($block) =>
+            in_array($block->name, $allowedBlockNames) ||
+            in_array($block->category, $allowedBlockCategories));
 
         return array_keys($allowed);
+    }
+
+    public function loadScriptInGutenbergEditor()
+    {
+        $fileName = '../../assets/js/unregisterEditorBlocks.js';
+
+        wp_enqueue_script(
+            'schools-manager-gutenberg-editor',
+            plugin_dir_url(__FILE__) . $fileName,
+            array('wp-blocks'),
+            filemtime(plugin_dir_path(__FILE__) . $fileName)
+        );
     }
 }
