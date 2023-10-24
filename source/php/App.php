@@ -30,9 +30,17 @@ class App
 
         add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
 
+        add_action('admin_menu', array( $this, 'hideStandardExcerptBox'));
+
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
 
         add_filter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
+    }
+
+
+    public function hideStandardExcerptBox()
+    {
+        remove_meta_box('postexcerpt', ['pre-school', 'elementary-school'], 'normal');
     }
 
     public function displayContactMetaInMetaBox($title, $post, $field, $post_id)
