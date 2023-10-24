@@ -39,6 +39,9 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-composer-
 
+    - name: Remove installer paths
+      run: composer config --unset extra.installer-paths
+
     - name: Install dependencies
       run: composer install --prefer-dist
 
