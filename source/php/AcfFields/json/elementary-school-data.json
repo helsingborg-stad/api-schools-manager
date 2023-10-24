@@ -202,6 +202,28 @@
             "append": ""
         },
         {
+            "key": "field_65376d3447255",
+            "label": "Number of profiles",
+            "name": "number_of_profiles",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_651e694d7b4dc",
             "label": "Area",
             "name": "area",

@@ -206,6 +206,28 @@
             'append' => '',
         ),
         6 => array(
+            'key' => 'field_65376d3447255',
+            'label' => __('Number of profiles', 'api-schools-manager'),
+            'name' => 'number_of_profiles',
+            'aria-label' => '',
+            'type' => 'number',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'min' => '',
+            'max' => '',
+            'placeholder' => '',
+            'step' => '',
+            'prepend' => '',
+            'append' => '',
+        ),
+        7 => array(
             'key' => 'field_651e694d7b4dc',
             'label' => __('Area', 'api-schools-manager'),
             'name' => 'area',
@@ -231,7 +253,7 @@
             'bidirectional_target' => array(
             ),
         ),
-        7 => array(
+        8 => array(
             'key' => 'field_6528dbde39aab',
             'label' => __('USP:s', 'api-schools-manager'),
             'name' => 'usp',
@@ -257,7 +279,7 @@
             'bidirectional_target' => array(
             ),
         ),
-        8 => array(
+        9 => array(
             'key' => 'field_651e694d7b5b3',
             'label' => __('Open hours (leisure center)', 'api-schools-manager'),
             'name' => 'open_hours_leisure_center',
@@ -316,7 +338,7 @@
                 ),
             ),
         ),
-        9 => array(
+        10 => array(
             'key' => 'field_651e694d7b7f4',
             'label' => __('Information', 'api-schools-manager'),
             'name' => 'information',
@@ -539,7 +561,7 @@
                 ),
             ),
         ),
-        10 => array(
+        11 => array(
             'key' => 'field_651e694d7b83b',
             'label' => __('Visiting address', 'api-schools-manager'),
             'name' => 'visiting_address',
@@ -604,7 +626,7 @@
                 ),
             ),
         ),
-        11 => array(
+        12 => array(
             'key' => 'field_651e694d7b766',
             'label' => __('Link Facebook', 'api-schools-manager'),
             'name' => 'link_facebook',
@@ -621,7 +643,7 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        12 => array(
+        13 => array(
             'key' => 'field_651e694d7b71f',
             'label' => __('Link Instagram', 'api-schools-manager'),
             'name' => 'link_instagram',
@@ -638,7 +660,7 @@
             'default_value' => '',
             'placeholder' => '',
         ),
-        13 => array(
+        14 => array(
             'key' => 'field_651e694d7b89a',
             'label' => __('Contacts', 'api-schools-manager'),
             'name' => 'contacts',
@@ -713,7 +735,7 @@
                 ),
             ),
         ),
-        14 => array(
+        15 => array(
             'key' => 'field_651e694d7b8ed',
             'label' => __('Call to action: Application', 'api-schools-manager'),
             'name' => '',
@@ -731,7 +753,7 @@
             'multi_expand' => 0,
             'endpoint' => 0,
         ),
-        15 => array(
+        16 => array(
             'key' => 'field_651e694d7b93a',
             'label' => '',
             'name' => 'cta_application',
@@ -801,7 +823,7 @@
                 ),
             ),
         ),
-        16 => array(
+        17 => array(
             'key' => 'field_651e694d7b983',
             'label' => __('end call to action accordion', 'api-schools-manager'),
             'name' => '',
