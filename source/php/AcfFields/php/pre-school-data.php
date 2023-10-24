@@ -837,7 +837,9 @@
     'style' => 'default',
     'label_placement' => 'top',
     'instruction_placement' => 'label',
-    'hide_on_screen' => '',
+    'hide_on_screen' => array(
+        0 => 'excerpt',
+    ),
     'active' => true,
     'description' => '',
     'show_in_rest' => 1,
