@@ -20,12 +20,12 @@
                 'id' => '',
             ),
             'layout' => 'block',
-            'pagination' => 1,
-            'rows_per_page' => 1,
+            'pagination' => 0,
             'min' => 0,
             'max' => 6,
             'collapsed' => '',
             'button_label' => __('Add facade image', 'api-schools-manager'),
+            'rows_per_page' => 20,
             'sub_fields' => array(
                 0 => array(
                     'key' => 'field_652960b54161a',
@@ -67,12 +67,12 @@
                 'id' => '',
             ),
             'layout' => 'block',
-            'pagination' => 1,
-            'rows_per_page' => 1,
+            'pagination' => 0,
             'min' => 0,
             'max' => 6,
             'collapsed' => '',
             'button_label' => __('Add image', 'api-schools-manager'),
+            'rows_per_page' => 20,
             'sub_fields' => array(
                 0 => array(
                     'key' => 'field_652960ba4161c',

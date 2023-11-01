@@ -17,12 +17,12 @@
                 "id": ""
             },
             "layout": "block",
-            "pagination": 1,
-            "rows_per_page": 1,
+            "pagination": 0,
             "min": 0,
             "max": 6,
             "collapsed": "",
             "button_label": "Add facade image",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_652cd91f17dd0",
@@ -71,12 +71,12 @@
                 "id": ""
             },
             "layout": "block",
-            "pagination": 1,
-            "rows_per_page": 1,
+            "pagination": 0,
             "min": 0,
             "max": 6,
             "collapsed": "",
             "button_label": "Add image",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_652ced5511e28",
