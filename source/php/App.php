@@ -35,6 +35,8 @@ class App
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
 
         add_filter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
+
+        add_action('post_updated', array($this, 'setPageParentOnPostUpdated'));
     }
 
 
@@ -248,5 +250,27 @@ class App
         remove_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
         wp_update_post(['ID' => $postId, 'post_excerpt' => $customExcerpt], false);
         add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
+    }
+
+    public function setPageParentOnPostUpdated(int $postId)
+    {
+        $fieldName = 'parent_school';
+        $postType  = 'page';
+
+        if (get_post_type($postId) !== $postType) {
+            return;
+        }
+
+        $value = get_post_meta($postId, $fieldName, true);
+
+        if (empty($value)) {
+            return;
+        }
+
+        // Remove filter to prevent infinite loop.
+        remove_filter('post_updated', [$this, 'setPageParentOnPostUpdated'], 10, 1);
+
+        // Update page and set post_parent.
+        wp_update_post(['ID' => $postId, 'post_parent' => $value], true);
     }
 }

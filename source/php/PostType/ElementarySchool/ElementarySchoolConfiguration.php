@@ -21,7 +21,7 @@ class ElementarySchoolConfiguration
                 'show_ui'             => true,
                 'show_in_nav_menus'   => true,
                 'has_archive'         => true,
-                'hierarchical'        => false,
+                'hierarchical'        => true,
                 'exclude_from_search' => true,
                 'supports'            => array('title', 'revisions', 'thumbnail', 'excerpt'),
                 'show_in_rest'        => true,
