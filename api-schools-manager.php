@@ -50,7 +50,7 @@ add_action('acf/init', function () {
 // Start application
 new SchoolsManager\App();
 
-add_action('init', function () {
+add_action('plugins_loaded', function () {
 
     load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages');
 });
