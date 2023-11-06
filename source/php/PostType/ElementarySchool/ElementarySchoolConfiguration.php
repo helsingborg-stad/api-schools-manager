@@ -10,6 +10,7 @@ class ElementarySchoolConfiguration
 
     public function getPostTypeArgs(): array
     {
+
         return [
             'slug'         => self::POST_TYPE_SLUG,
             'namePlural'   => __('Elementary schools', ASM_TEXT_DOMAIN),

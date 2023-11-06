@@ -23,8 +23,6 @@ define('SCHOOLS_MANAGER_URL', plugins_url('', __FILE__));
 define('SCHOOLS_MANAGER_TEMPLATE_PATH', SCHOOLS_MANAGER_PATH . 'templates/');
 const ASM_TEXT_DOMAIN = 'api-schools-manager';
 
-load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages');
-
 require_once SCHOOLS_MANAGER_PATH . 'Public.php';
 
 // Register the autoloader
@@ -51,3 +49,8 @@ add_action('acf/init', function () {
 
 // Start application
 new SchoolsManager\App();
+
+add_action('init', function () {
+
+    load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
