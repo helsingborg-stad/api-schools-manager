@@ -87,7 +87,7 @@ class App
 
         // Columns
         $postColumn = new PostColumn(
-            __('School', ASM_TEXT_DOMAIN),
+            __('School', 'api-schools-manager'),
             $pageSchoolColumnRenderer,
             $pageSchoolColumnSorting
         );
@@ -144,16 +144,16 @@ class App
         $taxonomyConfigurations = [
         [
             GeographicArea::class,
-            __('Areas', ASM_TEXT_DOMAIN),
-            __('Area', ASM_TEXT_DOMAIN),
+            __('Areas', 'api-schools-manager'),
+            __('Area', 'api-schools-manager'),
             'area',
             ['elementary-school', 'pre-school'],
             []
         ],
         [
             Usp::class,
-            __('USPs', ASM_TEXT_DOMAIN),
-            __('USP', ASM_TEXT_DOMAIN),
+            __('USPs', 'api-schools-manager'),
+            __('USP', 'api-schools-manager'),
             'usp',
             ['elementary-school', 'pre-school'],
             ['hierarchical' => true]
@@ -162,11 +162,11 @@ class App
             Grade::class,
             __(
                 'Grades',
-                ASM_TEXT_DOMAIN
+                'api-schools-manager'
             ),
             __(
                 'Grade',
-                ASM_TEXT_DOMAIN
+                'api-schools-manager'
             ),
             'grade',
             ['elementary-school'],

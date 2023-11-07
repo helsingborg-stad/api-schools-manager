@@ -30,7 +30,7 @@ class ValidateRequiredRestParams extends ValidateRestRequest
     {
         return WPResponseFactory::wp_error_response(
             'avm_param_error',
-            __('Missing required parameter', ASM_TEXT_DOMAIN),
+            __('Missing required parameter', 'api-schools-manager'),
             ['param' => $param]
         );
     }

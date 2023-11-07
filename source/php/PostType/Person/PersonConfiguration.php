@@ -10,10 +10,10 @@ class PersonConfiguration
     {
         return [
             'slug'         => 'person',
-            'namePlural'   => __('persons', ASM_TEXT_DOMAIN),
-            'nameSingular' => __('person', ASM_TEXT_DOMAIN),
+            'namePlural'   => __('persons', 'api-schools-manager'),
+            'nameSingular' => __('person', 'api-schools-manager'),
             'args'         => [
-                'description'         => __('Persons', ASM_TEXT_DOMAIN),
+                'description'         => __('Persons', 'api-schools-manager'),
                 'menu_icon'           => Icon::get('people'),
                 'publicly_queryable'  => true,
                 'show_ui'             => true,

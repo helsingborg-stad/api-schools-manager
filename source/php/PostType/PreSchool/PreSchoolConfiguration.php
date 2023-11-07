@@ -12,10 +12,10 @@ class PreSchoolConfiguration
     {
         return [
             'slug'         => self::POST_TYPE_SLUG,
-            'namePlural'   => __('Pre schools', ASM_TEXT_DOMAIN),
-            'nameSingular' => __('Pre school', ASM_TEXT_DOMAIN),
+            'namePlural'   => __('Pre schools', 'api-schools-manager'),
+            'nameSingular' => __('Pre school', 'api-schools-manager'),
             'args'         => [
-                'description'         => __('Pre schools', ASM_TEXT_DOMAIN),
+                'description'         => __('Pre schools', 'api-schools-manager'),
                 'menu_icon'           => Icon::get('school'),
                 'publicly_queryable'  => true,
                 'show_ui'             => true,

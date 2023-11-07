@@ -21,7 +21,6 @@ if (!defined('WPINC')) {
 define('SCHOOLS_MANAGER_PATH', plugin_dir_path(__FILE__));
 define('SCHOOLS_MANAGER_URL', plugins_url('', __FILE__));
 define('SCHOOLS_MANAGER_TEMPLATE_PATH', SCHOOLS_MANAGER_PATH . 'templates/');
-const ASM_TEXT_DOMAIN = 'api-schools-manager';
 
 require_once SCHOOLS_MANAGER_PATH . 'Public.php';
 
@@ -52,5 +51,5 @@ new SchoolsManager\App();
 
 add_action('plugins_loaded', function () {
 
-    load_plugin_textdomain(ASM_TEXT_DOMAIN, false, dirname(plugin_basename(__FILE__)) . '/languages');
+    load_plugin_textdomain('api-schools-manager', false, dirname(plugin_basename(__FILE__)) . '/languages');
 });

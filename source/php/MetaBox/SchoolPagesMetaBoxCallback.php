@@ -25,17 +25,17 @@ class SchoolPagesMetaBoxCallback implements MetaBoxCallbackRendererInterface
         if (empty($this->pagePosts)) {
             $paragraph1 = __(<<<'EOD'
             No pages are associated with this school yet.
-            EOD, ASM_TEXT_DOMAIN);
+            EOD, 'api-schools-manager');
 
             $paragraph2 = __(<<<'EOD'
             To associate a page with this school, edit the page and select
             this school from the "Parent School" dropdown.
-            EOD, ASM_TEXT_DOMAIN);
+            EOD, 'api-schools-manager');
 
             echo '<p><i>' . esc_html($paragraph1) . '</i></p>';
             echo '<p>' . esc_html($paragraph2) . '</p>';
         } else {
-            echo '<p>' . esc_html(__('These pages are associated with this school.', ASM_TEXT_DOMAIN)) . '</p>';
+            echo '<p>' . esc_html(__('These pages are associated with this school.', 'api-schools-manager')) . '</p>';
         }
     }
 

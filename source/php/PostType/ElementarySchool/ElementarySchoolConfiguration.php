@@ -10,13 +10,12 @@ class ElementarySchoolConfiguration
 
     public function getPostTypeArgs(): array
     {
-
         return [
             'slug'         => self::POST_TYPE_SLUG,
-            'namePlural'   => __('Elementary schools', ASM_TEXT_DOMAIN),
-            'nameSingular' => __('Elementary school', ASM_TEXT_DOMAIN),
+            'namePlural'   => __('Elementary schools', 'api-schools-manager'),
+            'nameSingular' => __('Elementary school', 'api-schools-manager'),
             'args'         => [
-                'description'         => __('Elementary schools', ASM_TEXT_DOMAIN),
+                'description'         => __('Elementary schools', 'api-schools-manager'),
                 'menu_icon'           => Icon::get('school'),
                 'publicly_queryable'  => true,
                 'show_ui'             => true,

@@ -47,23 +47,23 @@ class PostType implements PostTypeInterface
      */
     public function registerPostType(): void
     {
-        $nameSingular = __(strtolower($this->nameSingular), ASM_TEXT_DOMAIN);
-        $namePlural   = __(strtolower($this->namePlural), ASM_TEXT_DOMAIN);
+        $nameSingular = __(strtolower($this->nameSingular), 'api-schools-manager');
+        $namePlural   = __(strtolower($this->namePlural), 'api-schools-manager');
 
         $labels = array_merge(
             array(
-                'name'               => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN),
-                'singular_name'      => __(ucfirst($this->nameSingular), ASM_TEXT_DOMAIN),
-                'add_new'            => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), $nameSingular),
-                'add_new_item'       => sprintf(__('Add new %s', ASM_TEXT_DOMAIN), $nameSingular),
-                'edit_item'          => sprintf(__('Edit %s', ASM_TEXT_DOMAIN), $nameSingular),
-                'new_item'           => sprintf(__('New %s', ASM_TEXT_DOMAIN), $nameSingular),
-                'view_item'          => sprintf(__('View %s', ASM_TEXT_DOMAIN), $nameSingular),
-                'search_items'       => sprintf(__('Search %s', ASM_TEXT_DOMAIN), $namePlural),
-                'not_found'          => sprintf(__('No %s found', ASM_TEXT_DOMAIN), $namePlural),
-                'not_found_in_trash' => sprintf(__('No %s found in trash', ASM_TEXT_DOMAIN), $namePlural),
-                'parent_item_colon'  => sprintf(__('Parent %s:', ASM_TEXT_DOMAIN), $nameSingular),
-                'menu_name'          => __(ucfirst($this->namePlural), ASM_TEXT_DOMAIN)
+                'name'               => __(ucfirst($this->namePlural), 'api-schools-manager'),
+                'singular_name'      => __(ucfirst($this->nameSingular), 'api-schools-manager'),
+                'add_new'            => sprintf(__('Add new %s', 'api-schools-manager'), $nameSingular),
+                'add_new_item'       => sprintf(__('Add new %s', 'api-schools-manager'), $nameSingular),
+                'edit_item'          => sprintf(__('Edit %s', 'api-schools-manager'), $nameSingular),
+                'new_item'           => sprintf(__('New %s', 'api-schools-manager'), $nameSingular),
+                'view_item'          => sprintf(__('View %s', 'api-schools-manager'), $nameSingular),
+                'search_items'       => sprintf(__('Search %s', 'api-schools-manager'), $namePlural),
+                'not_found'          => sprintf(__('No %s found', 'api-schools-manager'), $namePlural),
+                'not_found_in_trash' => sprintf(__('No %s found in trash', 'api-schools-manager'), $namePlural),
+                'parent_item_colon'  => sprintf(__('Parent %s:', 'api-schools-manager'), $nameSingular),
+                'menu_name'          => __(ucfirst($this->namePlural), 'api-schools-manager')
             ),
             $this->labels
         );
