@@ -287,14 +287,7 @@
             'type' => 'group',
             'instructions' => '',
             'required' => 0,
-            'conditional_logic' => array(
-                0 => array(
-                    0 => array(
-                        'field' => 'field_651e694d7b36f',
-                        'operator' => '!=empty',
-                    ),
-                ),
-            ),
+            'conditional_logic' => 0,
             'wrapper' => array(
                 'width' => '',
                 'class' => '',
