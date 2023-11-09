@@ -3,6 +3,7 @@
 namespace SchoolsManager;
 
 use SchoolsManager\API\Api;
+use SchoolsManager\API\DefaultValuesSetter;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\Entity\PostType;
@@ -71,6 +72,9 @@ class App
         //General
         $api = new Api($apiFieldsRegistrar);
         $api->addHooks();
+
+        $apiDefaultValuesSetter = new DefaultValuesSetter();
+        $apiDefaultValuesSetter->addHooks();
 
         $admin = new Admin();
         $admin->addHooks();
