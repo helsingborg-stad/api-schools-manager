@@ -52,10 +52,10 @@ class PostType implements PostTypeInterface
 
         $labels = array_merge(
             array(
-                'name'               => __(ucfirst($this->namePlural), 'api-schools-manager'),
-                'singular_name'      => __(ucfirst($this->nameSingular), 'api-schools-manager'),
-                'add_new'            => sprintf(__('Add new %s', 'api-schools-manager'), $nameSingular),
-                'add_new_item'       => sprintf(__('Add new %s', 'api-schools-manager'), $nameSingular),
+                'name'               => __($this->namePlural, 'api-schools-manager'),
+                'singular_name'      => __($this->nameSingular, 'api-schools-manager'),
+                'add_new'            => __("Add new", 'api-schools-manager'),
+                'add_new_item'       => __('Add new', 'api-schools-manager'),
                 'edit_item'          => sprintf(__('Edit %s', 'api-schools-manager'), $nameSingular),
                 'new_item'           => sprintf(__('New %s', 'api-schools-manager'), $nameSingular),
                 'view_item'          => sprintf(__('View %s', 'api-schools-manager'), $nameSingular),
