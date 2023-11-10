@@ -10,8 +10,8 @@ class PersonConfiguration
     {
         return [
             'slug'         => 'person',
-            'namePlural'   => __('persons', 'api-schools-manager'),
-            'nameSingular' => __('person', 'api-schools-manager'),
+            'namePlural'   => __('Persons', 'api-schools-manager'),
+            'nameSingular' => __('Person', 'api-schools-manager'),
             'args'         => [
                 'description'         => __('Persons', 'api-schools-manager'),
                 'menu_icon'           => Icon::get('people'),

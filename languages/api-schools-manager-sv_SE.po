@@ -3,31 +3,31 @@ msgstr ""
 "Project-Id-Version: Schools Manager\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-07 07:00+0000\n"
-"PO-Revision-Date: 2023-11-07 07:04+0000\n"
+"PO-Revision-Date: 2023-11-10 06:23+0000\n"
 "Last-Translator: Anna Johansson\n"
-"Language-Team: Swedish\n"
+"Language-Team: Svenska\n"
 "Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.6; wp-6.3.2\n"
+"X-Loco-Version: 2.6.6; wp-6.4\n"
 "X-Domain: api-schools-manager"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:361
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:354
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:342
 #, fuzzy
 msgid "About Us"
 msgstr "Om oss"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:585
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:578
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:566
 #, fuzzy
 msgid "Add additional addresses"
 msgstr "Lägg till ytterligare adresser"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:684
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:677
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:665
 #, fuzzy
 msgid "Add contact"
@@ -46,17 +46,17 @@ msgid "Add image"
 msgstr "Lägg till bild"
 
 #: workspaces/api-schools-manager/source/php/Entity/Taxonomy.php:43
-#, fuzzy, php-format
+#, php-format
 msgid "Add New %s"
-msgstr "Lägg till ny %s"
+msgstr "Lägg till ny"
 
 #: workspaces/api-schools-manager/source/php/Entity/PostType.php:57
 #: workspaces/api-schools-manager/source/php/Entity/PostType.php:58
-#, fuzzy, php-format
+#, php-format
 msgid "Add new %s"
-msgstr "Lägg till nya %s"
+msgstr "Lägg till ny"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:590
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:583
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:571
 #, fuzzy
 msgid "Address"
@@ -67,7 +67,7 @@ msgstr "Adress"
 msgid "All %s"
 msgstr "Alla %s"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:796
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:789
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:777
 #, fuzzy
 msgid "Apply here"
@@ -85,24 +85,24 @@ msgstr "Område"
 msgid "Areas"
 msgstr "Områden"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:742
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:735
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:723
 #, fuzzy
 msgid "Call to action: Application"
 msgstr "Uppmaning till handling: Ansökan"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:326
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:319
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:307
 msgid "Close"
-msgstr "Stäng"
+msgstr "Stänger"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:667
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:660
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:648
 #, fuzzy
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:543
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:536
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:524
 #: workspaces/api-schools-manager/source/php/AcfFields/php/notice.php:32
 #, fuzzy
@@ -120,8 +120,8 @@ msgstr "Skapar en api som kan användas för att hantera skolor"
 msgid "Custom excerpt"
 msgstr "Anpassat utdrag"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:610
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:776
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:603
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:769
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:591
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:757
 #, fuzzy
@@ -152,7 +152,7 @@ msgstr "Grundskola"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:8
 msgid "Elementary school data"
-msgstr "Uppgifter om grundskolan"
+msgstr "Uppgifter om skolan"
 
 #: workspaces/api-schools-manager/source/php/PostType/ElementarySchool/ElementarySchoolConfiguration.php:15
 #: workspaces/api-schools-manager/source/php/PostType/ElementarySchool/ElementarySchoolConfiguration.php:18
@@ -160,7 +160,7 @@ msgstr "Uppgifter om grundskolan"
 msgid "Elementary schools"
 msgstr "Grundskolor"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:830
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:823
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:811
 msgid "end call to action accordion"
 msgstr "avsluta call to action accordion"
@@ -187,24 +187,23 @@ msgstr "Betyg"
 msgid "Grades"
 msgstr "Betyg"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:522
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:515
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:503
 #: workspaces/api-schools-manager/source/php/AcfFields/php/notice.php:12
 #, fuzzy
 msgid "Heading"
 msgstr "Rubrik"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:812
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:805
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:793
 #, fuzzy
 msgid "How to apply"
 msgstr "Hur man ansöker"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:406
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:399
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:387
-#, fuzzy
 msgid "How we work"
-msgstr "Hur vi arbetar"
+msgstr "Så arbetar vi"
 
 #. Author URI of the plugin
 #, fuzzy
@@ -236,7 +235,7 @@ msgstr "Bildgalleri"
 msgid "Image gallery is only available if video is empty."
 msgstr "Bildgalleriet är endast tillgängligt om videon är tom."
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:345
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:338
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:326
 #, fuzzy
 msgid "Information"
@@ -247,19 +246,19 @@ msgstr "Information"
 msgid "Internally created user"
 msgstr "Internt skapad användare"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:633
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:626
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:614
 #, fuzzy
 msgid "Link Facebook"
 msgstr "Länk till Facebook"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:650
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:643
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:631
 #, fuzzy
 msgid "Link Instagram"
 msgstr "Länk till Instagram"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:517
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:510
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:498
 #, fuzzy
 msgid "Lägg till"
@@ -306,20 +305,17 @@ msgid "Number of profiles"
 msgstr "Antal profiler"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:190
-#, fuzzy
 msgid "Number of students"
-msgstr "Antal studenter"
+msgstr "Antal elever"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:198
-#, fuzzy
 msgid "Number of units"
-msgstr "Antal enheter"
+msgstr "Antal avdelningar"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:309
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:302
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:290
-#, fuzzy
 msgid "Open"
-msgstr "Öppna"
+msgstr "Öppnar"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:274
 #, fuzzy
@@ -336,17 +332,16 @@ msgstr "Öppettider (fritidscenter)"
 msgid "Optional row"
 msgstr "Valfri rad"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:482
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:475
 #, fuzzy
 msgid "Optional rows"
 msgstr "Valfria rader"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:425
-#, fuzzy
 msgid "Orientation"
-msgstr "Orientering"
+msgstr "Specialinriktning"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:444
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:437
 #, fuzzy
 msgid "Our leisure center"
 msgstr "Vårt fritidscenter"
@@ -367,30 +362,22 @@ msgstr "Förälder %s:"
 msgid "Parent School"
 msgstr "Överställd skola"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:710
+#: workspaces/api-schools-manager/source/php/PostType/Person/PersonConfiguration.php:14
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:703
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:691
 #, fuzzy
 msgid "Person"
 msgstr "Person"
 
-#: workspaces/api-schools-manager/source/php/PostType/Person/PersonConfiguration.php:14
-#, fuzzy
-msgid "person"
-msgstr "person"
-
 #: workspaces/api-schools-manager/source/php/AcfFields/php/person-details.php:8
 msgid "Person details"
 msgstr "Personuppgifter"
 
+#: workspaces/api-schools-manager/source/php/PostType/Person/PersonConfiguration.php:13
 #: workspaces/api-schools-manager/source/php/PostType/Person/PersonConfiguration.php:16
 #, fuzzy
 msgid "Persons"
 msgstr "Personer"
-
-#: workspaces/api-schools-manager/source/php/PostType/Person/PersonConfiguration.php:13
-#, fuzzy
-msgid "persons"
-msgstr "personer"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/person-details.php:31
 #, fuzzy
@@ -412,7 +399,7 @@ msgstr "Förskolor"
 msgid "Preschool data"
 msgstr "Uppgifter om förskola"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:689
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:682
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:670
 #, fuzzy
 msgid "Professional title"
@@ -424,9 +411,8 @@ msgid "School"
 msgstr "Skolan"
 
 #. Name of the plugin
-#, fuzzy
 msgid "Schools Manager"
-msgstr "Skolledare"
+msgstr "Schools Manager"
 
 #: workspaces/api-schools-manager/source/php/Entity/PostType.php:62
 #: workspaces/api-schools-manager/source/php/Entity/Taxonomy.php:37
@@ -502,13 +488,13 @@ msgstr "Visa %s"
 msgid "Visit Us"
 msgstr "Besök oss"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:568
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:561
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:549
 #, fuzzy
 msgid "Visiting address"
 msgstr "Besöksadress"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:504
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:497
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:485
 #, fuzzy
 msgid ""
