@@ -12,6 +12,7 @@ class Admin
         add_action('init', array($this, 'addOptionsPage'));
         add_action('after_setup_theme', array($this, 'themeSupport'));
         add_action('enqueue_block_editor_assets', array($this, 'loadScriptInGutenbergEditor'));
+        add_action('acf/init', array($this, 'addPluginSettingsPage'));
 
         // Allow only specific block categories.
         add_filter('allowed_block_types_all', array($this, 'filterAllowedBlockTypes'), 100, 2);
@@ -57,5 +58,18 @@ class Admin
             array('wp-blocks'),
             filemtime(plugin_dir_path(__FILE__) . $fileName)
         );
+    }
+
+    public function addPluginSettingsPage()
+    {
+        if (function_exists('acf_add_options_page')) {
+            acf_add_options_page(array(
+                'page_title' => __('Schools Manager Settings', 'schools-manager'),
+                'menu_title' => __('Schools Manager Settings', 'schools-manager'),
+                'menu_slug'  => 'schools-manager-settings',
+                'capability' => 'edit_posts',
+                'redirect'   => false
+            ));
+        }
     }
 }

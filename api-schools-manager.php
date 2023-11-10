@@ -4,7 +4,7 @@
  * Plugin Name:       Schools Manager
  * Plugin URI:        https://github.com/helsingborg-stad/api-schools-manager
  * Description:       Creates a api that may be used to manage schools
- * Version: 0.11.3
+ * Version: 0.12.0
  * Author:            Thor Brink @ Helsingborg Stad
  * Author URI:        https://github.com/helsingborg-stad
  * License:           MIT
@@ -36,11 +36,12 @@ add_action('acf/init', function () {
     $acfExportManager->setExportFolder(SCHOOLS_MANAGER_PATH . 'source/php/AcfFields/');
     $acfExportManager->autoExport(array(
         // School fields
-        'elementary-school-data' => 'group_651e694d7a010',
-        'pre-school-data'        => 'group_651e669808174',
-        'page-fields'            => 'group_64e84e2b7a8c4',
-        'notice'                 => 'group_6524011f6f467',
-        'person-details'         => 'group_64e6f3b077aa6'
+        'elementary-school-data'   => 'group_651e694d7a010',
+        'pre-school-data'          => 'group_651e669808174',
+        'page-fields'              => 'group_64e84e2b7a8c4',
+        'notice'                   => 'group_6524011f6f467',
+        'person-details'           => 'group_64e6f3b077aa6',
+        'schools-manager-settings' => 'group_654b8e292c983'
     ));
 
     $acfExportManager->import();
