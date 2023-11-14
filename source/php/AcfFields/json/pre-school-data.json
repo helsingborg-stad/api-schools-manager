@@ -745,6 +745,26 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_6553858f749a8",
+                    "label": "Display on website",
+                    "name": "display_on_website",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_65536d9acd483",
                     "label": "Title",
                     "name": "title",
