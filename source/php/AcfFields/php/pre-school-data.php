@@ -751,6 +751,26 @@
             'layout' => 'block',
             'sub_fields' => array(
                 0 => array(
+                    'key' => 'field_6553858f749a8',
+                    'label' => __('Display on website', 'api-schools-manager'),
+                    'name' => 'display_on_website',
+                    'aria-label' => '',
+                    'type' => 'true_false',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'message' => '',
+                    'default_value' => 1,
+                    'ui' => 0,
+                    'ui_on_text' => '',
+                    'ui_off_text' => '',
+                ),
+                1 => array(
                     'key' => 'field_65536d9acd483',
                     'label' => __('Title', 'api-schools-manager'),
                     'name' => 'title',
@@ -770,7 +790,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                1 => array(
+                2 => array(
                     'key' => 'field_651e66981a2f9',
                     'label' => __('Description', 'api-schools-manager'),
                     'name' => 'description',
@@ -790,7 +810,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                2 => array(
+                3 => array(
                     'key' => 'field_651e66981a343',
                     'label' => __('Apply here', 'api-schools-manager'),
                     'name' => 'cta_apply_here',
@@ -806,7 +826,7 @@
                     ),
                     'return_format' => 'array',
                 ),
-                3 => array(
+                4 => array(
                     'key' => 'field_651e66981a38e',
                     'label' => __('How to apply', 'api-schools-manager'),
                     'name' => 'cta_how_to_apply',
