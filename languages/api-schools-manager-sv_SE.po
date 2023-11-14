@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Schools Manager\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-07 07:00+0000\n"
-"PO-Revision-Date: 2023-11-10 07:53+0000\n"
+"PO-Revision-Date: 2023-11-14 14:52+0000\n"
 "Last-Translator: Anna Johansson\n"
 "Language-Team: Svenska\n"
 "Language: sv_SE\n"
@@ -67,10 +67,10 @@ msgstr "Adress"
 msgid "All %s"
 msgstr "Alla %s"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:789
-#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:777
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:66
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:136
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:809
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:817
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:86
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:176
 #, fuzzy
 msgid "Apply here"
 msgstr "Ansök här"
@@ -122,7 +122,7 @@ msgstr "Skapar en api som kan användas för att hantera skolor"
 msgid "Custom excerpt"
 msgstr "Anpassat utdrag"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:100
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:120
 msgid "Default Elementary School Settings"
 msgstr "Inställningar Grundskolor"
 
@@ -135,14 +135,18 @@ msgid "Default values"
 msgstr "Standardvärden"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:603
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:769
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:789
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:591
-#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:757
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:46
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:116
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:797
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:66
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:156
 #, fuzzy
 msgid "Description"
 msgstr "Beskrivning"
+
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:757
+msgid "Display on website"
+msgstr "Visa på webbsida"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:264
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:232
@@ -176,8 +180,8 @@ msgstr "Uppgifter om skolan"
 msgid "Elementary schools"
 msgstr "Grundskolor"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:823
-#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:811
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:843
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:851
 msgid "end call to action accordion"
 msgstr "avsluta call to action accordion"
 
@@ -210,10 +214,10 @@ msgstr "Betyg"
 msgid "Heading"
 msgstr "Rubrik"
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:805
-#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:793
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:82
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:152
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:825
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:833
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:102
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:192
 #, fuzzy
 msgid "How to apply"
 msgstr "Hur man ansöker"
@@ -363,7 +367,7 @@ msgstr "Valfria rader"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:425
 msgid "Orientation"
-msgstr "Specialinriktning"
+msgstr "Inskolning"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:437
 #, fuzzy
@@ -468,6 +472,13 @@ msgstr "Dessa sidor är associerade med denna skola."
 #, fuzzy
 msgid "Thor Brink @ Helsingborg Stad"
 msgstr "Thor Brink @ Helsingborg Stad"
+
+#: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:769
+#: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:777
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:46
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:136
+msgid "Title"
+msgstr "Rubrik"
 
 #: workspaces/api-schools-manager/source/php/Entity/Taxonomy.php:42
 #, fuzzy, php-format
