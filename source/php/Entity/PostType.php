@@ -63,7 +63,7 @@ class PostType implements PostTypeInterface
                 'not_found'          => sprintf(__('No %s found', 'api-schools-manager'), $namePlural),
                 'not_found_in_trash' => sprintf(__('No %s found in trash', 'api-schools-manager'), $namePlural),
                 'parent_item_colon'  => sprintf(__('Parent %s:', 'api-schools-manager'), $nameSingular),
-                'menu_name'          => __(ucfirst($this->namePlural), 'api-schools-manager')
+                'menu_name'          => __($this->namePlural, 'api-schools-manager')
             ),
             $this->labels
         );

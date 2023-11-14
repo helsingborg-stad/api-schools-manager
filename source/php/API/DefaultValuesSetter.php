@@ -32,6 +32,7 @@ class DefaultValuesSetter
         }
 
         $defaultFieldsMap = [
+            'cta_application_title'            => 'title',
             'cta_application_description'      => 'description',
             'cta_application_cta_apply_here'   => 'cta_apply_here',
             'cta_application_cta_how_to_apply' => 'cta_how_to_apply',

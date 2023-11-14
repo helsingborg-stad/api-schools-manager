@@ -40,6 +40,26 @@
             'layout' => 'block',
             'sub_fields' => array(
                 0 => array(
+                    'key' => 'field_65536be171beb',
+                    'label' => __('Title', 'api-schools-manager'),
+                    'name' => 'title',
+                    'aria-label' => '',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                ),
+                1 => array(
                     'key' => 'field_654c80a411306',
                     'label' => __('Description', 'api-schools-manager'),
                     'name' => 'description',
@@ -59,7 +79,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                1 => array(
+                2 => array(
                     'key' => 'field_654b8ec18b143',
                     'label' => __('Apply here', 'api-schools-manager'),
                     'name' => 'cta_apply_here',
@@ -75,7 +95,7 @@
                     ),
                     'return_format' => 'array',
                 ),
-                2 => array(
+                3 => array(
                     'key' => 'field_654b8ed88b144',
                     'label' => __('How to apply', 'api-schools-manager'),
                     'name' => 'cta_how_to_apply',
@@ -110,6 +130,26 @@
             'layout' => 'block',
             'sub_fields' => array(
                 0 => array(
+                    'key' => 'field_65536c0193993',
+                    'label' => __('Title', 'api-schools-manager'),
+                    'name' => 'title',
+                    'aria-label' => '',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'maxlength' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                ),
+                1 => array(
                     'key' => 'field_654c80b911307',
                     'label' => __('Description', 'api-schools-manager'),
                     'name' => 'description',
@@ -129,7 +169,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                1 => array(
+                2 => array(
                     'key' => 'field_654b8f161f997',
                     'label' => __('Apply here', 'api-schools-manager'),
                     'name' => 'cta_apply_here',
@@ -145,7 +185,7 @@
                     ),
                     'return_format' => 'array',
                 ),
-                2 => array(
+                3 => array(
                     'key' => 'field_654b8f161f998',
                     'label' => __('How to apply', 'api-schools-manager'),
                     'name' => 'cta_how_to_apply',

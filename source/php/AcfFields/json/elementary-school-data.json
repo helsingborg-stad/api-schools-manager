@@ -756,6 +756,26 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_65536dc0e959a",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
                     "key": "field_651e694d8cdfc",
                     "label": "Description",
                     "name": "description",
