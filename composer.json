@@ -64,5 +64,5 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
-    "version": "0.16.1"
+    "version": "0.16.3"
 }
