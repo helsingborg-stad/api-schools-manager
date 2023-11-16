@@ -734,7 +734,7 @@
             "name": "cta_application",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "If these fields are left unedited, the application Call-To-Action box will use the default settings from School Settings Manager.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -750,7 +750,7 @@
                     "name": "display_on_website",
                     "aria-label": "",
                     "type": "true_false",
-                    "instructions": "",
+                    "instructions": "Uncheck this to hide the application Call-To-Action box on the website",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

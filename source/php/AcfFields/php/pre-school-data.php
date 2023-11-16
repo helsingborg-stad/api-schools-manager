@@ -740,7 +740,7 @@
             'name' => 'cta_application',
             'aria-label' => '',
             'type' => 'group',
-            'instructions' => '',
+            'instructions' => __('If these fields are left unedited, the application Call-To-Action box will use the default settings from School Settings Manager.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -756,7 +756,7 @@
                     'name' => 'display_on_website',
                     'aria-label' => '',
                     'type' => 'true_false',
-                    'instructions' => '',
+                    'instructions' => __('Uncheck this to hide the application Call-To-Action box on the website', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(

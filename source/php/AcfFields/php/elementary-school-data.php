@@ -752,7 +752,7 @@
             'name' => 'cta_application',
             'aria-label' => '',
             'type' => 'group',
-            'instructions' => '',
+            'instructions' => __('If these fields are left unedited, the application Call-To-Action box will use the default settings from School Settings Manager.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -763,6 +763,26 @@
             'layout' => 'block',
             'sub_fields' => array(
                 0 => array(
+                    'key' => 'field_6555d5fec70b9',
+                    'label' => __('Display on website', 'api-schools-manager'),
+                    'name' => 'display_on_website',
+                    'aria-label' => '',
+                    'type' => 'true_false',
+                    'instructions' => __('Uncheck this to hide the application Call-To-Action box on the website', 'api-schools-manager'),
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array(
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'message' => '',
+                    'default_value' => 1,
+                    'ui' => 0,
+                    'ui_on_text' => '',
+                    'ui_off_text' => '',
+                ),
+                1 => array(
                     'key' => 'field_65536dc0e959a',
                     'label' => __('Title', 'api-schools-manager'),
                     'name' => 'title',
@@ -782,7 +802,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                1 => array(
+                2 => array(
                     'key' => 'field_651e694d8cdfc',
                     'label' => __('Description', 'api-schools-manager'),
                     'name' => 'description',
@@ -802,7 +822,7 @@
                     'prepend' => '',
                     'append' => '',
                 ),
-                2 => array(
+                3 => array(
                     'key' => 'field_651e694d8ce45',
                     'label' => __('Apply here', 'api-schools-manager'),
                     'name' => 'cta_apply_here',
@@ -818,7 +838,7 @@
                     ),
                     'return_format' => 'array',
                 ),
-                3 => array(
+                4 => array(
                     'key' => 'field_651e694d8ce8c',
                     'label' => __('How to apply', 'api-schools-manager'),
                     'name' => 'cta_how_to_apply',
