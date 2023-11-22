@@ -3,12 +3,32 @@
     "title": "Elementary school data",
     "fields": [
         {
+            "key": "field_651e694d7b7ad",
+            "label": "Custom excerpt",
+            "name": "custom_excerpt",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Use this space to write a short and engaging summary about your school. This summary will appear at the beginning of your school's page on the website, giving visitors a quick glimpse of what your school is all about.\r\n\r\nThink of it as the first impression for your school's page. Keep it brief (one or two sentences) and focus on what makes your school special. This summary can also appear in other places where people find information about your school, such as search results and archives.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_651e694d7b36f",
             "label": "Facade images",
             "name": "facade_images",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Upload up to 6 images of the school's facade. Images should be clear and well-lit.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,7 +75,7 @@
             "name": "gallery",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Image gallery is only available if video is empty.",
+            "instructions": "Use this section to create an image gallery showcasing different aspects of the school. You can upload up to 6 images. Each image should represent a unique feature or area of the school, such as classrooms, playgrounds, labs, or other facilities. Make sure the images are in high resolution and properly captioned to provide context. The gallery is an excellent way to visually engage prospective students and parents, offering them a glimpse into the school environment.\r\n\r\nPlease note: The image gallery will only be accessible if the 'Video' field is left empty. This is to ensure that the webpage remains uncluttered and user-friendly. If a video is uploaded, focus on its quality and relevance, and consider using the gallery section for another post where a video is not included.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -109,7 +129,7 @@
             "name": "video",
             "aria-label": "",
             "type": "oembed",
-            "instructions": "Video is only available if image gallery is empty.",
+            "instructions": "This field is designated for embedding a video that showcases the school. Please note that the video must be hosted on an external service, such as YouTube or Vimeo. Direct uploads are not supported in this field. \r\n<br><br>\r\n<strong>Video Content:<\/strong> The video should be concise, informative, and engaging. It could include a tour of the school, interviews with staff and students, or highlights of school activities and programs.\r\n<br><br>\r\n<strong>Privacy and Permissions:<\/strong> Ensure you have the right permissions and that the video complies with privacy policies, especially if it features students.\r\n<br><br>\r\nPlease be aware that if you utilize this video field, the 'Image Gallery' section will become inaccessible. This is to maintain a clean and user-friendly page layout. If you wish to use the image gallery, leave this video field empty.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -126,26 +146,6 @@
             },
             "width": "",
             "height": ""
-        },
-        {
-            "key": "field_651e694d7b7ad",
-            "label": "Custom excerpt",
-            "name": "custom_excerpt",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
         },
         {
             "key": "field_651e694d7b523",
@@ -331,7 +331,7 @@
             "name": "information",
             "aria-label": "",
             "type": "group",
-            "instructions": "",
+            "instructions": "In this field, provide a brief yet compelling overview of your school, focusing on key aspects that will appeal to new families and students. Remember, the goal is to give a snapshot that is informative but not overwhelming. Aim for clarity and brevity.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
