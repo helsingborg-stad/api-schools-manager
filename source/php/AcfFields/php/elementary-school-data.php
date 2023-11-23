@@ -347,7 +347,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
             'name' => 'information',
             'aria-label' => '',
             'type' => 'group',
-            'instructions' => __('In this field, provide a brief yet compelling overview of your school, focusing on key aspects that will appeal to new families and students. Remember, the goal is to give a snapshot that is informative but not overwhelming. Aim for clarity and brevity.', 'api-schools-manager'),
+            'instructions' => '',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -381,16 +381,9 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'about_us',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
-                    'instructions' => '',
+                    'instructions' => __('Presentation of the school; where we are located, how we are organized, special focus, teachers\' competence. Our own chef prepares the delicious food + link to the school\'s menu. How Student Health and Study and Career Counselling are organized and work at the school to support the students.', 'api-schools-manager'),
                     'required' => 0,
-                    'conditional_logic' => array(
-                        0 => array(
-                            0 => array(
-                                'field' => 'field_651e694d7b326',
-                                'operator' => '!=empty',
-                            ),
-                        ),
-                    ),
+                    'conditional_logic' => 0,
                     'wrapper' => array(
                         'width' => '',
                         'class' => '',
@@ -426,7 +419,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'how_we_work',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
-                    'instructions' => '',
+                    'instructions' => __('The school\'s guiding principles and working methods, how we work organizationally, how we work with and support the students, safety and well-being, and guardians.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -464,7 +457,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'our_leisure_center',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
-                    'instructions' => '',
+                    'instructions' => __('Information about what a leisure-time center is and how it operates at our school.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
