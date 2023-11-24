@@ -6,12 +6,34 @@
     'title' => __('Preschool data', 'api-schools-manager'),
     'fields' => array(
         0 => array(
+            'key' => 'field_651e669809b2b',
+            'label' => __('Custom excerpt', 'api-schools-manager'),
+            'name' => 'custom_excerpt',
+            'aria-label' => '',
+            'type' => 'wysiwyg',
+            'instructions' => __('Use this space to write a short and engaging summary about your school. This summary will appear at the beginning of your school\'s page on the website, giving visitors a quick glimpse of what your school is all about.
+
+Think of it as the first impression for your school\'s page. Keep it brief (one or two sentences) and focus on what makes your school special. This summary can also appear in other places where people find information about your school, such as search results and archives.', 'api-schools-manager'),
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'tabs' => 'all',
+            'toolbar' => 'basic',
+            'media_upload' => 0,
+            'delay' => 0,
+        ),
+        1 => array(
             'key' => 'field_652960b541619',
             'label' => __('Facade images', 'api-schools-manager'),
             'name' => 'facade_images',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => '',
+            'instructions' => __('Upload up to 6 images of the school\'s facade. Images should be clear and well-lit.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -52,15 +74,24 @@
                 ),
             ),
         ),
-        1 => array(
+        2 => array(
             'key' => 'field_652960ba4161b',
             'label' => __('Image gallery', 'api-schools-manager'),
             'name' => 'gallery',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => __('Image gallery is only available if video is empty.', 'api-schools-manager'),
+            'instructions' => __('Use this section to create an image gallery showcasing different aspects of the school. You can upload up to 6 images. Each image should represent a unique feature or area of the school, such as classrooms, playgrounds, labs, or other facilities. Make sure the images are in high resolution and properly captioned to provide context. The gallery is an excellent way to visually engage prospective students and parents, offering them a glimpse into the school environment.
+
+Please note: The image gallery will only be accessible if the \'Video\' field is left empty. This is to ensure that the webpage remains uncluttered and user-friendly. If a video is uploaded, focus on its quality and relevance, and consider using the gallery section for another post where a video is not included.', 'api-schools-manager'),
             'required' => 0,
-            'conditional_logic' => 0,
+            'conditional_logic' => array(
+                0 => array(
+                    0 => array(
+                        'field' => 'field_652663d62efd2',
+                        'operator' => '==empty',
+                    ),
+                ),
+            ),
             'wrapper' => array(
                 'width' => '',
                 'class' => '',
@@ -99,18 +130,24 @@
                 ),
             ),
         ),
-        2 => array(
+        3 => array(
             'key' => 'field_652663d62efd2',
             'label' => __('Video', 'api-schools-manager'),
             'name' => 'video',
             'aria-label' => '',
             'type' => 'oembed',
-            'instructions' => __('Video is only available if no image gallery is added.', 'api-schools-manager'),
+            'instructions' => __('This field is designated for embedding a video that showcases the school. Please note that the video must be hosted on an external service, such as YouTube or Vimeo. Direct uploads are not supported in this field. 
+<br><br>
+<strong>Video Content:</strong> The video should be concise, informative, and engaging. It could include a tour of the school, interviews with staff and students, or highlights of school activities and programs.
+<br><br>
+<strong>Privacy and Permissions:</strong> Ensure you have the right permissions and that the video complies with privacy policies, especially if it features students.
+<br><br>
+Please be aware that if you utilize this video field, the \'Image Gallery\' section will become inaccessible. This is to maintain a clean and user-friendly page layout. If you wish to use the image gallery, leave this video field empty.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => array(
                 0 => array(
                     0 => array(
-                        'field' => 'field_652663f98892c',
+                        'field' => 'field_651e669809b2b',
                         'operator' => '==empty',
                     ),
                 ),
@@ -122,26 +159,6 @@
             ),
             'width' => '',
             'height' => '',
-        ),
-        3 => array(
-            'key' => 'field_651e669809b2b',
-            'label' => __('Custom excerpt', 'api-schools-manager'),
-            'name' => 'custom_excerpt',
-            'aria-label' => '',
-            'type' => 'wysiwyg',
-            'instructions' => __('Short description of the school, for example used in listings of schools.', 'api-schools-manager'),
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array(
-                'width' => '',
-                'class' => '',
-                'id' => '',
-            ),
-            'default_value' => '',
-            'tabs' => 'all',
-            'toolbar' => 'basic',
-            'media_upload' => 0,
-            'delay' => 0,
         ),
         4 => array(
             'key' => 'field_651e6698097ca',
@@ -349,7 +366,7 @@
                         'class' => '',
                         'id' => '',
                     ),
-                    'open' => 1,
+                    'open' => 0,
                     'multi_expand' => 1,
                     'endpoint' => 0,
                 ),
@@ -442,7 +459,7 @@
                     'name' => 'orientation',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
-                    'instructions' => '',
+                    'instructions' => __('This is what happens when your child starts in pre-school class at our school.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
