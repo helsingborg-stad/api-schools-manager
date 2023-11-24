@@ -27,6 +27,8 @@ class App
 
         add_action('plugins_loaded', array( $this, 'init' ));
 
+        add_action('admin_init', array($this, 'hideUnusedAdminPages'));
+
         add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
 
         add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
@@ -44,6 +46,21 @@ class App
     public function hideStandardExcerptBox()
     {
         remove_meta_box('postexcerpt', ['pre-school', 'elementary-school'], 'normal');
+    }
+
+    public function hideUnusedAdminPages()
+    {
+
+        remove_menu_page('edit.php'); // Posts
+        remove_menu_page('link-manager.php');
+        remove_menu_page('edit-comments.php');
+        remove_menu_page('themes.php');
+        remove_menu_page('tools.php');
+        remove_menu_page('index.php');
+
+        remove_submenu_page('options-general.php', 'options-discussion.php');
+        remove_submenu_page('options-general.php', 'options-writing.php');
+        remove_submenu_page('options-general.php', 'options-privacy.php');
     }
 
     public function displayContactMetaInMetaBox($title, $post, $field, $post_id)
