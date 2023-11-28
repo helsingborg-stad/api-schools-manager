@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Schools Manager\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-07 07:00+0000\n"
-"PO-Revision-Date: 2023-11-23 10:22+0000\n"
+"PO-Revision-Date: 2023-11-28 06:38+0000\n"
 "Last-Translator: Anna Johansson\n"
 "Language-Team: Svenska\n"
 "Language: sv_SE\n"
@@ -185,15 +185,13 @@ msgid "Facade images"
 msgstr "Bilder av fasader"
 
 #: workspaces/api-schools-manager/source/php/App.php:171
-#, fuzzy
 msgid "Grade"
-msgstr "Betyg"
+msgstr "Årskurs"
 
 #: workspaces/api-schools-manager/source/php/App.php:167
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:167
-#, fuzzy
 msgid "Grades"
-msgstr "Betyg"
+msgstr "Årskurser"
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:518
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:520
