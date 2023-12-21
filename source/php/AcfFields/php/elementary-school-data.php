@@ -877,6 +877,23 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
             'multi_expand' => 0,
             'endpoint' => 1,
         ),
+        18 => array(
+            'key' => 'field_6584444be0b15',
+            'label' => __('Posttype Canonical URL', 'api-schools-manager'),
+            'name' => 'posttype_canonical_url',
+            'aria-label' => '',
+            'type' => 'url',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+        ),
     ),
     'location' => array(
         0 => array(
