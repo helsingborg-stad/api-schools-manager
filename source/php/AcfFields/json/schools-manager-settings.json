@@ -148,7 +148,7 @@
         {
             "key": "field_65842c1828254",
             "label": "Elementary School Canonical URL",
-            "name": "elementary_school_canonical_url",
+            "name": "elementary-school_canonical_url",
             "aria-label": "",
             "type": "url",
             "instructions": "A Canonical URL is used to specify the preferred version of a web page to avoid duplicate content issues in search engine optimization.",

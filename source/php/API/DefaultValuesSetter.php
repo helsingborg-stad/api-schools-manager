@@ -15,8 +15,29 @@ class DefaultValuesSetter
     public function addHooks()
     {
         add_filter('acf/load_value', array($this, 'setDefaultValues'), 10, 3);
+        add_filter('acf/prepare_field/name=posttype_canonical_url', array($this, 'setFieldHidden'), 10, 1);
     }
 
+    public function setFieldHidden($field)
+    {
+        $field['wrapper']['class'] = 'hidden';
+
+        $field['readonly']     = true;
+        $field['instructions'] = __('This is set under School Manager Settings (per post type).', 'schools-manager');
+        $field['value']        = $this->getCanonicalUrl();
+
+        return $field;
+    }
+
+    private function getCanonicalUrl(): string
+    {
+        $postType = get_post_type();
+        $url      = \get_field("{$postType}_canonical_url", 'options');
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            return $url;
+        }
+        return '';
+    }
     /**
      * Sets default values for ACF fields.
      *
@@ -40,7 +61,7 @@ class DefaultValuesSetter
 
         foreach ($defaultFieldsMap as $fieldName => $defaultFieldNameSuffix) {
             if ($field['name'] === $fieldName) {
-                $value = $this->getDefaultValue($value, $postId, $field, $defaultFieldNameSuffix);
+                return $this->getDefaultValue($value, $postId, $field, $defaultFieldNameSuffix);
             }
         }
 

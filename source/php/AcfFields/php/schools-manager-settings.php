@@ -151,7 +151,7 @@
         4 => array(
             'key' => 'field_65842c1828254',
             'label' => __('Elementary School Canonical URL', 'api-schools-manager'),
-            'name' => 'elementary_school_canonical_url',
+            'name' => 'elementary-school_canonical_url',
             'aria-label' => '',
             'type' => 'url',
             'instructions' => __('A Canonical URL is used to specify the preferred version of a web page to avoid duplicate content issues in search engine optimization.', 'api-schools-manager'),
