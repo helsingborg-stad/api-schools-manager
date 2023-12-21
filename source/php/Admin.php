@@ -36,7 +36,7 @@ class Admin
 
     public function filterAllowedBlockTypes($allowedBlocks, $blockEditorContext): array
     {
-        $allowedBlockNames      = ['core/embed', 'core/image'];
+        $allowedBlockNames      = ['core/embed', 'core/image', 'core/freeform'];
         $allowedBlockCategories = ['text'];
         $allBlocks              = WP_Block_Type_Registry::get_instance()->get_all_registered();
 
