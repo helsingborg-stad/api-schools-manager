@@ -15,7 +15,7 @@ class DefaultValuesSetter
     public function addHooks()
     {
         add_filter('acf/load_value', array($this, 'setDefaultValues'), 10, 3);
-        add_filter('acf/prepare_field/name=posttype_canonical_url', array($this, 'hidePosttypeCanonicalUrlField'), 10, 1);
+        add_filter('acf/prepare_field/name=posttype_canonical_url', [$this, 'hidePosttypeCanonicalUrlField'], 10, 1);
     }
 
     /**
