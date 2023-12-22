@@ -13,7 +13,7 @@ class SetDefaultValuesTest extends TestCase
      */
     public function testSkipsIfIsNotRestRequest()
     {
-        $defaultValuesSetter = Mockery::mock(DefaultValuesSetter::class)->makePartial()->shouldAllowMockingProtectedMethods();
+        $defaultValuesSetter = $this->getDefaultValueSetter();
         $defaultValuesSetter->shouldReceive('isRestRequest')->andReturn(false);
         $defaultValuesSetter->shouldReceive('getDefaultValue')->times(0);
 
@@ -29,7 +29,7 @@ class SetDefaultValuesTest extends TestCase
     public function testSetsDefaultValue($fieldName)
     {
         $defaultValue        = 'bar';
-        $defaultValuesSetter = Mockery::mock(DefaultValuesSetter::class)->makePartial()->shouldAllowMockingProtectedMethods();
+        $defaultValuesSetter = $this->getDefaultValueSetter();
         $defaultValuesSetter->shouldReceive('isRestRequest')->andReturn(true);
         $defaultValuesSetter->shouldReceive('getDefaultValue')->andReturn($defaultValue);
 
@@ -55,12 +55,17 @@ class SetDefaultValuesTest extends TestCase
     {
         $fieldName           = 'posttype_canonical_url';
         $defaultValue        = 'url';
-        $defaultValuesSetter = Mockery::mock(DefaultValuesSetter::class)->makePartial()->shouldAllowMockingProtectedMethods();
+        $defaultValuesSetter = $this->getDefaultValueSetter();
         $defaultValuesSetter->shouldReceive('isRestRequest')->andReturn(true);
         $defaultValuesSetter->shouldReceive('getCurrentPosttypeCanonicalUrl')->once()->andReturn($defaultValue);
 
         $result = $defaultValuesSetter->setDefaultValues('foo', 1, ['name' => $fieldName]);
 
         $this->assertSame($defaultValue, $result);
+    }
+
+    private function getDefaultValueSetter()
+    {
+        return Mockery::mock(DefaultValuesSetter::class)->makePartial()->shouldAllowMockingProtectedMethods();
     }
 }
