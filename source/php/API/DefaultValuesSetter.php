@@ -75,7 +75,7 @@ class DefaultValuesSetter
      *
      * @return string The canonical URL of the current post type, or an empty string if not found or invalid.
      */
-    private function getCurrentPosttypeCanonicalUrl(): string
+    protected function getCurrentPosttypeCanonicalUrl(): string
     {
         $postType = get_post_type();
         $url      = \get_field("{$postType}_canonical_url", 'options');
@@ -94,7 +94,7 @@ class DefaultValuesSetter
      * @param string $defaultFieldNameSuffix The suffix of the default field name.
      * @return mixed The default value.
      */
-    private function getDefaultValue(mixed $value, $postId, array $field, string $defaultFieldNameSuffix): mixed
+    protected function getDefaultValue(mixed $value, $postId, array $field, string $defaultFieldNameSuffix): mixed
     {
         $isEmpty = $this->getEmptyCheckByField($field);
 
@@ -143,7 +143,7 @@ class DefaultValuesSetter
      *
      * @return bool Returns true if the request is a REST request, false otherwise.
      */
-    private function isRestRequest(): bool
+    protected function isRestRequest(): bool
     {
         return function_exists('did_action') && did_action('rest_api_init');
     }
