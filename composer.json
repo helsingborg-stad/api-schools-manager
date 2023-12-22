@@ -6,10 +6,10 @@
     "scripts": {
         "test": "phpunit --testdox --no-coverage",
         "test:coverage": "XDEBUG_MODE=coverage phpunit --testdox",
-        "lint": "vendor/bin/phpcs",
-        "lint:changed": "vendor/bin/phpcs-changed origin/main",
-        "fix": "vendor/bin/phpcbf",
-        "fix:changed": "vendor/bin/phpcbf-changed origin/main",
+        "php:lint": "vendor/bin/phpcs",
+        "php:lint:changed": "vendor/bin/phpcs-changed origin/main",
+        "php:fix": "vendor/bin/phpcbf",
+        "php:fix:changed": "vendor/bin/phpcbf-changed origin/main",
         "post-update-cmd": []
     },
     "extra": {
