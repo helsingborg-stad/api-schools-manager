@@ -4,7 +4,7 @@
 
 use tad\FunctionMocker\FunctionMocker;
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once dirname(__DIR__) . '/../vendor/autoload.php';
 
 // Bootstrap Patchwork
 WP_Mock::setUsePatchwork(true);
@@ -25,6 +25,3 @@ WP_Mock::userFunction('is_wp_error', [
 FunctionMocker::init([
     'include' => [dirname(__DIR__)]
 ]);
-
-// Optional step
-require_once dirname(__DIR__) . '/api-schools-manager.php';

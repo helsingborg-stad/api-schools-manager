@@ -15,6 +15,7 @@ class DefaultValuesSetter
     public function addHooks()
     {
         add_filter('acf/load_value', array($this, 'setDefaultValues'), 10, 3);
+        add_filter('acf/prepare_field/name=posttype_canonical_url', [$this, 'hidePosttypeCanonicalUrlField'], 10, 1);
     }
 
     /**
@@ -40,11 +41,48 @@ class DefaultValuesSetter
 
         foreach ($defaultFieldsMap as $fieldName => $defaultFieldNameSuffix) {
             if ($field['name'] === $fieldName) {
-                $value = $this->getDefaultValue($value, $postId, $field, $defaultFieldNameSuffix);
+                return $this->getDefaultValue($value, $postId, $field, $defaultFieldNameSuffix);
             }
         }
 
+        if ($field['name'] === 'posttype_canonical_url') {
+            return $this->getCurrentPosttypeCanonicalUrl();
+        }
+
         return $value;
+    }
+
+
+    /**
+     * Sets the field as readonly and applies a value. Sets the field wrapper as hidden.
+     *
+     * @param array $field The field to be modified.
+     * @return array The modified field with default values applied.
+     */
+    public function hidePosttypeCanonicalUrlField($field)
+    {
+        $field['wrapper']['class'] = 'hidden';
+
+        $field['readonly']     = true;
+        $field['instructions'] = __('This is set under School Manager Settings (per post type).', 'schools-manager');
+        $field['value']        = $this->getCurrentPosttypeCanonicalUrl();
+
+        return $field;
+    }
+
+    /**
+     * Retrieves the current post type's canonical URL.
+     *
+     * @return string The canonical URL of the current post type, or an empty string if not found or invalid.
+     */
+    protected function getCurrentPosttypeCanonicalUrl(): string
+    {
+        $postType = get_post_type();
+        $url      = \get_field("{$postType}_canonical_url", 'options');
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+            return $url;
+        }
+        return '';
     }
 
     /**
@@ -56,7 +94,7 @@ class DefaultValuesSetter
      * @param string $defaultFieldNameSuffix The suffix of the default field name.
      * @return mixed The default value.
      */
-    private function getDefaultValue(mixed $value, $postId, array $field, string $defaultFieldNameSuffix): mixed
+    protected function getDefaultValue(mixed $value, $postId, array $field, string $defaultFieldNameSuffix): mixed
     {
         $isEmpty = $this->getEmptyCheckByField($field);
 
@@ -105,7 +143,7 @@ class DefaultValuesSetter
      *
      * @return bool Returns true if the request is a REST request, false otherwise.
      */
-    private function isRestRequest(): bool
+    protected function isRestRequest(): bool
     {
         return function_exists('did_action') && did_action('rest_api_init');
     }

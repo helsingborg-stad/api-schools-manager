@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Schools Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-23 10:21+0000\n"
+"POT-Creation-Date: 2023-12-21 12:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,6 +15,13 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.6; wp-6.3.2\n"
 "X-Domain: api-schools-manager"
+
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:124
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:249
+msgid ""
+"A Canonical URL is used to specify the preferred version of a web page to "
+"avoid duplicate content issues in search engine optimization."
+msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:364
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:359
@@ -64,23 +71,28 @@ msgstr ""
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:832
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:834
 #: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:86
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:176
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:211
 msgid "Apply here"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:152
+#: workspaces/api-schools-manager/source/php/App.php:169
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:244
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:189
 msgid "Area"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:151
+#: workspaces/api-schools-manager/source/php/App.php:168
 msgid "Areas"
 msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:738
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:740
 msgid "Call to action: Application"
+msgstr ""
+
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:16
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:141
+msgid "Click to open"
 msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:329
@@ -108,16 +120,12 @@ msgstr ""
 msgid "Custom excerpt"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:120
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:137
 msgid "Default Elementary School Settings"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:30
-msgid "Default Pre School Settings"
-msgstr ""
-
 #: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:12
-msgid "Default values"
+msgid "Default Pre School Settings"
 msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:606
@@ -125,7 +133,7 @@ msgstr ""
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:608
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:814
 #: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:66
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:156
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:191
 msgid "Description"
 msgstr ""
 
@@ -153,6 +161,10 @@ msgstr ""
 msgid "Elementary school"
 msgstr ""
 
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:245
+msgid "Elementary School Canonical URL"
+msgstr ""
+
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:8
 msgid "Elementary school data"
 msgstr ""
@@ -176,11 +188,11 @@ msgstr ""
 msgid "Facade images"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:171
+#: workspaces/api-schools-manager/source/php/App.php:188
 msgid "Grade"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:167
+#: workspaces/api-schools-manager/source/php/App.php:184
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:167
 msgid "Grades"
 msgstr ""
@@ -194,7 +206,7 @@ msgstr ""
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:848
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:850
 #: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:102
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:192
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:227
 msgid "How to apply"
 msgstr ""
 
@@ -209,12 +221,6 @@ msgstr ""
 
 #. URI of the plugin
 msgid "https://github.com/helsingborg-stad/api-schools-manager"
-msgstr ""
-
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:24
-msgid ""
-"If a default setting is provided it will populate the objects field if "
-"omitted."
 msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:760
@@ -382,6 +388,10 @@ msgstr ""
 msgid "Pre schools"
 msgstr ""
 
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:120
+msgid "Pre-School Canonical URL"
+msgstr ""
+
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:8
 msgid "Preschool data"
 msgstr ""
@@ -399,7 +409,7 @@ msgstr ""
 msgid "Professional title"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:94
+#: workspaces/api-schools-manager/source/php/App.php:111
 msgid "School"
 msgstr ""
 
@@ -419,6 +429,11 @@ msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/page-fields.php:14
 msgid "Select a school to which this page belongs."
+msgstr ""
+
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:30
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:155
+msgid "Settings for Call To Action \"Application\""
 msgstr ""
 
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:424
@@ -466,7 +481,7 @@ msgstr ""
 #: workspaces/api-schools-manager/source/php/AcfFields/php/elementary-school-data.php:792
 #: workspaces/api-schools-manager/source/php/AcfFields/php/pre-school-data.php:794
 #: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:46
-#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:136
+#: workspaces/api-schools-manager/source/php/AcfFields/php/schools-manager-settings.php:171
 msgid "Title"
 msgstr ""
 
@@ -518,7 +533,7 @@ msgid ""
 "your school, such as search results and archives."
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:160
+#: workspaces/api-schools-manager/source/php/App.php:177
 msgid "USP"
 msgstr ""
 
@@ -527,7 +542,7 @@ msgstr ""
 msgid "USP:s"
 msgstr ""
 
-#: workspaces/api-schools-manager/source/php/App.php:159
+#: workspaces/api-schools-manager/source/php/App.php:176
 msgid "USPs"
 msgstr ""
 

@@ -3,12 +3,12 @@
     "title": "Schools Manager Settings",
     "fields": [
         {
-            "key": "field_654b8f6d49549",
-            "label": "Default values",
+            "key": "field_65842cdd7cb8d",
+            "label": "Default Pre School Settings",
             "name": "",
             "aria-label": "",
-            "type": "message",
-            "instructions": "",
+            "type": "accordion",
+            "instructions": "Click to open",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -16,13 +16,30 @@
                 "class": "",
                 "id": ""
             },
-            "message": "If a default setting is provided it will populate the objects field if omitted.",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_65842c9928255",
+            "label": "Pre-School Canonical URL",
+            "name": "pre-school_canonical_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "A Canonical URL is used to specify the preferred version of a web page to avoid duplicate content issues in search engine optimization.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_654b8e29fc46a",
-            "label": "Default Pre School Settings",
+            "label": "Settings for Call To Action \"Application\"",
             "name": "default_pre-school_application_settings",
             "aria-label": "",
             "type": "group",
@@ -86,7 +103,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -102,7 +119,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -111,8 +128,43 @@
             ]
         },
         {
-            "key": "field_654b8f161f996",
+            "key": "field_65842cf57cb8e",
             "label": "Default Elementary School Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "Click to open",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
+            "key": "field_65842c1828254",
+            "label": "Elementary School Canonical URL",
+            "name": "elementary-school_canonical_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "A Canonical URL is used to specify the preferred version of a web page to avoid duplicate content issues in search engine optimization.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_654b8f161f996",
+            "label": "Settings for Call To Action \"Application\"",
             "name": "default_elementary-school_application_settings",
             "aria-label": "",
             "type": "group",
@@ -176,7 +228,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -192,7 +244,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
