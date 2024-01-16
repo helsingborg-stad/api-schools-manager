@@ -147,7 +147,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
             'conditional_logic' => array(
                 0 => array(
                     0 => array(
-                        'field' => 'field_651e669809b2b',
+                        'field' => 'field_652960ba4161b',
                         'operator' => '==empty',
                     ),
                 ),
