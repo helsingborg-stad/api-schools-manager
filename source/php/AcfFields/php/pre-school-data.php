@@ -1,9 +1,11 @@
 <?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+
+if (function_exists('acf_add_local_field_group')) {
+
+    acf_add_local_field_group(array(
     'key' => 'group_651e669808174',
-    'title' => __('Preschool data', 'api-schools-manager'),
+    'title' => __('Describe the preschool for the preschool chooser', 'api-schools-manager'),
     'fields' => array(
         0 => array(
             'key' => 'field_651e669809b2b',
@@ -11,9 +13,7 @@
             'name' => 'custom_excerpt',
             'aria-label' => '',
             'type' => 'wysiwyg',
-            'instructions' => __('Use this space to write a short and engaging summary about your school. This summary will appear at the beginning of your school\'s page on the website, giving visitors a quick glimpse of what your school is all about.
-
-Think of it as the first impression for your school\'s page. Keep it brief (one or two sentences) and focus on what makes your school special. This summary can also appear in other places where people find information about your school, such as search results and archives.', 'api-schools-manager'),
+            'instructions' => __('2-3 lines summarizing the offer for the chooser. What makes the preschool unique and special. This summary is displayed in search results and archives.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -33,7 +33,7 @@ Think of it as the first impression for your school\'s page. Keep it brief (one 
             'name' => 'facade_images',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => __('Upload up to 6 images of the school\'s facade. Images should be clear and well-lit.', 'api-schools-manager'),
+            'instructions' => __('Upload a maximum of 6 images in jpg/landscape format of the preschool\'s facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -80,9 +80,9 @@ Think of it as the first impression for your school\'s page. Keep it brief (one 
             'name' => 'gallery',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => __('Use this section to create an image gallery showcasing different aspects of the school. You can upload up to 6 images. Each image should represent a unique feature or area of the school, such as classrooms, playgrounds, labs, or other facilities. Make sure the images are in high resolution and properly captioned to provide context. The gallery is an excellent way to visually engage prospective students and parents, offering them a glimpse into the school environment.
+            'instructions' => __('Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor.
 
-Please note: The image gallery will only be accessible if the \'Video\' field is left empty. This is to ensure that the webpage remains uncluttered and user-friendly. If a video is uploaded, focus on its quality and relevance, and consider using the gallery section for another post where a video is not included.', 'api-schools-manager'),
+            <strong>Please note:</strong> The image gallery will only be available if the \'Video\' field is empty.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => array(
                 0 => array(
@@ -136,13 +136,9 @@ Please note: The image gallery will only be accessible if the \'Video\' field is
             'name' => 'video',
             'aria-label' => '',
             'type' => 'oembed',
-            'instructions' => __('This field is designated for embedding a video that showcases the school. Please note that the video must be hosted on an external service, such as YouTube or Vimeo. Direct uploads are not supported in this field. 
-<br><br>
-<strong>Video Content:</strong> The video should be concise, informative, and engaging. It could include a tour of the school, interviews with staff and students, or highlights of school activities and programs.
-<br><br>
-<strong>Privacy and Permissions:</strong> Ensure you have the right permissions and that the video complies with privacy policies, especially if it features students.
-<br><br>
-Please be aware that if you utilize this video field, the \'Image Gallery\' section will become inaccessible. This is to maintain a clean and user-friendly page layout. If you wish to use the image gallery, leave this video field empty.', 'api-schools-manager'),
+            'instructions' => __('Embed 1 video that captures the chooser’s interest. 
+
+<strong>Please note:</strong> The video must be linked from an external service, such as YouTube or Vimeo.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => array(
                 0 => array(
@@ -240,11 +236,11 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
         ),
         7 => array(
             'key' => 'field_6528d90953367',
-            'label' => __('USP:s', 'api-schools-manager'),
+            'label' => __('USP:s, a maximum of 5', 'api-schools-manager'),
             'name' => 'usp',
             'aria-label' => '',
             'type' => 'taxonomy',
-            'instructions' => __('Drag and drop the terms to set the order in which to display them.', 'api-schools-manager'),
+            'instructions' => __('Unique and specific features that distinguish the unit and attract the chooser. Select a USP by starting to type on the line, then choose from the existing USPs in the list. Special programs or focuses for children with special needs can be found in the list under Specialization.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -338,7 +334,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
         ),
         10 => array(
             'key' => 'field_651e669809b74',
-            'label' => __('Information', 'api-schools-manager'),
+            'label' => __('Presentation of the preschool', 'api-schools-manager'),
             'name' => 'information',
             'aria-label' => '',
             'type' => 'group',
@@ -358,7 +354,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => '',
                     'aria-label' => '',
                     'type' => 'accordion',
-                    'instructions' => '',
+                    'instructions' => __('Describes, for example, the area, age division of groups, expertise, view of children, focus/profile, indoor/outdoor learning environment, who prepares the food/menu, collaboration within the preschool area (which preschools and the type of collaboration), and opening hours.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -403,7 +399,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => '',
                     'aria-label' => '',
                     'type' => 'accordion',
-                    'instructions' => '',
+                    'instructions' => __('Describes, for example, the view on knowledge, how the preschool has chosen to organize learning for the children based on the profile and the curriculum.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -441,7 +437,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => '',
                     'aria-label' => '',
                     'type' => 'accordion',
-                    'instructions' => '',
+                    'instructions' => __('Describes what enrollment is, how long it lasts, and the role and responsibilities of the parent and preschool during that time. Mandatory to mention the plan for equal treatment and the learning platform to follow the child\'s development.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -459,7 +455,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'orientation',
                     'aria-label' => '',
                     'type' => 'wysiwyg',
-                    'instructions' => __('This is what happens when your child starts in pre-school class at our school.', 'api-schools-manager'),
+                    'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -479,7 +475,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => '',
                     'aria-label' => '',
                     'type' => 'accordion',
-                    'instructions' => '',
+                    'instructions' => __('Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -565,7 +561,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
             'name' => 'visiting_address',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => '',
+            'instructions' => __('Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -607,7 +603,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'description',
                     'aria-label' => '',
                     'type' => 'textarea',
-                    'instructions' => '',
+                    'instructions' => __('In the case of multiple visiting addresses, print which part of the organization is located here.', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -664,7 +660,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
             'name' => 'contacts',
             'aria-label' => '',
             'type' => 'repeater',
-            'instructions' => '',
+            'instructions' => __('The applicants most important contact person, 1-2 names. For example, principal and administrator', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -707,7 +703,7 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
                     'name' => 'person',
                     'aria-label' => '',
                     'type' => 'post_object',
-                    'instructions' => '',
+                    'instructions' => __('Email (taken from People)', 'api-schools-manager'),
                     'required' => 0,
                     'conditional_logic' => 0,
                     'wrapper' => array(
@@ -735,11 +731,11 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
         ),
         15 => array(
             'key' => 'field_651e669809c4a',
-            'label' => __('Call to action: Application', 'api-schools-manager'),
+            'label' => __('Call to action: Application special', 'api-schools-manager'),
             'name' => '',
             'aria-label' => '',
             'type' => 'accordion',
-            'instructions' => '',
+            'instructions' => __('An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form.', 'api-schools-manager'),
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array(
@@ -918,4 +914,5 @@ Please be aware that if you utilize this video field, the \'Image Gallery\' sect
     'description' => '',
     'show_in_rest' => 1,
 ));
-}
+
+}

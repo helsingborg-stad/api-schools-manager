@@ -1,7 +1,9 @@
 <?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+
+if (function_exists('acf_add_local_field_group')) {
+
+    acf_add_local_field_group(array(
     'key' => 'group_654b8e292c983',
     'title' => __('Schools Manager Settings', 'api-schools-manager'),
     'fields' => array(
@@ -275,4 +277,5 @@
     'description' => '',
     'show_in_rest' => 0,
 ));
-}
+
+}
