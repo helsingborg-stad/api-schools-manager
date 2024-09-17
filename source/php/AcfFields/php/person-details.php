@@ -1,11 +1,31 @@
 <?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+
+if (function_exists('acf_add_local_field_group')) {
+
+    acf_add_local_field_group(array(
     'key' => 'group_64e6f3b077aa6',
     'title' => __('Person details', 'api-schools-manager'),
     'fields' => array(
         0 => array(
+            'key' => 'field_66e959cbaeab1',
+            'label' => __('Contact instructions', 'api-schools-manager'),
+            'name' => '',
+            'aria-label' => '',
+            'type' => 'message',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+                'width' => '',
+                'class' => '',
+                'id' => '',
+            ),
+            'message' => __('Add the persons name under "Add new heading".', 'api-schools-manager'),
+            'new_lines' => 'wpautop',
+            'esc_html' => 0,
+        ),
+        1 => array(
             'key' => 'field_64e6f3b00a717',
             'label' => __('E-mail', 'api-schools-manager'),
             'name' => 'e-mail',
@@ -24,7 +44,7 @@
             'prepend' => '',
             'append' => '',
         ),
-        1 => array(
+        2 => array(
             'key' => 'field_64e6f3e40a718',
             'label' => __('Phone number', 'api-schools-manager'),
             'name' => 'phone-number',
@@ -66,4 +86,5 @@
     'description' => '',
     'show_in_rest' => 1,
 ));
-}
+
+}

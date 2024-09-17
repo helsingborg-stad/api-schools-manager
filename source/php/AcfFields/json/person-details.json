@@ -3,6 +3,24 @@
     "title": "Person details",
     "fields": [
         {
+            "key": "field_66e959cbaeab1",
+            "label": "Contact instructions",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_64e6f3b00a717",
             "label": "E-mail",
             "name": "e-mail",

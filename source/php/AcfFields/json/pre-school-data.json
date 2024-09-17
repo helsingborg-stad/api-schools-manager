@@ -148,6 +148,24 @@
             "height": ""
         },
         {
+            "key": "field_66e938a10548b",
+            "label": "Quick facts",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_651e6698097ca",
             "label": "Number of children",
             "name": "number_of_children",
@@ -644,6 +662,24 @@
             "placeholder": ""
         },
         {
+            "key": "field_66e9442c058a9",
+            "label": "Create contact",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_651e669809c03",
             "label": "Contacts",
             "name": "contacts",
@@ -879,6 +915,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66e93f38c88e3",
+            "label": "Create subpages",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pages describe, for example, the pre-school's special focus or profile in more detail with a picture, a video link to YouTube and text.\r\n\r\nAlso use pages when the device has the option Application module, which should link to a subpage for the device with application information.\r\n\r\nNote! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\r\n\r\nNote! Always name the page with the name of the school.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [

@@ -180,6 +180,24 @@
             "bidirectional_target": []
         },
         {
+            "key": "field_66e937d7f5e0d",
+            "label": "Quick facts",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_651e694d7b44d",
             "label": "Number of students",
             "name": "number_of_students",
@@ -641,6 +659,24 @@
             "placeholder": ""
         },
         {
+            "key": "field_66e93e3e62d4d",
+            "label": "Create contact",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_651e694d7b89a",
             "label": "Contacts",
             "name": "contacts",
@@ -876,6 +912,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66e93dff24971",
+            "label": "Create subpages",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "A subpage describes, for example, adapted primary school, specialisation, beginning preschool class or profile in more detail. Option to insert image and\/or video link from YouTube.\r\n\r\nTo be visible on the school website, the page must be linked to the specific school. \r\n\r\nNote! Always name the page with the name of the school.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
@@ -899,4 +953,4 @@
     "description": "",
     "show_in_rest": 1
 }]
-
+
