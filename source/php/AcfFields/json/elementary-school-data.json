@@ -1,6 +1,6 @@
 [{
     "key": "group_651e694d7a010",
-    "title": "Elementary school data",
+    "title": "Describe the school for the school chooser",
     "fields": [
         {
             "key": "field_651e694d7b7ad",
@@ -8,7 +8,7 @@
             "name": "custom_excerpt",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "Use this space to write a short and engaging summary about your school. This summary will appear at the beginning of your school's page on the website, giving visitors a quick glimpse of what your school is all about.\r\n\r\nThink of it as the first impression for your school's page. Keep it brief (one or two sentences) and focus on what makes your school special. This summary can also appear in other places where people find information about your school, such as search results and archives.",
+            "instructions": "2-3 lines summarizing the offer for the chooser. What makes the school unique and special. This summary is displayed in search results and archives.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -28,7 +28,7 @@
             "name": "facade_images",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Upload up to 6 images of the school's facade. Images should be clear and well-lit.",
+            "instructions": "Upload a maximum of 6 images in jpg/landscape format of the school's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -75,7 +75,7 @@
             "name": "gallery",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Use this section to create an image gallery showcasing different aspects of the school. You can upload up to 6 images. Each image should represent a unique feature or area of the school, such as classrooms, playgrounds, labs, or other facilities. Make sure the images are in high resolution and properly captioned to provide context. The gallery is an excellent way to visually engage prospective students and parents, offering them a glimpse into the school environment.\r\n\r\nPlease note: The image gallery will only be accessible if the 'Video' field is left empty. This is to ensure that the webpage remains uncluttered and user-friendly. If a video is uploaded, focus on its quality and relevance, and consider using the gallery section for another post where a video is not included.",
+            "instructions": "Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note:</strong> The image gallery will only be available if the 'Video' field is empty.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -129,7 +129,7 @@
             "name": "video",
             "aria-label": "",
             "type": "oembed",
-            "instructions": "This field is designated for embedding a video that showcases the school. Please note that the video must be hosted on an external service, such as YouTube or Vimeo. Direct uploads are not supported in this field. \r\n<br><br>\r\n<strong>Video Content:<\/strong> The video should be concise, informative, and engaging. It could include a tour of the school, interviews with staff and students, or highlights of school activities and programs.\r\n<br><br>\r\n<strong>Privacy and Permissions:<\/strong> Ensure you have the right permissions and that the video complies with privacy policies, especially if it features students.\r\n<br><br>\r\nPlease be aware that if you utilize this video field, the 'Image Gallery' section will become inaccessible. This is to maintain a clean and user-friendly page layout. If you wish to use the image gallery, leave this video field empty.",
+            "instructions": "Embed 1 video that captures the chooser's interest. Please note: The video must be linked from an external service, such as YouTube or Vimeo.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -250,11 +250,11 @@
         },
         {
             "key": "field_6528dbde39aab",
-            "label": "USP:s",
+            "label": "USP:s, a maximum of 5",
             "name": "usp",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "Drag and drop the terms to set the order in which to display them.",
+            "instructions": "Unique and specific features that distinguish the unit and attract the chooser. Select a USP by starting to type on the line, then choose from the existing USPs in the list. Special programs or focuses for children with special needs can be found in the list under Specialization.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -327,7 +327,7 @@
         },
         {
             "key": "field_651e694d7b7f4",
-            "label": "Information",
+            "label": "Presentation of the school",
             "name": "information",
             "aria-label": "",
             "type": "group",
@@ -347,7 +347,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "",
+                    "instructions": "Presentation of the school; where we are, how we are organised, specialization, the competence of the pedagogues. Our own chef prepares the delicious food + link to the schools menu. How Elevhälsa and SYV are organized and work at the school to support the students. No contact details here!",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -385,7 +385,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "",
+                    "instructions": "The schools motto and working methods, how we work organizationally, how we work with and support the students, for example safety and well-being. Mandatory to mention the plan for equal treatment and the learning platform to follow the childs development/contact with the school.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -403,7 +403,7 @@
                     "name": "how_we_work",
                     "aria-label": "",
                     "type": "wysiwyg",
-                    "instructions": "The school's guiding principles and working methods, how we work organizationally, how we work with and support the students, safety and well-being, and guardians.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -423,7 +423,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "",
+                    "instructions": "Describe what it is and how it works at our school. No contact information here.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -441,7 +441,7 @@
                     "name": "our_leisure_center",
                     "aria-label": "",
                     "type": "wysiwyg",
-                    "instructions": "Information about what a leisure-time center is and how it operates at our school.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -461,7 +461,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "",
+                    "instructions": "Any row (max 5). Eg Start school class.  Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Vimeo together with the text.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -479,7 +479,7 @@
                     "name": "optional",
                     "aria-label": "",
                     "type": "repeater",
-                    "instructions": "You can add up to 5 optional rows. Click the arrow icon in the top of the left column next to a row to close it. Drag and drop rows by clicking and holding the left column to reorder them if necessary.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -547,7 +547,7 @@
             "name": "visiting_address",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -589,7 +589,7 @@
                     "name": "description",
                     "aria-label": "",
                     "type": "textarea",
-                    "instructions": "",
+                    "instructions": "In the case of multiple visiting addresses, print which part of the organization is located here.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -646,7 +646,7 @@
             "name": "contacts",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "The school applicants most important contact persons with title and responsibility: for example principal, assistant principal grades 7-9 + 1 administrator.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -689,7 +689,7 @@
                     "name": "person",
                     "aria-label": "",
                     "type": "post_object",
-                    "instructions": "",
+                    "instructions": "Email (taken from People)",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -716,11 +716,11 @@
         },
         {
             "key": "field_651e694d7b8ed",
-            "label": "Call to action: Application",
+            "label": "Call to action: Application special",
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "",
+            "instructions": "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -899,4 +899,4 @@
     "description": "",
     "show_in_rest": 1
 }]
-
+
