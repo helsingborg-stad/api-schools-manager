@@ -1,10 +1,10 @@
 [{
     "key": "group_651e669808174",
-    "title": "Describe the preschool for the preschool chooser",
+    "title": "Pre school",
     "fields": [
         {
             "key": "field_651e669809b2b",
-            "label": "Custom excerpt",
+            "label": "Describe the preschool for the preschool chooser",
             "name": "custom_excerpt",
             "aria-label": "",
             "type": "wysiwyg",
@@ -28,7 +28,7 @@
             "name": "facade_images",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Upload a maximum of 6 images in jpg/landscape format of the preschool's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.",
+            "instructions": "Upload a maximum of 6 images in jpg\/landscape format of the preschool's facade from different angles, such as the entrance and the yard\/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -75,7 +75,7 @@
             "name": "gallery",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty.",
+            "instructions": "Upload a maximum of 6 images in jpg\/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -146,6 +146,24 @@
             },
             "width": "",
             "height": ""
+        },
+        {
+            "key": "field_66ebdbf3f949d",
+            "label": "Quick facts",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_651e6698097ca",
@@ -343,7 +361,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "Describes, for example, the area, age division of groups, expertise, view of children, focus/profile, indoor/outdoor learning environment, who prepares the food/menu, collaboration within the preschool area (which preschools and the type of collaboration), and opening hours.",
+                    "instructions": "Describes, for example, the area, age division of groups, expertise, view of children, focus\/profile, indoor\/outdoor learning environment, who prepares the food\/menu, collaboration within the preschool area (which preschools and the type of collaboration), and opening hours.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -464,7 +482,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "'Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text.",
+                    "instructions": "'Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube\/Video together with the text.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -482,7 +500,7 @@
                     "name": "optional",
                     "aria-label": "",
                     "type": "repeater",
-                    "instructions": "You can add up to 5 optional rows. Click the arrow icon in the top of the left column next to a row to close it. Drag and drop rows by clicking and holding the left column to reorder them if necessary.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -494,7 +512,7 @@
                     "pagination": 0,
                     "min": 0,
                     "max": 5,
-                    "collapsed": "field_651e694d8799b",
+                    "collapsed": "",
                     "button_label": "L\u00e4gg till",
                     "rows_per_page": 20,
                     "sub_fields": [
@@ -550,7 +568,7 @@
             "name": "visiting_address",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -562,7 +580,7 @@
             "pagination": 0,
             "min": 1,
             "max": 0,
-            "collapsed": "field_64f6bff16c30a",
+            "collapsed": "",
             "button_label": "Add additional addresses",
             "rows_per_page": 20,
             "sub_fields": [
@@ -572,7 +590,7 @@
                     "name": "address",
                     "aria-label": "",
                     "type": "google_map",
-                    "instructions": "",
+                    "instructions": "Enter address or device name. Also links to the Find here link for the visitor, opens in new window on Google Maps.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -592,7 +610,7 @@
                     "name": "description",
                     "aria-label": "",
                     "type": "textarea",
-                    "instructions": "",
+                    "instructions": "In the case of multiple visiting addresses, print which part of the organization is located here.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -642,6 +660,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66ebdeb217490",
+            "label": "Contact instructions",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Job title - please also specify the area of \u200b\u200bresponsibility, e.g. Deputy headmaster years 7-9.  \r\nPerson - you select the person's name and email here. \r\n\r\nIf the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_651e669809c03",
@@ -723,7 +759,7 @@
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form.",
+            "instructions": "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts\/links to, for example, another e-service for the application or PDF with application form.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -879,6 +915,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66ebdf7b335d3",
+            "label": "Add subpages",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pages describe, for example, the unit's special focus or profile in more detail with an image, movie link to YouTube\/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.\r\nNote! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\r\nNote! Always name the page with the name of the school.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
