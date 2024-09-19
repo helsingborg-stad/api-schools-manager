@@ -3,11 +3,11 @@
 if (function_exists('acf_add_local_field_group')) {
     acf_add_local_field_group(array(
     'key'                   => 'group_651e669808174',
-    'title'                 => __('Describe the preschool for the preschool chooser', 'api-schools-manager'),
+    'title'                 => __('Pre school', 'api-schools-manager'),
     'fields'                => array(
         0  => array(
             'key'               => 'field_651e669809b2b',
-            'label'             => __('Custom excerpt', 'api-schools-manager'),
+            'label'             => __('Describe the preschool for the preschool chooser', 'api-schools-manager'),
             'name'              => 'custom_excerpt',
             'aria-label'        => '',
             'type'              => 'wysiwyg',
@@ -151,6 +151,24 @@ if (function_exists('acf_add_local_field_group')) {
             'height'            => '',
         ),
         4  => array(
+            'key'               => 'field_66ebdbf3f949d',
+            'label'             => __('Quick facts', 'api-schools-manager'),
+            'name'              => '',
+            'aria-label'        => '',
+            'type'              => 'message',
+            'instructions'      => '',
+            'required'          => 0,
+            'conditional_logic' => 0,
+            'wrapper'           => array(
+                'width' => '',
+                'class' => '',
+                'id'    => '',
+            ),
+            'message'           => '',
+            'new_lines'         => 'wpautop',
+            'esc_html'          => 0,
+        ),
+        5  => array(
             'key'               => 'field_651e6698097ca',
             'label'             => __('Number of children', 'api-schools-manager'),
             'name'              => 'number_of_children',
@@ -172,7 +190,7 @@ if (function_exists('acf_add_local_field_group')) {
             'prepend'           => '',
             'append'            => '',
         ),
-        5  => array(
+        6  => array(
             'key'                  => 'field_651e669809859',
             'label'                => __('Area', 'api-schools-manager'),
             'name'                 => 'area',
@@ -198,7 +216,7 @@ if (function_exists('acf_add_local_field_group')) {
             'bidirectional_target' => array(
             ),
         ),
-        6  => array(
+        7  => array(
             'key'               => 'field_651e669809811',
             'label'             => __('Number of units', 'api-schools-manager'),
             'name'              => 'number_of_units',
@@ -228,7 +246,7 @@ if (function_exists('acf_add_local_field_group')) {
             'prepend'           => '',
             'append'            => '',
         ),
-        7  => array(
+        8  => array(
             'key'                  => 'field_6528d90953367',
             'label'                => __('USP:s, a maximum of 5', 'api-schools-manager'),
             'name'                 => 'usp',
@@ -254,7 +272,7 @@ if (function_exists('acf_add_local_field_group')) {
             'bidirectional_target' => array(
             ),
         ),
-        8  => array(
+        9  => array(
             'key'               => 'field_652cfb47f60e9',
             'label'             => __('Visit Us', 'api-schools-manager'),
             'name'              => 'visit_us',
@@ -274,7 +292,7 @@ if (function_exists('acf_add_local_field_group')) {
             'media_upload'      => 0,
             'delay'             => 0,
         ),
-        9  => array(
+        10 => array(
             'key'               => 'field_65295aed43689',
             'label'             => __('Open hours', 'api-schools-manager'),
             'name'              => 'open_hours',
@@ -326,7 +344,7 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
-        10 => array(
+        11 => array(
             'key'               => 'field_651e669809b74',
             'label'             => __('Presentation of the preschool', 'api-schools-manager'),
             'name'              => 'information',
@@ -469,7 +487,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'name'              => '',
                     'aria-label'        => '',
                     'type'              => 'accordion',
-                    'instructions'      => __('Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text.', 'api-schools-manager'),
+                    'instructions'      => __('\'Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text.', 'api-schools-manager'),
                     'required'          => 0,
                     'conditional_logic' => 0,
                     'wrapper'           => array(
@@ -487,7 +505,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'name'              => 'optional',
                     'aria-label'        => '',
                     'type'              => 'repeater',
-                    'instructions'      => __('You can add up to 5 optional rows. Click the arrow icon in the top of the left column next to a row to close it. Drag and drop rows by clicking and holding the left column to reorder them if necessary.', 'api-schools-manager'),
+                    'instructions'      => '',
                     'required'          => 0,
                     'conditional_logic' => 0,
                     'wrapper'           => array(
@@ -499,7 +517,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'pagination'        => 0,
                     'min'               => 0,
                     'max'               => 5,
-                    'collapsed'         => 'field_651e694d8799b',
+                    'collapsed'         => '',
                     'button_label'      => __('Lägg till', 'api-schools-manager'),
                     'rows_per_page'     => 20,
                     'sub_fields'        => array(
@@ -549,13 +567,13 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
-        11 => array(
+        12 => array(
             'key'               => 'field_651e669809bbb',
             'label'             => __('Visiting address', 'api-schools-manager'),
             'name'              => 'visiting_address',
             'aria-label'        => '',
             'type'              => 'repeater',
-            'instructions'      => __('Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps.', 'api-schools-manager'),
+            'instructions'      => '',
             'required'          => 0,
             'conditional_logic' => 0,
             'wrapper'           => array(
@@ -567,7 +585,7 @@ if (function_exists('acf_add_local_field_group')) {
             'pagination'        => 0,
             'min'               => 1,
             'max'               => 0,
-            'collapsed'         => 'field_64f6bff16c30a',
+            'collapsed'         => '',
             'button_label'      => __('Add additional addresses', 'api-schools-manager'),
             'rows_per_page'     => 20,
             'sub_fields'        => array(
@@ -577,7 +595,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'name'              => 'address',
                     'aria-label'        => '',
                     'type'              => 'google_map',
-                    'instructions'      => '',
+                    'instructions'      => __('Enter address or device name. Also links to the Find here link for the visitor, opens in new window on Google Maps.', 'api-schools-manager'),
                     'required'          => 0,
                     'conditional_logic' => 0,
                     'wrapper'           => array(
@@ -614,7 +632,7 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
-        12 => array(
+        13 => array(
             'key'               => 'field_651e669809ae2',
             'label'             => __('Link Facebook', 'api-schools-manager'),
             'name'              => 'link_facebook',
@@ -631,7 +649,7 @@ if (function_exists('acf_add_local_field_group')) {
             'default_value'     => '',
             'placeholder'       => '',
         ),
-        13 => array(
+        14 => array(
             'key'               => 'field_651e669809a99',
             'label'             => __('Link Instagram', 'api-schools-manager'),
             'name'              => 'link_instagram',
@@ -648,7 +666,28 @@ if (function_exists('acf_add_local_field_group')) {
             'default_value'     => '',
             'placeholder'       => '',
         ),
-        14 => array(
+        15 => array(
+            'key'               => 'field_66ebdeb217490',
+            'label'             => __('Contact instructions', 'api-schools-manager'),
+            'name'              => '',
+            'aria-label'        => '',
+            'type'              => 'message',
+            'instructions'      => '',
+            'required'          => 0,
+            'conditional_logic' => 0,
+            'wrapper'           => array(
+                'width' => '',
+                'class' => '',
+                'id'    => '',
+            ),
+            'message'           => __('Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.    
+Person - you select the person\'s name and email here. 
+
+If the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person.', 'api-schools-manager'),
+            'new_lines'         => 'wpautop',
+            'esc_html'          => 0,
+        ),
+        16 => array(
             'key'               => 'field_651e669809c03',
             'label'             => __('Contacts', 'api-schools-manager'),
             'name'              => 'contacts',
@@ -723,7 +762,7 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
-        15 => array(
+        17 => array(
             'key'               => 'field_651e669809c4a',
             'label'             => __('Call to action: Application special', 'api-schools-manager'),
             'name'              => '',
@@ -741,7 +780,7 @@ if (function_exists('acf_add_local_field_group')) {
             'multi_expand'      => 0,
             'endpoint'          => 0,
         ),
-        16 => array(
+        18 => array(
             'key'               => 'field_651e669809c92',
             'label'             => '',
             'name'              => 'cta_application',
@@ -851,7 +890,7 @@ if (function_exists('acf_add_local_field_group')) {
                 ),
             ),
         ),
-        17 => array(
+        19 => array(
             'key'               => 'field_651e669809cda',
             'label'             => __('end call to action accordion', 'api-schools-manager'),
             'name'              => '',
@@ -869,7 +908,7 @@ if (function_exists('acf_add_local_field_group')) {
             'multi_expand'      => 0,
             'endpoint'          => 1,
         ),
-        18 => array(
+        20 => array(
             'key'               => 'field_65843cdc0c2e8',
             'label'             => __('Posttype Canonical URL', 'api-schools-manager'),
             'name'              => 'posttype_canonical_url',
@@ -885,6 +924,26 @@ if (function_exists('acf_add_local_field_group')) {
             ),
             'default_value'     => '',
             'placeholder'       => '',
+        ),
+        21 => array(
+            'key'               => 'field_66ebdf7b335d3',
+            'label'             => __('Add subpages', 'api-schools-manager'),
+            'name'              => '',
+            'aria-label'        => '',
+            'type'              => 'message',
+            'instructions'      => '',
+            'required'          => 0,
+            'conditional_logic' => 0,
+            'wrapper'           => array(
+                'width' => '',
+                'class' => '',
+                'id'    => '',
+            ),
+            'message'           => __('Pages describe, for example, the unit\'s special focus or profile in more detail with an image, movie link to YouTube/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.
+Note! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.
+Note! Always name the page with the name of the school.', 'api-schools-manager'),
+            'new_lines'         => 'wpautop',
+            'esc_html'          => 0,
         ),
     ),
     'location'              => array(

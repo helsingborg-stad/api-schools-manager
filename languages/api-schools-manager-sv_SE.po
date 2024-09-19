@@ -20,18 +20,18 @@ msgstr ""
 msgid "A Canonical URL is used to specify the preferred version of a web page to avoid duplicate content issues in search engine optimization."
 msgstr "En kanonisk URL används för att ange den föredragna versionen av en webbsida för att undvika problem med duplicerat innehåll vid sökmotoroptimering."
 
-#: php/AcfFields/php/elementary-school-data.php:358
-#: php/AcfFields/php/pre-school-data.php:353
+#: php/AcfFields/php/elementary-school-data.php:372
+#: php/AcfFields/php/pre-school-data.php:367
 msgid "About Us"
 msgstr "Om oss"
 
-#: php/AcfFields/php/elementary-school-data.php:575
-#: php/AcfFields/php/pre-school-data.php:577
+#: php/AcfFields/php/elementary-school-data.php:589
+#: php/AcfFields/php/pre-school-data.php:591
 msgid "Add additional addresses"
 msgstr "Lägg till ytterligare adresser"
 
-#: php/AcfFields/php/elementary-school-data.php:674
-#: php/AcfFields/php/pre-school-data.php:676
+#: php/AcfFields/php/elementary-school-data.php:709
+#: php/AcfFields/php/pre-school-data.php:711
 msgid "Add contact"
 msgstr "Lägg till kontakt"
 
@@ -40,8 +40,8 @@ msgstr "Lägg till kontakt"
 msgid "Add facade image"
 msgstr "Lägg till fasadbild"
 
-#: php/AcfFields/php/elementary-school-data.php:105
-#: php/AcfFields/php/pre-school-data.php:105
+#: php/AcfFields/php/elementary-school-data.php:103
+#: php/AcfFields/php/pre-school-data.php:103
 msgid "Add image"
 msgstr "Lägg till bild"
 
@@ -55,8 +55,8 @@ msgstr "Lägg till ny"
 msgid "Add New %s"
 msgstr "Lägg till ny %s"
 
-#: php/AcfFields/php/elementary-school-data.php:580
-#: php/AcfFields/php/pre-school-data.php:582
+#: php/AcfFields/php/elementary-school-data.php:594
+#: php/AcfFields/php/pre-school-data.php:596
 msgid "Address"
 msgstr "Adress"
 
@@ -65,15 +65,15 @@ msgstr "Adress"
 msgid "All %s"
 msgstr "Alla %s"
 
-#: php/AcfFields/php/elementary-school-data.php:826
-#: php/AcfFields/php/pre-school-data.php:828
+#: php/AcfFields/php/elementary-school-data.php:861
+#: php/AcfFields/php/pre-school-data.php:863
 #: php/AcfFields/php/schools-manager-settings.php:103
 #: php/AcfFields/php/schools-manager-settings.php:228
 msgid "Apply here"
 msgstr "Ansök här"
 
-#: php/AcfFields/php/elementary-school-data.php:238
-#: php/AcfFields/php/pre-school-data.php:183
+#: php/AcfFields/php/elementary-school-data.php:252
+#: php/AcfFields/php/pre-school-data.php:197
 #: php/App.php:169
 msgid "Area"
 msgstr "Geografiskt område"
@@ -88,19 +88,19 @@ msgstr "Områden"
 msgid "Click to open"
 msgstr "Klicka för att öppna"
 
-#: php/AcfFields/php/elementary-school-data.php:323
-#: php/AcfFields/php/pre-school-data.php:318
+#: php/AcfFields/php/elementary-school-data.php:337
+#: php/AcfFields/php/pre-school-data.php:332
 msgid "Close"
 msgstr "Stänger"
 
-#: php/AcfFields/php/elementary-school-data.php:657
-#: php/AcfFields/php/pre-school-data.php:659
+#: php/AcfFields/php/elementary-school-data.php:692
+#: php/AcfFields/php/pre-school-data.php:694
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: php/AcfFields/php/elementary-school-data.php:533
+#: php/AcfFields/php/elementary-school-data.php:547
 #: php/AcfFields/php/notice.php:32
-#: php/AcfFields/php/pre-school-data.php:535
+#: php/AcfFields/php/pre-school-data.php:549
 msgid "Content"
 msgstr "Innehåll"
 
@@ -117,21 +117,21 @@ msgstr "Inställningar Grundskolor"
 msgid "Default Pre School Settings"
 msgstr "Inställningar förskolor"
 
-#: php/AcfFields/php/elementary-school-data.php:600
-#: php/AcfFields/php/elementary-school-data.php:806
-#: php/AcfFields/php/pre-school-data.php:602
-#: php/AcfFields/php/pre-school-data.php:808
+#: php/AcfFields/php/elementary-school-data.php:614
+#: php/AcfFields/php/elementary-school-data.php:841
+#: php/AcfFields/php/pre-school-data.php:616
+#: php/AcfFields/php/pre-school-data.php:843
 #: php/AcfFields/php/schools-manager-settings.php:83
 #: php/AcfFields/php/schools-manager-settings.php:208
 msgid "Description"
 msgstr "Beskrivning"
 
-#: php/AcfFields/php/elementary-school-data.php:766
-#: php/AcfFields/php/pre-school-data.php:768
+#: php/AcfFields/php/elementary-school-data.php:801
+#: php/AcfFields/php/pre-school-data.php:803
 msgid "Display on website"
 msgstr "Visa på webbsida"
 
-#: php/AcfFields/php/person-details.php:12
+#: php/AcfFields/php/person-details.php:30
 msgid "E-mail"
 msgstr "E-post"
 
@@ -156,8 +156,8 @@ msgstr "Kanonisk URL för grundskolor"
 msgid "Elementary schools"
 msgstr "Grundskolor"
 
-#: php/AcfFields/php/elementary-school-data.php:860
-#: php/AcfFields/php/pre-school-data.php:862
+#: php/AcfFields/php/elementary-school-data.php:895
+#: php/AcfFields/php/pre-school-data.php:897
 msgid "end call to action accordion"
 msgstr "avsluta call to action accordion"
 
@@ -175,40 +175,40 @@ msgstr "Fasadbilder"
 msgid "Grade"
 msgstr "Årskurs"
 
-#: php/AcfFields/php/elementary-school-data.php:161
+#: php/AcfFields/php/elementary-school-data.php:157
 #: php/App.php:184
 msgid "Grades"
 msgstr "Årskurser"
 
-#: php/AcfFields/php/elementary-school-data.php:512
+#: php/AcfFields/php/elementary-school-data.php:526
 #: php/AcfFields/php/notice.php:12
-#: php/AcfFields/php/pre-school-data.php:514
+#: php/AcfFields/php/pre-school-data.php:528
 #, fuzzy
 msgid "Heading"
 msgstr "Rubrik"
 
-#: php/AcfFields/php/elementary-school-data.php:842
-#: php/AcfFields/php/pre-school-data.php:844
+#: php/AcfFields/php/elementary-school-data.php:877
+#: php/AcfFields/php/pre-school-data.php:879
 #: php/AcfFields/php/schools-manager-settings.php:119
 #: php/AcfFields/php/schools-manager-settings.php:244
 #, fuzzy
 msgid "How to apply"
 msgstr "Hur man ansöker"
 
-#: php/AcfFields/php/elementary-school-data.php:396
-#: php/AcfFields/php/pre-school-data.php:398
+#: php/AcfFields/php/elementary-school-data.php:410
+#: php/AcfFields/php/pre-school-data.php:412
 msgid "How we work"
 msgstr "Så arbetar vi"
 
-#: php/AcfFields/php/elementary-school-data.php:754
-#: php/AcfFields/php/pre-school-data.php:756
+#: php/AcfFields/php/elementary-school-data.php:789
+#: php/AcfFields/php/pre-school-data.php:791
 msgid "If these fields are left unedited, the application Call-To-Action box will use the default settings from School Settings Manager."
 msgstr "Om denna sektion lämnas orörd så kommer rutan för ansökan på webbsidan att använda sig av de inställningar som gjorts under School Settings Manager."
 
 #: php/AcfFields/php/elementary-school-data.php:54
-#: php/AcfFields/php/elementary-school-data.php:110
+#: php/AcfFields/php/elementary-school-data.php:108
 #: php/AcfFields/php/pre-school-data.php:54
-#: php/AcfFields/php/pre-school-data.php:110
+#: php/AcfFields/php/pre-school-data.php:108
 #, fuzzy
 msgid "Image"
 msgstr "Bild"
@@ -224,20 +224,20 @@ msgstr "Bildgalleri"
 msgid "Internally created user"
 msgstr "Internt skapad användare"
 
-#: php/AcfFields/php/elementary-school-data.php:623
-#: php/AcfFields/php/pre-school-data.php:625
+#: php/AcfFields/php/elementary-school-data.php:637
+#: php/AcfFields/php/pre-school-data.php:639
 #, fuzzy
 msgid "Link Facebook"
 msgstr "Länk till Facebook"
 
-#: php/AcfFields/php/elementary-school-data.php:640
-#: php/AcfFields/php/pre-school-data.php:642
+#: php/AcfFields/php/elementary-school-data.php:654
+#: php/AcfFields/php/pre-school-data.php:656
 #, fuzzy
 msgid "Link Instagram"
 msgstr "Länk till Instagram"
 
-#: php/AcfFields/php/elementary-school-data.php:507
-#: php/AcfFields/php/pre-school-data.php:509
+#: php/AcfFields/php/elementary-school-data.php:521
+#: php/AcfFields/php/pre-school-data.php:523
 #, fuzzy
 msgid "Lägg till"
 msgstr "Lägg till"
@@ -272,51 +272,51 @@ msgstr "Inga %s hittades i papperskorgen"
 msgid "Notice"
 msgstr "Meddelande"
 
-#: php/AcfFields/php/pre-school-data.php:161
+#: php/AcfFields/php/pre-school-data.php:175
 #, fuzzy
 msgid "Number of children"
 msgstr "Antal barn, cirka"
 
-#: php/AcfFields/php/elementary-school-data.php:216
+#: php/AcfFields/php/elementary-school-data.php:230
 #, fuzzy
 msgid "Number of profiles"
 msgstr "Antal profiler"
 
-#: php/AcfFields/php/elementary-school-data.php:194
+#: php/AcfFields/php/elementary-school-data.php:208
 msgid "Number of students"
 msgstr "Antal elever, cirka"
 
-#: php/AcfFields/php/pre-school-data.php:209
+#: php/AcfFields/php/pre-school-data.php:223
 msgid "Number of units"
 msgstr "Antal avdelningar"
 
-#: php/AcfFields/php/elementary-school-data.php:306
-#: php/AcfFields/php/pre-school-data.php:301
+#: php/AcfFields/php/elementary-school-data.php:320
+#: php/AcfFields/php/pre-school-data.php:315
 msgid "Open"
 msgstr "Öppnar"
 
-#: php/AcfFields/php/pre-school-data.php:285
+#: php/AcfFields/php/pre-school-data.php:299
 #, fuzzy
 msgid "Open hours"
 msgstr "Öppettider"
 
-#: php/AcfFields/php/elementary-school-data.php:290
+#: php/AcfFields/php/elementary-school-data.php:304
 msgid "Open hours (leisure center)"
 msgstr "Öppettider (fritidshem)"
 
-#: php/AcfFields/php/pre-school-data.php:474
+#: php/AcfFields/php/pre-school-data.php:488
 msgid "Optional row"
 msgstr "Valfri rad"
 
-#: php/AcfFields/php/elementary-school-data.php:472
+#: php/AcfFields/php/elementary-school-data.php:486
 msgid "Optional rows"
 msgstr "Valfria rader"
 
-#: php/AcfFields/php/pre-school-data.php:436
+#: php/AcfFields/php/pre-school-data.php:450
 msgid "Orientation"
 msgstr "Inskolning"
 
-#: php/AcfFields/php/elementary-school-data.php:434
+#: php/AcfFields/php/elementary-school-data.php:448
 msgid "Our leisure center"
 msgstr "Vårt fritidshem"
 
@@ -335,8 +335,8 @@ msgstr "Förälder %s:"
 msgid "Parent School"
 msgstr "Överställd skola"
 
-#: php/AcfFields/php/elementary-school-data.php:700
-#: php/AcfFields/php/pre-school-data.php:702
+#: php/AcfFields/php/elementary-school-data.php:735
+#: php/AcfFields/php/pre-school-data.php:737
 #: php/PostType/Person/PersonConfiguration.php:14
 msgid "Person"
 msgstr "Person"
@@ -350,7 +350,7 @@ msgstr "Personuppgifter"
 msgid "Persons"
 msgstr "Personer"
 
-#: php/AcfFields/php/person-details.php:31
+#: php/AcfFields/php/person-details.php:49
 msgid "Phone number"
 msgstr "Telefonnummer"
 
@@ -367,8 +367,8 @@ msgstr "Förskolor"
 msgid "Pre-School Canonical URL"
 msgstr "Kanonisk URL för förskolor"
 
-#: php/AcfFields/php/elementary-school-data.php:679
-#: php/AcfFields/php/pre-school-data.php:681
+#: php/AcfFields/php/elementary-school-data.php:714
+#: php/AcfFields/php/pre-school-data.php:716
 msgid "Professional title"
 msgstr "Yrkestitel"
 
@@ -399,15 +399,15 @@ msgstr "Inställningar för informationsruta \"Vill du ansöka?\""
 msgid "These pages are associated with this school."
 msgstr "Dessa sidor är associerade med denna skola."
 
-#: php/AcfFields/php/elementary-school-data.php:786
-#: php/AcfFields/php/pre-school-data.php:788
+#: php/AcfFields/php/elementary-school-data.php:821
+#: php/AcfFields/php/pre-school-data.php:823
 #: php/AcfFields/php/schools-manager-settings.php:63
 #: php/AcfFields/php/schools-manager-settings.php:188
 msgid "Title"
 msgstr "Rubrik"
 
-#: php/AcfFields/php/elementary-school-data.php:770
-#: php/AcfFields/php/pre-school-data.php:772
+#: php/AcfFields/php/elementary-school-data.php:805
+#: php/AcfFields/php/pre-school-data.php:807
 msgid "Uncheck this to hide the application Call-To-Action box on the website"
 msgstr "Bocka ur denna ruta för att dölja rutan för ansökan på den här skolans webbsida."
 
@@ -424,8 +424,8 @@ msgstr "USP"
 msgid "USPs"
 msgstr "USP"
 
-#: php/AcfFields/php/elementary-school-data.php:135
-#: php/AcfFields/php/pre-school-data.php:135
+#: php/AcfFields/php/elementary-school-data.php:133
+#: php/AcfFields/php/pre-school-data.php:133
 msgid "Video"
 msgstr "Video"
 
@@ -434,22 +434,17 @@ msgstr "Video"
 msgid "View %s"
 msgstr "Visa %s"
 
-#: php/AcfFields/php/pre-school-data.php:265
+#: php/AcfFields/php/pre-school-data.php:279
 msgid "Visit Us"
 msgstr "Besök oss"
 
-#: php/AcfFields/php/elementary-school-data.php:558
-#: php/AcfFields/php/pre-school-data.php:560
+#: php/AcfFields/php/elementary-school-data.php:572
+#: php/AcfFields/php/pre-school-data.php:574
 msgid "Visiting address"
 msgstr "Besöksadress"
 
-#: php/AcfFields/php/elementary-school-data.php:494
-#: php/AcfFields/php/pre-school-data.php:496
-msgid "You can add up to 5 optional rows. Click the arrow icon in the top of the left column next to a row to close it. Drag and drop rows by clicking and holding the left column to reorder them if necessary."
-msgstr "Du kan lägga till upp till 5 valfria rader. Klicka på pilikonen högst upp i den vänstra kolumnen bredvid en rad för att stänga den. Dra och släpp rader genom att klicka och hålla ned den vänstra kolumnen för att omorganisera dem vid behov."
-
-#: php/AcfFields/php/elementary-school-data.php:878
-#: php/AcfFields/php/pre-school-data.php:880
+#: php/AcfFields/php/elementary-school-data.php:913
+#: php/AcfFields/php/pre-school-data.php:915
 msgid "Posttype Canonical URL"
 msgstr ""
 
@@ -465,94 +460,69 @@ msgstr "Beskriv skolan för skolväljaren"
 msgid "Upload a maximum of 6 images in jpg/landscape format of the preschool's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor."
 msgstr "Ladda upp max 6 bilder i jpg/liggande format på förskolans fasad från olika vyer, t ex entrén och gården/baksidan. Visas bäst i 16:9-format. Lägg till bild-text som förklarar bilden för besökaren."
 
-#: php/AcfFields/php/elementary-school-data.php:139
-#: php/AcfFields/php/pre-school-data.php:139
-msgid ""
-"Embed 1 video that captures the chooser’s interest. \n"
-"\n"
-"<strong>Please note:</strong> The video must be linked from an external service, such as YouTube or Vimeo."
-msgstr "Bädda in 1 video, som väcker väljarens intresse. Observera: Videon måste länkas från en extern tjänst, t ex YouTube eller Vimeo. "
-
 #: php/AcfFields/php/pre-school-data.php:8
 msgid "Describe the preschool for the preschool chooser"
 msgstr "Beskriv förskolan för förskoleväljaren"
-
-#: php/AcfFields/php/elementary-school-data.php:83
-#: php/AcfFields/php/pre-school-data.php:83
-msgid ""
-"Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor.\n"
-"\n"
-"            <strong>Please note:</strong> The image gallery will only be available if the 'Video' field is empty."
-msgstr "Ladda upp max 6 bilder i jpg/liggande format som visar olika aspekter av verksamheten för väljaren. Visas bäst i 16:9-format. Lägg till bild-text som förklarar bilden för besökaren. Observera. Bildgalleriet kommer endast att vara tillgängligt om fältet 'Video' är tomt."
 
 #: php/AcfFields/php/elementary-school-data.php:36
 msgid "Upload a maximum of 6 images in jpg/landscape format of the school's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor."
 msgstr "Ladda upp max 6 bilder i jpg/liggande format på skolans fasad från olika vyer, t ex entrén och gården/baksidan. Visas bäst i 16:9-format. Lägg till bild-text som förklarar bilden för besökaren."
 
-#: php/AcfFields/php/elementary-school-data.php:264
-#: php/AcfFields/php/pre-school-data.php:239
+#: php/AcfFields/php/elementary-school-data.php:278
+#: php/AcfFields/php/pre-school-data.php:253
 msgid "USP:s, a maximum of 5"
 msgstr "USP:ar (max 5 st)"
 
-#: php/AcfFields/php/elementary-school-data.php:268
-#: php/AcfFields/php/pre-school-data.php:243
+#: php/AcfFields/php/elementary-school-data.php:282
+#: php/AcfFields/php/pre-school-data.php:257
 msgid "Unique and specific features that distinguish the unit and attract the chooser. Select a USP by starting to type on the line, then choose from the existing USPs in the list. Special programs or focuses for children with special needs can be found in the list under Specialization."
 msgstr "Unikt och specifikt som särskiljer enheten och attraherar väljaren. Välj USP genom att börja skriva på raden och sedan välj från befintliga USP:ar i listan. Specialverksamhet eller inriktningar för barn med speciella behov hittar du i listan under Specialisering."
 
-#: php/AcfFields/php/pre-school-data.php:402
+#: php/AcfFields/php/pre-school-data.php:416
 msgid "Describes, for example, the view on knowledge, how the preschool has chosen to organize learning for the children based on the profile and the curriculum."
 msgstr "Beskriver t ex kunskapssyn, hur förskolan valt att organisera lärandet för barnen i profilen och utifrån läroplanen."
 
-#: php/AcfFields/php/pre-school-data.php:357
+#: php/AcfFields/php/pre-school-data.php:371
 msgid "Describes, for example, the area, age division of groups, expertise, view of children, focus/profile, indoor/outdoor learning environment, who prepares the food/menu, collaboration within the preschool area (which preschools and the type of collaboration), and opening hours."
 msgstr "Beskriver t ex området, åldersidelning avdelningar, kompetens, barnsyn, inriktning/profil, lärmiljö ute/inne, vem som lagar maten/matsedel, samarbete i förskoleområdet (vilka förskolor och vilket samarbete) och öppettider."
 
-#: php/AcfFields/php/pre-school-data.php:440
+#: php/AcfFields/php/pre-school-data.php:454
 msgid "Describes what enrollment is, how long it lasts, and the role and responsibilities of the parent and preschool during that time. Mandatory to mention the plan for equal treatment and the learning platform to follow the child's development."
 msgstr "Beskriver vad inskolning är, hur länge den pågår samt förälderns och förskolans roll och ansvar under tiden. Obligatoriskt att nämna plan för likabehandling och lärplattformen för att följa barnets utveckling."
 
-#: php/AcfFields/php/pre-school-data.php:478
-msgid "Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text."
-msgstr "Valfri rad (max 5). Beskriv exempelvis förskolans specialinriktning eller profil lite djupare här. Välj istället att skapa ny Sida, om du ska lägga in bilder eller filmlänk från YouTube/Video tillsammans med texten."
-
-#: php/AcfFields/php/elementary-school-data.php:342
+#: php/AcfFields/php/elementary-school-data.php:356
 msgid "Presentation of the school"
 msgstr "Presentation av skolan"
 
-#: php/AcfFields/php/pre-school-data.php:337
+#: php/AcfFields/php/pre-school-data.php:351
 msgid "Presentation of the preschool"
 msgstr "Presentation av förskolan"
 
-#: php/AcfFields/php/elementary-school-data.php:362
+#: php/AcfFields/php/elementary-school-data.php:376
 msgid "Presentation of the school; where we are, how we are organised, specialization, the competence of the pedagogues. Our own chef prepares the delicious food + link to the schools menu. How Elevhälsa and SYV are organized and work at the school to support the students. No contact details here!"
 msgstr "Presentation av skolan; var vi finns, hur vi är organiserade, specialinriktning, pedagogernas kompetens. Vår egen kock lagar den goda maten + länk till skolans matsedel. Hur Elevhälsa och SYV är organiserade och arbetar på skolan för att stötta eleverna. Inga kontaktuppgifter här!"
 
-#: php/AcfFields/php/elementary-school-data.php:400
+#: php/AcfFields/php/elementary-school-data.php:414
 msgid "The schools motto and working methods, how we work organizationally, how we work with and support the students, for example safety and well-being. Mandatory to mention the plan for equal treatment and the learning platform to follow the childs development/contact with the school."
 msgstr "Skolans ledord och arbetssätt, hur vi arbetar organisatoriskt, hur vi arbetar med och stöttar eleverna t ex trygghet och trivsel.  Obligatoriskt att nämna plan för likabehandling och lärplattformen för att följa barnets utveckling/kontakt med skolan."
 
-#: php/AcfFields/php/elementary-school-data.php:562
-#: php/AcfFields/php/pre-school-data.php:564
-msgid "Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps."
-msgstr "Skriv in adress eller enhetens namn. Kopplas även till Hitta hit-länken för besökaren, öppnas i nytt fönster på Google Maps."
-
-#: php/AcfFields/php/elementary-school-data.php:604
-#: php/AcfFields/php/pre-school-data.php:606
+#: php/AcfFields/php/elementary-school-data.php:618
+#: php/AcfFields/php/pre-school-data.php:620
 msgid "In the case of multiple visiting addresses, print which part of the organization is located here."
 msgstr "Vid flera besöksadresser, skriv ut vilken del av organisationen som finns här."
 
-#: php/AcfFields/php/elementary-school-data.php:704
-#: php/AcfFields/php/pre-school-data.php:706
+#: php/AcfFields/php/elementary-school-data.php:739
+#: php/AcfFields/php/pre-school-data.php:741
 msgid "Email (taken from People)"
 msgstr "E-post (hämtas från Personer)"
 
-#: php/AcfFields/php/elementary-school-data.php:732
-#: php/AcfFields/php/pre-school-data.php:734
+#: php/AcfFields/php/elementary-school-data.php:767
+#: php/AcfFields/php/pre-school-data.php:769
 msgid "Call to action: Application special"
 msgstr "Call to action-Ansökan (special)"
 
-#: php/AcfFields/php/elementary-school-data.php:736
-#: php/AcfFields/php/pre-school-data.php:738
+#: php/AcfFields/php/elementary-school-data.php:771
+#: php/AcfFields/php/pre-school-data.php:773
 msgid "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form."
 msgstr "En alternativ Ansökan-modul för enheter med annat ansökningsförfarande, till exempel speicalförskola eller särskild inriktning för barn med särskilda behov. Lägg till 2 knappar med länktexter/länkar till exempelvis en annan e-tjänst för ansökan eller PDF med ansökningsblankett."
 
@@ -560,18 +530,91 @@ msgstr "En alternativ Ansökan-modul för enheter med annat ansökningsförfaran
 msgid "2-3 lines summarizing the offer for the chooser. What makes the school unique and special. This summary is displayed in search results and archives."
 msgstr "2-3 rader som sammanfattar erbjudandet för väljaren. Vad gör skolan unik och speciell. Denna sammanfattning visas i sökresultat och arkiv."
 
-#: php/AcfFields/php/elementary-school-data.php:661
+#: php/AcfFields/php/elementary-school-data.php:696
 msgid "The school applicants most important contact persons with title and responsibility: for example principal, assistant principal grades 7-9 + 1 administrator."
 msgstr "Skolväljarens viktigaste kontaktpersoner med titel och ansvar: exempelvis rektor, bitr rektor åk 7-9 + 1 adm."
 
-#: php/AcfFields/php/pre-school-data.php:663
+#: php/AcfFields/php/pre-school-data.php:698
 msgid "The applicants most important contact person, 1-2 names. For example, principal and administrator"
 msgstr "Väljarens viktigaste kontaktperson, 1-2 namn. Exempelvis rektor och administratör."
 
-#: php/AcfFields/php/elementary-school-data.php:476
-msgid "Any row (max 5). Eg Start school class.  Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Vimeo together with the text."
-msgstr "Valfri rad (max 5). T ex Börja förskoleklass.  Beskriv vad det är och hur det fungerar på vår skola. Välj istället att skapa ny Sida, om du ska lägga in bilder eller filmlänk från YouTube/Vimeo tillsammans med texten."
-
-#: php/AcfFields/php/elementary-school-data.php:438
+#: php/AcfFields/php/elementary-school-data.php:452
 msgid "Describe what it is and how it works at our school. No contact information here."
 msgstr "Beskriv vad det är och hur det fungerar på vår skola. Inga kontaktuppgifter här."
+
+#: php/AcfFields/php/elementary-school-data.php:137
+#: php/AcfFields/php/pre-school-data.php:137
+msgid "Embed 1 video that captures the chooser's interest. Please note: The video must be linked from an external service, such as YouTube or Vimeo."
+msgstr "Bädda in 1  video, som väcker väljarens intresse. Observera: Videon måste länkas från en extern tjänst, t ex YouTube eller Vimeo."
+
+#: php/AcfFields/php/elementary-school-data.php:83
+#: php/AcfFields/php/pre-school-data.php:83
+msgid "Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty."
+msgstr "Ladda upp max 6 bilder i jpg/liggande format som visar olika aspekter av verksamheten för väljaren. Visas bäst i 16:9-format. Lägg till bild-text som förklarar bilden för besökaren. Observera. Bildgalleriet kommer endast att vara tillgängligt om fältet \"Video\" är tomt."
+
+#: php/AcfFields/php/pre-school-data.php:492
+msgid "'Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text."
+msgstr "Valfri rad (max 5). Beskriv exempelvis förskolans specialinriktning eller profil lite djupare här. Välj istället att skapa ny Sida, om du ska lägga in bilder eller filmlänk från YouTube/Vimeo tillsammans med texten."
+
+#: php/AcfFields/php/elementary-school-data.php:190
+#: php/AcfFields/php/pre-school-data.php:157
+msgid "Quick facts"
+msgstr "Snabba fakta"
+
+#: php/AcfFields/php/elementary-school-data.php:598
+#: php/AcfFields/php/pre-school-data.php:600
+msgid "Enter address or device name. Also links to the Find here link for the visitor, opens in new window on Google Maps."
+msgstr "Skriv in adress eller enhetens namn. Kopplas även till Hitta hit-länken för besökaren, öppnas i nytt fönster på Google Maps."
+
+#: php/AcfFields/php/elementary-school-data.php:671
+#: php/AcfFields/php/pre-school-data.php:673
+msgid "Contact instructions"
+msgstr "Kontaktinstruktioner"
+
+#: php/AcfFields/php/elementary-school-data.php:930
+#: php/AcfFields/php/pre-school-data.php:932
+msgid "Add subpages"
+msgstr "Lägg till undersidor"
+
+#: php/AcfFields/php/elementary-school-data.php:683
+#: php/AcfFields/php/pre-school-data.php:685
+msgid ""
+"Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.    \r\n"
+"Person - you select the person's name and email here. \r\n"
+"\r\n"
+"If the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person."
+msgstr ""
+"Yrkestitel - specificera gärna även ansvarsområde t ex Biträdande rektor åk 7-9.\n"
+"Person - personens namn och e-post väljer du in här.\n"
+"Saknas uppgifterna skapar du en ny kontakt via Personer i menyn. Där lägger du in namn, e-post, telefonnummer och gärna bild på personen."
+
+#: php/AcfFields/php/elementary-school-data.php:942
+#: php/AcfFields/php/pre-school-data.php:944
+msgid ""
+"Pages describe, for example, the unit's special focus or profile in more detail with an image, movie link to YouTube/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.\r\n"
+"Note! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\r\n"
+"Note! Always name the page with the name of the school."
+msgstr ""
+"Sidor beskriver exempelvis enhetens specialinriktning eller profil mer utförligt med bild, filmlänk till YouTube/Vimeo och text. Använd också sidor när enheten har alternativ Ansökan-modul, som ska länka till en undersida med ansökan-information för enheten.\n"
+"Obs! Markera alltid sidan som en underordnad sida till enheten. Sidan visas då automatiskt för besökaren.\n"
+"Obs! Döp alltid sidan med skolans namn."
+
+#: php/AcfFields/php/elementary-school-data.php:394
+msgid "Presentation of the school; where we are located, how we are organized, special focus, teachers' competence. Our own chef prepares the delicious food + link to the school's menu. How Student Health and Study and Career Counselling are organized and work at the school to support the students."
+msgstr "Presentation av skolan; var vi finns, hur vi är organiserade, specialinriktning, pedagogernas kompetens. Vår egen kock lagar den goda maten + länk till skolans matsedel. Hur Elevhälsa och SYV är organiserade och arbetar på skolan för att stötta eleverna. Inga kontaktuppgifter här!"
+
+#: php/AcfFields/php/elementary-school-data.php:490
+msgid "Any row (max 5). Eg Start school class.    Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Vimeo together with the text."
+msgstr "Valfri rad (max 5). Beskriv exempelvis förskolans specialinriktning eller profil lite djupare här. Välj istället att skapa ny Sida, om du ska lägga in bilder eller filmlänk från YouTube/Vimeo tillsammans med texten."
+
+#: php/AcfFields/php/person-details.php:12
+msgid "Person instructions"
+msgstr "Personinstruktioner"
+
+#: php/AcfFields/php/person-details.php:24
+msgid "Add the name in the title field."
+msgstr "Lägg till namnet i rubriksfältet."
+
+#: php/AcfFields/php/person-details.php:53
+msgid "Use format (07XX-XX XX XX)"
+msgstr "Använd formatet (07XX-XX XX XX)"

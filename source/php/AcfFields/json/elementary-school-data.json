@@ -1,10 +1,10 @@
 [{
     "key": "group_651e694d7a010",
-    "title": "Describe the school for the school chooser",
+    "title": "Elementary school",
     "fields": [
         {
             "key": "field_651e694d7b7ad",
-            "label": "Custom excerpt",
+            "label": "Describe the school for the school chooser",
             "name": "custom_excerpt",
             "aria-label": "",
             "type": "wysiwyg",
@@ -28,7 +28,7 @@
             "name": "facade_images",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Upload a maximum of 6 images in jpg/landscape format of the school's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.",
+            "instructions": "Upload a maximum of 6 images in jpg\/landscape format of the school's facade from different angles, such as the entrance and the yard\/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -75,7 +75,7 @@
             "name": "gallery",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note:</strong> The image gallery will only be available if the 'Video' field is empty.",
+            "instructions": "Upload a maximum of 6 images in jpg\/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -178,6 +178,24 @@
             "multiple": 0,
             "allow_null": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_66ebe37f080c0",
+            "label": "Quick facts",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_651e694d7b44d",
@@ -347,7 +365,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "Presentation of the school; where we are, how we are organised, specialization, the competence of the pedagogues. Our own chef prepares the delicious food + link to the schools menu. How Elevhälsa and SYV are organized and work at the school to support the students. No contact details here!",
+                    "instructions": "Presentation of the school; where we are, how we are organised, specialization, the competence of the pedagogues. Our own chef prepares the delicious food + link to the schools menu. How Elevh\u00e4lsa and SYV are organized and work at the school to support the students. No contact details here!",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -385,7 +403,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "The schools motto and working methods, how we work organizationally, how we work with and support the students, for example safety and well-being. Mandatory to mention the plan for equal treatment and the learning platform to follow the childs development/contact with the school.",
+                    "instructions": "The schools motto and working methods, how we work organizationally, how we work with and support the students, for example safety and well-being. Mandatory to mention the plan for equal treatment and the learning platform to follow the childs development\/contact with the school.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -461,7 +479,7 @@
                     "name": "",
                     "aria-label": "",
                     "type": "accordion",
-                    "instructions": "Any row (max 5). Eg Start school class.  Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Vimeo together with the text.",
+                    "instructions": "Any row (max 5). Eg Start school class.  Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube\/Vimeo together with the text.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -547,7 +565,7 @@
             "name": "visiting_address",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Enter address or device name. Also links to the Find it link for the visitor, opens in new window on Google Maps.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -559,7 +577,7 @@
             "pagination": 0,
             "min": 1,
             "max": 0,
-            "collapsed": "field_64f6bff16c30a",
+            "collapsed": "",
             "button_label": "Add additional addresses",
             "rows_per_page": 20,
             "sub_fields": [
@@ -569,7 +587,7 @@
                     "name": "address",
                     "aria-label": "",
                     "type": "google_map",
-                    "instructions": "",
+                    "instructions": "Enter address or device name. Also links to the Find here link for the visitor, opens in new window on Google Maps.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -639,6 +657,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66ebe51e59f09",
+            "label": "Contact instructions",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Job title - please also specify the area of \u200b\u200bresponsibility, e.g. Deputy headmaster years 7-9.  \r\nPerson - you select the person's name and email here. \r\n\r\nIf the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_651e694d7b89a",
@@ -720,7 +756,7 @@
             "name": "",
             "aria-label": "",
             "type": "accordion",
-            "instructions": "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form.",
+            "instructions": "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts\/links to, for example, another e-service for the application or PDF with application form.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -876,6 +912,24 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_66ebe4daa5801",
+            "label": "Add subpages",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pages describe, for example, the unit's special focus or profile in more detail with an image, movie link to YouTube\/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.\r\nNote! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\r\nNote! Always name the page with the name of the school.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         }
     ],
     "location": [
