@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_651e669809b2b",
-            "label": "Custom excerpt",
-            "name": "Describe the preschool for the preschool chooser",
+            "label": "Describe the preschool for the preschool chooser",
+            "name": "custom_excerpt",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "2-3 lines summarizing the offer for the chooser. What makes the preschool unique and special. This summary is displayed in search results and archives.",
