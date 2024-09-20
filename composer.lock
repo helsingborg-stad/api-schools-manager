@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23ad3b806f4250cb6798ce5b470d1cb6",
+    "content-hash": "b063ac9935c1af11c273da41737d4dd3",
     "packages": [
         {
             "name": "helsingborg-stad/acf-export-manager",
