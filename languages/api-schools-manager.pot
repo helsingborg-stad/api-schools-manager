@@ -7,331 +7,331 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-19T09:04:24+00:00\n"
+"POT-Creation-Date: 2024-09-19T13:33:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: api-schools-manager\n"
 
-#: php/AcfFields/php/elementary-school-data.php:8
+#: php/AcfFields/php/elementary-school-data.php:6
+#: php/PostType/ElementarySchool/ElementarySchoolConfiguration.php:16
+msgid "Elementary school"
+msgstr ""
+
+#: php/AcfFields/php/elementary-school-data.php:10
 msgid "Describe the school for the school chooser"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:12
-#: php/AcfFields/php/pre-school-data.php:12
-msgid "Custom excerpt"
-msgstr ""
-
-#: php/AcfFields/php/elementary-school-data.php:16
+#: php/AcfFields/php/elementary-school-data.php:14
 msgid "2-3 lines summarizing the offer for the chooser. What makes the school unique and special. This summary is displayed in search results and archives."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:32
-#: php/AcfFields/php/pre-school-data.php:32
+#: php/AcfFields/php/elementary-school-data.php:30
+#: php/AcfFields/php/pre-school-data.php:30
 msgid "Facade images"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:36
+#: php/AcfFields/php/elementary-school-data.php:34
 msgid "Upload a maximum of 6 images in jpg/landscape format of the school's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:49
-#: php/AcfFields/php/pre-school-data.php:49
+#: php/AcfFields/php/elementary-school-data.php:47
+#: php/AcfFields/php/pre-school-data.php:47
 msgid "Add facade image"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:54
-#: php/AcfFields/php/elementary-school-data.php:108
-#: php/AcfFields/php/pre-school-data.php:54
-#: php/AcfFields/php/pre-school-data.php:108
+#: php/AcfFields/php/elementary-school-data.php:52
+#: php/AcfFields/php/elementary-school-data.php:106
+#: php/AcfFields/php/pre-school-data.php:52
+#: php/AcfFields/php/pre-school-data.php:106
 msgid "Image"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:79
-#: php/AcfFields/php/pre-school-data.php:79
+#: php/AcfFields/php/elementary-school-data.php:77
+#: php/AcfFields/php/pre-school-data.php:77
 msgid "Image gallery"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:83
-#: php/AcfFields/php/pre-school-data.php:83
+#: php/AcfFields/php/elementary-school-data.php:81
+#: php/AcfFields/php/pre-school-data.php:81
 msgid "Upload a maximum of 6 images in jpg/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:103
-#: php/AcfFields/php/pre-school-data.php:103
+#: php/AcfFields/php/elementary-school-data.php:101
+#: php/AcfFields/php/pre-school-data.php:101
 msgid "Add image"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:133
-#: php/AcfFields/php/pre-school-data.php:133
+#: php/AcfFields/php/elementary-school-data.php:131
+#: php/AcfFields/php/pre-school-data.php:131
 msgid "Video"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:137
-#: php/AcfFields/php/pre-school-data.php:137
+#: php/AcfFields/php/elementary-school-data.php:135
+#: php/AcfFields/php/pre-school-data.php:135
 msgid "Embed 1 video that captures the chooser's interest. Please note: The video must be linked from an external service, such as YouTube or Vimeo."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:157
+#: php/AcfFields/php/elementary-school-data.php:155
 #: php/App.php:184
 msgid "Grades"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:190
-#: php/AcfFields/php/pre-school-data.php:157
+#: php/AcfFields/php/elementary-school-data.php:188
+#: php/AcfFields/php/pre-school-data.php:155
 msgid "Quick facts"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:208
+#: php/AcfFields/php/elementary-school-data.php:206
 msgid "Number of students"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:230
+#: php/AcfFields/php/elementary-school-data.php:228
 msgid "Number of profiles"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:252
-#: php/AcfFields/php/pre-school-data.php:197
+#: php/AcfFields/php/elementary-school-data.php:250
+#: php/AcfFields/php/pre-school-data.php:195
 #: php/App.php:169
 msgid "Area"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:278
-#: php/AcfFields/php/pre-school-data.php:253
+#: php/AcfFields/php/elementary-school-data.php:276
+#: php/AcfFields/php/pre-school-data.php:251
 msgid "USP:s, a maximum of 5"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:282
-#: php/AcfFields/php/pre-school-data.php:257
+#: php/AcfFields/php/elementary-school-data.php:280
+#: php/AcfFields/php/pre-school-data.php:255
 msgid "Unique and specific features that distinguish the unit and attract the chooser. Select a USP by starting to type on the line, then choose from the existing USPs in the list. Special programs or focuses for children with special needs can be found in the list under Specialization."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:304
+#: php/AcfFields/php/elementary-school-data.php:302
 msgid "Open hours (leisure center)"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:320
-#: php/AcfFields/php/pre-school-data.php:315
+#: php/AcfFields/php/elementary-school-data.php:318
+#: php/AcfFields/php/pre-school-data.php:313
 msgid "Open"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:337
-#: php/AcfFields/php/pre-school-data.php:332
+#: php/AcfFields/php/elementary-school-data.php:335
+#: php/AcfFields/php/pre-school-data.php:330
 msgid "Close"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:356
+#: php/AcfFields/php/elementary-school-data.php:354
 msgid "Presentation of the school"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:372
-#: php/AcfFields/php/pre-school-data.php:367
+#: php/AcfFields/php/elementary-school-data.php:370
+#: php/AcfFields/php/pre-school-data.php:365
 msgid "About Us"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:376
+#: php/AcfFields/php/elementary-school-data.php:374
 msgid "Presentation of the school; where we are, how we are organised, specialization, the competence of the pedagogues. Our own chef prepares the delicious food + link to the schools menu. How Elevhälsa and SYV are organized and work at the school to support the students. No contact details here!"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:394
+#: php/AcfFields/php/elementary-school-data.php:392
 msgid "Presentation of the school; where we are located, how we are organized, special focus, teachers' competence. Our own chef prepares the delicious food + link to the school's menu. How Student Health and Study and Career Counselling are organized and work at the school to support the students."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:410
-#: php/AcfFields/php/pre-school-data.php:412
+#: php/AcfFields/php/elementary-school-data.php:408
+#: php/AcfFields/php/pre-school-data.php:410
 msgid "How we work"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:414
+#: php/AcfFields/php/elementary-school-data.php:412
 msgid "The schools motto and working methods, how we work organizationally, how we work with and support the students, for example safety and well-being. Mandatory to mention the plan for equal treatment and the learning platform to follow the childs development/contact with the school."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:448
+#: php/AcfFields/php/elementary-school-data.php:446
 msgid "Our leisure center"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:452
+#: php/AcfFields/php/elementary-school-data.php:450
 msgid "Describe what it is and how it works at our school. No contact information here."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:486
+#: php/AcfFields/php/elementary-school-data.php:484
 msgid "Optional rows"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:490
+#: php/AcfFields/php/elementary-school-data.php:488
 msgid "Any row (max 5). Eg Start school class.    Describe what it is and how it works at our school. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Vimeo together with the text."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:521
-#: php/AcfFields/php/pre-school-data.php:523
+#: php/AcfFields/php/elementary-school-data.php:519
+#: php/AcfFields/php/pre-school-data.php:521
 msgid "Lägg till"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:526
+#: php/AcfFields/php/elementary-school-data.php:524
 #: php/AcfFields/php/notice.php:12
-#: php/AcfFields/php/pre-school-data.php:528
+#: php/AcfFields/php/pre-school-data.php:526
 msgid "Heading"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:547
+#: php/AcfFields/php/elementary-school-data.php:545
 #: php/AcfFields/php/notice.php:32
-#: php/AcfFields/php/pre-school-data.php:549
+#: php/AcfFields/php/pre-school-data.php:547
 msgid "Content"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:572
-#: php/AcfFields/php/pre-school-data.php:574
+#: php/AcfFields/php/elementary-school-data.php:570
+#: php/AcfFields/php/pre-school-data.php:572
 msgid "Visiting address"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:589
-#: php/AcfFields/php/pre-school-data.php:591
+#: php/AcfFields/php/elementary-school-data.php:587
+#: php/AcfFields/php/pre-school-data.php:589
 msgid "Add additional addresses"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:594
-#: php/AcfFields/php/pre-school-data.php:596
+#: php/AcfFields/php/elementary-school-data.php:592
+#: php/AcfFields/php/pre-school-data.php:594
 msgid "Address"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:598
-#: php/AcfFields/php/pre-school-data.php:600
+#: php/AcfFields/php/elementary-school-data.php:596
+#: php/AcfFields/php/pre-school-data.php:598
 msgid "Enter address or device name. Also links to the Find here link for the visitor, opens in new window on Google Maps."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:614
-#: php/AcfFields/php/elementary-school-data.php:841
-#: php/AcfFields/php/pre-school-data.php:616
-#: php/AcfFields/php/pre-school-data.php:843
+#: php/AcfFields/php/elementary-school-data.php:612
+#: php/AcfFields/php/elementary-school-data.php:839
+#: php/AcfFields/php/pre-school-data.php:614
+#: php/AcfFields/php/pre-school-data.php:841
 #: php/AcfFields/php/schools-manager-settings.php:83
 #: php/AcfFields/php/schools-manager-settings.php:208
 msgid "Description"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:618
-#: php/AcfFields/php/pre-school-data.php:620
+#: php/AcfFields/php/elementary-school-data.php:616
+#: php/AcfFields/php/pre-school-data.php:618
 msgid "In the case of multiple visiting addresses, print which part of the organization is located here."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:637
-#: php/AcfFields/php/pre-school-data.php:639
+#: php/AcfFields/php/elementary-school-data.php:635
+#: php/AcfFields/php/pre-school-data.php:637
 msgid "Link Facebook"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:654
-#: php/AcfFields/php/pre-school-data.php:656
+#: php/AcfFields/php/elementary-school-data.php:652
+#: php/AcfFields/php/pre-school-data.php:654
 msgid "Link Instagram"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:671
-#: php/AcfFields/php/pre-school-data.php:673
+#: php/AcfFields/php/elementary-school-data.php:669
+#: php/AcfFields/php/pre-school-data.php:671
 msgid "Contact instructions"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:683
-#: php/AcfFields/php/pre-school-data.php:685
+#: php/AcfFields/php/elementary-school-data.php:681
+#: php/AcfFields/php/pre-school-data.php:683
 msgid ""
-"Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.    \r\n"
-"Person - you select the person's name and email here. \r\n"
-"\r\n"
+"Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.    \n"
+"Person - you select the person's name and email here. \n"
+"\n"
 "If the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:692
-#: php/AcfFields/php/pre-school-data.php:694
+#: php/AcfFields/php/elementary-school-data.php:690
+#: php/AcfFields/php/pre-school-data.php:692
 msgid "Contacts"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:696
+#: php/AcfFields/php/elementary-school-data.php:694
 msgid "The school applicants most important contact persons with title and responsibility: for example principal, assistant principal grades 7-9 + 1 administrator."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:709
-#: php/AcfFields/php/pre-school-data.php:711
+#: php/AcfFields/php/elementary-school-data.php:707
+#: php/AcfFields/php/pre-school-data.php:709
 msgid "Add contact"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:714
-#: php/AcfFields/php/pre-school-data.php:716
+#: php/AcfFields/php/elementary-school-data.php:712
+#: php/AcfFields/php/pre-school-data.php:714
 msgid "Professional title"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:735
-#: php/AcfFields/php/pre-school-data.php:737
+#: php/AcfFields/php/elementary-school-data.php:733
+#: php/AcfFields/php/pre-school-data.php:735
 #: php/PostType/Person/PersonConfiguration.php:14
 msgid "Person"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:739
-#: php/AcfFields/php/pre-school-data.php:741
+#: php/AcfFields/php/elementary-school-data.php:737
+#: php/AcfFields/php/pre-school-data.php:739
 msgid "Email (taken from People)"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:767
-#: php/AcfFields/php/pre-school-data.php:769
+#: php/AcfFields/php/elementary-school-data.php:765
+#: php/AcfFields/php/pre-school-data.php:767
 msgid "Call to action: Application special"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:771
-#: php/AcfFields/php/pre-school-data.php:773
+#: php/AcfFields/php/elementary-school-data.php:769
+#: php/AcfFields/php/pre-school-data.php:771
 msgid "An alternative Application module for units with a different application procedure, for example speical preschool or special orientation for children with special needs. Add 2 buttons with link texts/links to, for example, another e-service for the application or PDF with application form."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:789
-#: php/AcfFields/php/pre-school-data.php:791
+#: php/AcfFields/php/elementary-school-data.php:787
+#: php/AcfFields/php/pre-school-data.php:789
 msgid "If these fields are left unedited, the application Call-To-Action box will use the default settings from School Settings Manager."
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:801
-#: php/AcfFields/php/pre-school-data.php:803
+#: php/AcfFields/php/elementary-school-data.php:799
+#: php/AcfFields/php/pre-school-data.php:801
 msgid "Display on website"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:805
-#: php/AcfFields/php/pre-school-data.php:807
+#: php/AcfFields/php/elementary-school-data.php:803
+#: php/AcfFields/php/pre-school-data.php:805
 msgid "Uncheck this to hide the application Call-To-Action box on the website"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:821
-#: php/AcfFields/php/pre-school-data.php:823
+#: php/AcfFields/php/elementary-school-data.php:819
+#: php/AcfFields/php/pre-school-data.php:821
 #: php/AcfFields/php/schools-manager-settings.php:63
 #: php/AcfFields/php/schools-manager-settings.php:188
 msgid "Title"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:861
-#: php/AcfFields/php/pre-school-data.php:863
+#: php/AcfFields/php/elementary-school-data.php:859
+#: php/AcfFields/php/pre-school-data.php:861
 #: php/AcfFields/php/schools-manager-settings.php:103
 #: php/AcfFields/php/schools-manager-settings.php:228
 msgid "Apply here"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:877
-#: php/AcfFields/php/pre-school-data.php:879
+#: php/AcfFields/php/elementary-school-data.php:875
+#: php/AcfFields/php/pre-school-data.php:877
 #: php/AcfFields/php/schools-manager-settings.php:119
 #: php/AcfFields/php/schools-manager-settings.php:244
 msgid "How to apply"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:895
-#: php/AcfFields/php/pre-school-data.php:897
+#: php/AcfFields/php/elementary-school-data.php:893
+#: php/AcfFields/php/pre-school-data.php:895
 msgid "end call to action accordion"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:913
-#: php/AcfFields/php/pre-school-data.php:915
+#: php/AcfFields/php/elementary-school-data.php:911
+#: php/AcfFields/php/pre-school-data.php:913
 msgid "Posttype Canonical URL"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:930
-#: php/AcfFields/php/pre-school-data.php:932
+#: php/AcfFields/php/elementary-school-data.php:928
+#: php/AcfFields/php/pre-school-data.php:930
 msgid "Add subpages"
 msgstr ""
 
-#: php/AcfFields/php/elementary-school-data.php:942
-#: php/AcfFields/php/pre-school-data.php:944
+#: php/AcfFields/php/elementary-school-data.php:940
+#: php/AcfFields/php/pre-school-data.php:942
 msgid ""
-"Pages describe, for example, the unit's special focus or profile in more detail with an image, movie link to YouTube/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.\r\n"
-"Note! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\r\n"
+"Pages describe, for example, the unit's special focus or profile in more detail with an image, movie link to YouTube/Vimeo and text. Also use pages when the device has the option Application module, which should link to a subpage with application information for the device.\n"
+"Note! Always mark the page as a child page of the entity. The page is then automatically displayed to the visitor.\n"
 "Note! Always name the page with the name of the school."
 msgstr ""
 
@@ -375,63 +375,68 @@ msgstr ""
 msgid "Use format (07XX-XX XX XX)"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:8
+#: php/AcfFields/php/pre-school-data.php:6
+#: php/PostType/PreSchool/PreSchoolConfiguration.php:16
+msgid "Pre school"
+msgstr ""
+
+#: php/AcfFields/php/pre-school-data.php:10
 msgid "Describe the preschool for the preschool chooser"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:16
+#: php/AcfFields/php/pre-school-data.php:14
 msgid "2-3 lines summarizing the offer for the chooser. What makes the preschool unique and special. This summary is displayed in search results and archives."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:36
+#: php/AcfFields/php/pre-school-data.php:34
 msgid "Upload a maximum of 6 images in jpg/landscape format of the preschool's facade from different angles, such as the entrance and the yard/backside. Best displayed in 16:9 format. Add captions to explain the image to the visitor."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:175
+#: php/AcfFields/php/pre-school-data.php:173
 msgid "Number of children"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:223
+#: php/AcfFields/php/pre-school-data.php:221
 msgid "Number of units"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:279
+#: php/AcfFields/php/pre-school-data.php:277
 msgid "Visit Us"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:299
+#: php/AcfFields/php/pre-school-data.php:297
 msgid "Open hours"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:351
+#: php/AcfFields/php/pre-school-data.php:349
 msgid "Presentation of the preschool"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:371
+#: php/AcfFields/php/pre-school-data.php:369
 msgid "Describes, for example, the area, age division of groups, expertise, view of children, focus/profile, indoor/outdoor learning environment, who prepares the food/menu, collaboration within the preschool area (which preschools and the type of collaboration), and opening hours."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:416
+#: php/AcfFields/php/pre-school-data.php:414
 msgid "Describes, for example, the view on knowledge, how the preschool has chosen to organize learning for the children based on the profile and the curriculum."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:450
+#: php/AcfFields/php/pre-school-data.php:448
 msgid "Orientation"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:454
+#: php/AcfFields/php/pre-school-data.php:452
 msgid "Describes what enrollment is, how long it lasts, and the role and responsibilities of the parent and preschool during that time. Mandatory to mention the plan for equal treatment and the learning platform to follow the child's development."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:488
+#: php/AcfFields/php/pre-school-data.php:486
 msgid "Optional row"
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:492
+#: php/AcfFields/php/pre-school-data.php:490
 msgid "'Any row (max 5). For example, describe the pre-schools special focus or profile in a little more depth here. Choose to create a new Page instead, if you want to insert images or a video link from YouTube/Video together with the text."
 msgstr ""
 
-#: php/AcfFields/php/pre-school-data.php:698
+#: php/AcfFields/php/pre-school-data.php:696
 msgid "The applicants most important contact person, 1-2 names. For example, principal and administrator"
 msgstr ""
 
@@ -564,10 +569,6 @@ msgstr ""
 msgid "Elementary schools"
 msgstr ""
 
-#: php/PostType/ElementarySchool/ElementarySchoolConfiguration.php:16
-msgid "Elementary school"
-msgstr ""
-
 #: php/PostType/Person/PersonConfiguration.php:13
 #: php/PostType/Person/PersonConfiguration.php:16
 msgid "Persons"
@@ -576,8 +577,4 @@ msgstr ""
 #: php/PostType/PreSchool/PreSchoolConfiguration.php:15
 #: php/PostType/PreSchool/PreSchoolConfiguration.php:18
 msgid "Pre schools"
-msgstr ""
-
-#: php/PostType/PreSchool/PreSchoolConfiguration.php:16
-msgid "Pre school"
 msgstr ""
