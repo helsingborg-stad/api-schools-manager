@@ -2,6 +2,9 @@
 
 namespace SchoolsManager\PostType\Person;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+
+#[CoversClass(PersonConfiguration::class)]
 class PersonConfigurationTest extends \PHPUnit\Framework\TestCase
 {
     protected static $postTypeArgs = null;

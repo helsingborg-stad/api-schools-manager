@@ -86,7 +86,10 @@ class App
      */
     public function init()
     {
-        $apiFields          = [new SchoolPagesField(), new ImagesField(new NativeAcfService(), new NativeWpService())];
+        $acfService = new NativeAcfService();
+        $wpService  = new NativeWpService();
+
+        $apiFields          = [new SchoolPagesField(), new ImagesField($acfService, $wpService)];
         $apiFieldsRegistrar = new FieldsRegistrar($apiFields);
 
         //General

@@ -4,23 +4,22 @@ namespace SchoolsManager\API\Fields;
 
 use PHPUnit\Framework\TestCase;
 use AcfService\Implementations\FakeAcfService;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\TestDox;
 use WP_REST_Request;
 use WpService\Implementations\FakeWpService;
 
+#[CoversClass(ImagesField::class)]
 class ImagesFieldTest extends TestCase
 {
-    /**
-     * @testdox class can be instantiated
-     */
+    #[TestDox('class can be instantiated')]
     public function testCanBeInstantiated(): void
     {
         $field = new ImagesField(new FakeAcfService(), new FakeWpService());
         $this->assertInstanceOf(ImagesField::class, $field);
     }
 
-    /**
-     * @testdox getCallback returns images from gallery and facade_images ACF fields if they are set
-     */
+    #[TestDox('getCallback returns images from gallery and facade_images ACF fields if they are set')]
     public function testGetCallbackReturnsImagesFromGalleryAndFacadeImagesIfSet(): void
     {
         $acfService = new FakeAcfService(['getField' => fn($selector, $postId) => match ($selector) {
@@ -62,9 +61,7 @@ class ImagesFieldTest extends TestCase
         ], $result);
     }
 
-    /**
-     * @testdox getCallback returns empty array if no images are set in gallery and facade_images ACF fields
-     */
+    #[TestDox('getCallback returns empty array if no images are set in gallery and facade_images ACF fields')]
     public function testGetCallbackReturnsEmptyArrayIfNoImagesAreSet(): void
     {
         $acfService = new FakeAcfService(['getField' => fn($selector, $postId) => match ($selector) {
