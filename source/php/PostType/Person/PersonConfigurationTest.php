@@ -1,6 +1,6 @@
 <?php
 
-namespace SchoolsManager\PostType\Person\Test;
+namespace SchoolsManager\PostType\Person;
 
 class PersonConfigurationTest extends \PHPUnit\Framework\TestCase
 {
@@ -8,6 +8,7 @@ class PersonConfigurationTest extends \PHPUnit\Framework\TestCase
 
     public static function setUpBeforeClass(): void
     {
+        define('SCHOOLS_MANAGER_PATH', '');
         self::$postTypeArgs = \SchoolsManager\PostType\Person\PersonConfiguration::getPostTypeArgs()['args'];
     }
 

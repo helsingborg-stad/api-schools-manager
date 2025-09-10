@@ -2,10 +2,12 @@
 
 namespace SchoolsManager;
 
+use AcfService\Implementations\NativeAcfService;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\DefaultValuesSetter;
 use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\SchoolPagesField;
+use SchoolsManager\API\Fields\ImagesField;
 use SchoolsManager\Entity\PostType;
 use SchoolsManager\PostColumn\PostColumn;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
@@ -19,6 +21,7 @@ use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade;
 use SchoolsManager\Taxonomy\Usp\Usp;
+use WpService\Implementations\NativeWpService;
 
 class App
 {
@@ -83,7 +86,7 @@ class App
      */
     public function init()
     {
-        $apiFields          = [new SchoolPagesField()];
+        $apiFields          = [new SchoolPagesField(), new ImagesField(new NativeAcfService(), new NativeWpService())];
         $apiFieldsRegistrar = new FieldsRegistrar($apiFields);
 
         //General
