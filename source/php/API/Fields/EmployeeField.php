@@ -21,6 +21,7 @@ class EmployeeField extends Field
 
     public string|array $objectType;
     public string $attribute = 'employee';
+
     public function __construct(
         private GetField $acfService,
         private GetPostThumbnailId $wpService,
@@ -32,6 +33,14 @@ class EmployeeField extends Field
         ];
     }
 
+    /**
+     * Returns formatted employee contacts for the given object.
+     *
+     * @param string|array $object
+     * @param string $field_name
+     * @param WP_REST_Request $request
+     * @return array
+     */
     public function getCallback(string|array $object, string $field_name, WP_REST_Request $request): array
     {
         $contacts = $this->acfService->getField('contacts', $object['id']) ?: [];
@@ -40,24 +49,44 @@ class EmployeeField extends Field
             return [];
         }
 
-        return array_filter(array_map([$this, 'formatEmployee'], $contacts));
+        return array_values(array_filter(array_map([$this, 'formatEmployee'], $contacts)));
     }
 
+    /**
+     * Formats a single employee contact.
+     *
+     * @param array $contact
+     * @return array|null
+     */
     public function formatEmployee(array $contact): ?array
     {
         if (empty($contact['person']) || !($contact['person'] instanceof \WP_Post)) {
             return null;
         }
 
-        $person = $contact['person'];
-        $image  = $this->imageProvider->getImage($this->wpService->getPostThumbnailId($person->ID));
+        $person     = $contact['person'];
+        $imageArray = $this->getPersonImageArray($person->ID);
 
         return [
             'job_title' => $contact['professional_title'] ?? null,
             'name'      => $person->post_title ?? null,
             'email'     => $this->acfService->getField('e-mail', $person->ID) ?: null,
             'telephone' => $this->acfService->getField('phone-number', $person->ID) ?: null,
-            'image'     => $image->toArray()
+            'image'     => $imageArray,
         ];
+    }
+
+    /**
+     * Gets the image array for a person by post ID.
+     *
+     * @param int $personId
+     * @return array|null
+     */
+    private function getPersonImageArray(int $personId): ?array
+    {
+        $thumbnailId = $this->wpService->getPostThumbnailId($personId);
+        $image       = $this->imageProvider->getImage($thumbnailId);
+
+        return !empty($image->getUrl()) ? $image->toArray() : null;
     }
 }
