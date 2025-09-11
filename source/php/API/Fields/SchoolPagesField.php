@@ -7,6 +7,7 @@ use SchoolsManager\Entity\API\FieldGetCallback;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use WP_REST_Request;
+use WpService\Contracts\GetPosts;
 
 class SchoolPagesField extends Field
 {
@@ -15,7 +16,7 @@ class SchoolPagesField extends Field
     public string|array $objectType;
     public string $attribute = 'pages';
 
-    public function __construct()
+    public function __construct(private GetPosts $wpService)
     {
         $this->objectType = [
             PreSchoolConfiguration::POST_TYPE_SLUG,
@@ -25,7 +26,7 @@ class SchoolPagesField extends Field
 
     public function getCallback(string|array $object, string $field_name, WP_REST_Request $request): array
     {
-        return get_posts(
+        return $this->wpService->getPosts(
             array(
                 'post_type'      => 'page',
                 'fields'         => 'ids',

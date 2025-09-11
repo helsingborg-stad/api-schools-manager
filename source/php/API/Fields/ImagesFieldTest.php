@@ -4,12 +4,11 @@ namespace SchoolsManager\API\Fields;
 
 use PHPUnit\Framework\TestCase;
 use AcfService\Implementations\FakeAcfService;
-use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\CoversNothing;
 use PHPUnit\Framework\Attributes\TestDox;
 use WP_REST_Request;
 use WpService\Implementations\FakeWpService;
 
-#[CoversClass(ImagesField::class)]
 class ImagesFieldTest extends TestCase
 {
     #[TestDox('class can be instantiated')]

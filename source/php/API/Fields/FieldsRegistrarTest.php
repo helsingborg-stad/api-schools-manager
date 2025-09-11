@@ -2,9 +2,6 @@
 
 namespace SchoolsManager\API\Fields;
 
-use PHPUnit\Framework\Attributes\CoversClass;
-
-#[CoversClass(FieldsRegistrar::class)]
 class FieldsRegistrarTest extends \PHPUnit\Framework\TestCase
 {
     public function testFieldsRegistrarRegistersFields()

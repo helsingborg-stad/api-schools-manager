@@ -2,7 +2,7 @@
 
 namespace SchoolsManager;
 
-use AcfService\Implementations\NativeAcfService;
+use AcfService\AcfService;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\DefaultValuesSetter;
 use SchoolsManager\API\Fields\FieldsRegistrar;
@@ -21,56 +21,55 @@ use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use SchoolsManager\Taxonomy\GeographicArea\GeographicArea;
 use SchoolsManager\Taxonomy\Grade\Grade;
 use SchoolsManager\Taxonomy\Usp\Usp;
-use WpService\Implementations\NativeWpService;
+use WpService\WpService;
 
 class App
 {
-    public function __construct()
+    public function __construct(private AcfService $acfService, private WpService $wpService)
     {
+        $this->wpService->addAction('plugins_loaded', array( $this, 'init' ));
 
-        add_action('plugins_loaded', array( $this, 'init' ));
+        $this->wpService->addAction('admin_init', array($this, 'hideUnusedAdminPages'));
 
-        add_action('admin_init', array($this, 'hideUnusedAdminPages'));
+        $this->wpService->addAction('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
 
-        add_action('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
+        $this->wpService->addFilter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
 
-        add_filter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
+        $this->wpService->addAction('admin_menu', array( $this, 'hideStandardExcerptBox'));
 
-        add_action('admin_menu', array( $this, 'hideStandardExcerptBox'));
+        $this->wpService->addAction('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
 
-        add_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
+        $this->wpService->addFilter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
 
-        add_filter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
-
-        add_action('post_updated', array($this, 'setPageParentOnPostUpdated'));
+        $this->wpService->addAction('post_updated', array($this, 'setPageParentOnPostUpdated'));
     }
 
 
     public function hideStandardExcerptBox()
     {
-        remove_meta_box('postexcerpt', ['pre-school', 'elementary-school'], 'normal');
+        $this->wpService->removeMetaBox('postexcerpt', ['pre-school', 'elementary-school'], 'normal');
     }
 
     public function hideUnusedAdminPages()
     {
 
-        remove_menu_page('edit.php'); // Posts
-        remove_menu_page('link-manager.php');
-        remove_menu_page('edit-comments.php');
-        remove_menu_page('themes.php');
-        remove_menu_page('tools.php');
-        remove_menu_page('index.php');
+        $this->wpService->removeMenuPage('edit.php'); // Posts
+        $this->wpService->removeMenuPage('link-manager.php');
+        $this->wpService->removeMenuPage('edit-comments.php');
+        $this->wpService->removeMenuPage('themes.php');
+        $this->wpService->removeMenuPage('tools.php');
+        $this->wpService->removeMenuPage('index.php');
 
-        remove_submenu_page('options-general.php', 'options-discussion.php');
-        remove_submenu_page('options-general.php', 'options-writing.php');
-        remove_submenu_page('options-general.php', 'options-privacy.php');
+        $this->wpService->removeSubmenuPage('options-general.php', 'options-discussion.php');
+        $this->wpService->removeSubmenuPage('options-general.php', 'options-writing.php');
+        $this->wpService->removeSubmenuPage('options-general.php', 'options-privacy.php');
     }
 
     public function displayContactMetaInMetaBox($title, $post, $field, $post_id)
     {
 
-        if (is_admin()) {
-            $email = \get_field('e-mail', $post->ID);
+        if ($this->wpService->isAdmin()) {
+            $email = $this->acfService->getField('e-mail', $post->ID);
             if ($title) {
                 $title .= " ($email)";
             }
@@ -86,11 +85,11 @@ class App
      */
     public function init()
     {
-        $acfService = new NativeAcfService();
-        $wpService  = new NativeWpService();
-
-        $apiFields          = [new SchoolPagesField(), new ImagesField($acfService, $wpService)];
-        $apiFieldsRegistrar = new FieldsRegistrar($apiFields);
+        //API
+        $apiFieldsRegistrar = new FieldsRegistrar([
+            new SchoolPagesField($this->wpService),
+            new ImagesField($this->acfService, $this->wpService)
+        ]);
 
         //General
         $api = new Api($apiFieldsRegistrar);
@@ -272,7 +271,7 @@ class App
     public function saveCustomExcerptField($postId): void
     {
 
-        $customExcerpt = \get_field('custom_excerpt', $postId);
+        $customExcerpt = $this->acfService->getField('custom_excerpt', $postId);
 
         remove_action('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
         wp_update_post(['ID' => $postId, 'post_excerpt' => $customExcerpt], false);
