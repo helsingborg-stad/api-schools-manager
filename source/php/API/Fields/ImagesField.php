@@ -41,7 +41,7 @@ class ImagesField extends Field
             return [
                 'ID'      => (int)$image['id'] ?? null,
                 'url'     => $this->wpService->wpGetAttachmentUrl($image['id'] ?? 0) ?: null,
-                'alt'     => $this->wpService->getPostMeta($image['id'] ?? 0, '_wp_attachment_image_alt') ?: null,
+                'alt'     => $this->wpService->getPostMeta($image['id'] ?? 0, '_wp_attachment_image_alt', true) ?: null,
                 'name'    => $this->wpService->getPostField('post_title', $image['id'] ?? 0) ?: null,
                 'caption' => $this->wpService->getPostField('post_excerpt', $image['id'] ?? 0) ?: null,
             ];
