@@ -27,21 +27,27 @@ class App
 {
     public function __construct(private AcfService $acfService, private WpService $wpService)
     {
-        $this->wpService->addAction('plugins_loaded', array( $this, 'init' ));
+        foreach (
+            [
+            ['plugins_loaded', array( $this, 'init' ), 10, 1],
+            ['admin_init', array($this, 'hideUnusedAdminPages'), 10, 1],
+            ['plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ), 10, 1],
+            ['admin_menu', array( $this, 'hideStandardExcerptBox'), 10, 1],
+            ['acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1],
+            ['post_updated', array($this, 'setPageParentOnPostUpdated'), 10, 1],
+            ] as $action
+        ) {
+            $this->wpService->addAction(...$action);
+        }
 
-        $this->wpService->addAction('admin_init', array($this, 'hideUnusedAdminPages'));
-
-        $this->wpService->addAction('plugins_loaded', array( $this, 'useGoogleApiKeyIfDefined' ));
-
-        $this->wpService->addFilter('rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg' ), 10, 3);
-
-        $this->wpService->addAction('admin_menu', array( $this, 'hideStandardExcerptBox'));
-
-        $this->wpService->addAction('acf/save_post', array($this, 'saveCustomExcerptField'), 20, 1);
-
-        $this->wpService->addFilter('acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4);
-
-        $this->wpService->addAction('post_updated', array($this, 'setPageParentOnPostUpdated'));
+        foreach (
+            [
+            ['rest_prepare_taxonomy', array($this, 'respectMetaBoxCbInGutenberg'), 10, 3],
+            ['acf/fields/post_object/result/name=person', array($this, 'displayContactMetaInMetaBox'), 10, 4],
+            ] as $filter
+        ) {
+            $this->wpService->addFilter(...$filter);
+        }
     }
 
 
