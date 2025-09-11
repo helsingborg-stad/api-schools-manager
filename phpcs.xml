@@ -3,7 +3,6 @@
     <description>WordPress Coding Standard.</description>
     
     <file>./source/php</file>
-    <file>./tests/phpunit</file>
     <exclude-pattern type="relative">AcfFields/*</exclude-pattern>
     <exclude-pattern>**/*.css</exclude-pattern>
     <exclude-pattern>**/*.js</exclude-pattern>

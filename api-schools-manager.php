@@ -48,7 +48,10 @@ add_action('acf/init', function () {
 });
 
 // Start application
-new SchoolsManager\App();
+new SchoolsManager\App(
+    new \AcfService\Implementations\NativeAcfService(),
+    new \WpService\Implementations\NativeWpService()
+);
 
 add_action('plugins_loaded', function () {
 
