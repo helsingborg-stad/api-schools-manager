@@ -5,7 +5,9 @@ namespace SchoolsManager;
 use AcfService\AcfService;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\DefaultValuesSetter;
+use SchoolsManager\API\Fields\EmployeeField;
 use SchoolsManager\API\Fields\FieldsRegistrar;
+use SchoolsManager\API\Fields\GetImage\ImageProvider;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\API\Fields\ImagesField;
 use SchoolsManager\Entity\PostType;
@@ -92,9 +94,11 @@ class App
     public function init()
     {
         //API
+        $imageProvider      = new ImageProvider($this->wpService);
         $apiFieldsRegistrar = new FieldsRegistrar([
             new SchoolPagesField($this->wpService),
-            new ImagesField($this->acfService, $this->wpService)
+            new ImagesField($this->acfService, $imageProvider),
+            new EmployeeField($this->acfService, $this->wpService, $imageProvider),
         ]);
 
         //General

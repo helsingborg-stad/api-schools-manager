@@ -3,6 +3,7 @@
 namespace SchoolsManager\API\Fields;
 
 use AcfService\Contracts\GetField;
+use SchoolsManager\API\Fields\GetImage\GetImageInterface;
 use SchoolsManager\Entity\API\Field;
 use SchoolsManager\Entity\API\FieldGetCallback;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
@@ -21,7 +22,7 @@ class ImagesField extends Field
 
     public function __construct(
         private GetField $acfService,
-        private WpGetAttachmentUrl&GetPostMeta&GetPostField $wpService
+        private GetImageInterface $imageProvider
     ) {
         $this->objectType = [
             PreSchoolConfiguration::POST_TYPE_SLUG,
@@ -38,13 +39,7 @@ class ImagesField extends Field
         $images = array_map(fn($item) => $item['image'], $images);
 
         return array_map(function ($image) {
-            return [
-                'ID'      => (int)$image['id'] ?? null,
-                'url'     => $this->wpService->wpGetAttachmentUrl($image['id'] ?? 0) ?: null,
-                'alt'     => $this->wpService->getPostMeta($image['id'] ?? 0, '_wp_attachment_image_alt', true) ?: null,
-                'name'    => $this->wpService->getPostField('post_title', $image['id'] ?? 0) ?: null,
-                'caption' => $this->wpService->getPostField('post_excerpt', $image['id'] ?? 0) ?: null,
-            ];
+            return $this->imageProvider->getImage((int)($image['id'] ?? 0))->toArray();
         }, $images);
     }
 }
