@@ -9,9 +9,6 @@ use SchoolsManager\Entity\API\FieldGetCallback;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use WP_REST_Request;
-use WpService\Contracts\GetPostField;
-use WpService\Contracts\GetPostMeta;
-use WpService\Contracts\WpGetAttachmentUrl;
 
 class ImagesField extends Field
 {
@@ -35,7 +32,7 @@ class ImagesField extends Field
         $gallery      = $this->acfService->getField('gallery', $object['id']) ?: [];
         $facadeImages = $this->acfService->getField('facade_images', $object['id']) ?: [];
 
-        $images = array_merge($gallery, $facadeImages);
+        $images = array_merge($facadeImages, $gallery);
         $images = array_map(fn($item) => $item['image'], $images);
 
         return array_map(function ($image) {
