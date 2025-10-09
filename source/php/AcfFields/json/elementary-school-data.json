@@ -393,7 +393,7 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "basic",
+                    "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -431,7 +431,7 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "basic",
+                    "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -469,7 +469,7 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "basic",
+                    "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -550,7 +550,7 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "basic",
+                            "toolbar": "full",
                             "media_upload": 0,
                             "delay": 0,
                             "parent_repeater": "field_651e694d85222"
