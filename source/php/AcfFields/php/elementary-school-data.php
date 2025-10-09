@@ -400,7 +400,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'default_value'     => '',
                     'tabs'              => 'all',
                     'toolbar'           => 'full',
-                    'media_upload'      => 0,
+                    'media_upload'      => 1,
                     'delay'             => 0,
                 ),
                 2 => array(
@@ -438,7 +438,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'default_value'     => '',
                     'tabs'              => 'all',
                     'toolbar'           => 'full',
-                    'media_upload'      => 0,
+                    'media_upload'      => 1,
                     'delay'             => 0,
                 ),
                 4 => array(
@@ -476,7 +476,7 @@ if (function_exists('acf_add_local_field_group')) {
                     'default_value'     => '',
                     'tabs'              => 'all',
                     'toolbar'           => 'full',
-                    'media_upload'      => 0,
+                    'media_upload'      => 1,
                     'delay'             => 0,
                 ),
                 6 => array(
@@ -557,7 +557,7 @@ if (function_exists('acf_add_local_field_group')) {
                             'default_value'     => '',
                             'tabs'              => 'all',
                             'toolbar'           => 'full',
-                            'media_upload'      => 0,
+                            'media_upload'      => 1,
                             'delay'             => 0,
                             'parent_repeater'   => 'field_651e694d85222',
                         ),
