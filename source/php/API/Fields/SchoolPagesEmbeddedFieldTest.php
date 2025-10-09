@@ -6,23 +6,28 @@ use PHPUnit\Framework\Attributes\TestDox;
 use PHPUnit\Framework\TestCase;
 use WP_Post;
 use WP_REST_Request;
+use WpService\Contracts\ApplyFilters;
 use WpService\Contracts\GetPosts;
 
 class SchoolPagesEmbeddedFieldTest extends TestCase
 {
-    private function createEmptyGetPostsMock(): GetPosts
+    private function createEmptyGetPostsMock(): GetPosts&ApplyFilters
     {
-        return new class implements GetPosts {
+        return new class implements GetPosts, ApplyFilters {
             public function getPosts(array $args = null): array
             {
                 return [];
             }
+            public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
+            {
+                return $value;
+            }
         };
     }
 
-    private function createGetPostsMockWithIds(array $pages, int $expectedMetaValue): GetPosts
+    private function createGetPostsMockWithIds(array $pages, int $expectedMetaValue): GetPosts&ApplyFilters
     {
-        return new class ($pages, $expectedMetaValue) implements GetPosts {
+        return new class ($pages, $expectedMetaValue) implements GetPosts, ApplyFilters {
             private array $pages;
             private int $expectedMetaValue;
             public function __construct(array $pages, int $expectedMetaValue)
@@ -36,6 +41,10 @@ class SchoolPagesEmbeddedFieldTest extends TestCase
                     return $this->pages;
                 }
                 return [];
+            }
+            public function applyFilters(string $hookName, mixed $value, mixed ...$args): mixed
+            {
+                return $value;
             }
         };
     }

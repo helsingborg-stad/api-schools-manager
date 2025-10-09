@@ -7,6 +7,7 @@ use SchoolsManager\Entity\API\FieldGetCallback;
 use SchoolsManager\PostType\ElementarySchool\ElementarySchoolConfiguration;
 use SchoolsManager\PostType\PreSchool\PreSchoolConfiguration;
 use WP_REST_Request;
+use WpService\Contracts\ApplyFilters;
 use WpService\Contracts\GetPosts;
 
 class SchoolPagesEmbeddedField extends Field
@@ -16,7 +17,7 @@ class SchoolPagesEmbeddedField extends Field
     public string|array $objectType;
     public string $attribute = 'pages_embedded';
 
-    public function __construct(private GetPosts $wpService)
+    public function __construct(private GetPosts&ApplyFilters $wpService)
     {
         $this->objectType = [
             PreSchoolConfiguration::POST_TYPE_SLUG,
@@ -30,7 +31,7 @@ class SchoolPagesEmbeddedField extends Field
             return [
                 'ID'           => $post->ID,
                 'post_title'   => $post->post_title,
-                'post_content' => $post->post_content
+                'post_content' => $this->wpService->applyFilters('the_content', $post->post_content),
             ];
         }, $this->wpService->getPosts(
             array(
