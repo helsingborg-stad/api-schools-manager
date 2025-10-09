@@ -10,6 +10,7 @@ use SchoolsManager\API\Fields\FieldsRegistrar;
 use SchoolsManager\API\Fields\GetImage\ImageProvider;
 use SchoolsManager\API\Fields\SchoolPagesField;
 use SchoolsManager\API\Fields\ImagesField;
+use SchoolsManager\API\Fields\SchoolPagesEmbeddedField;
 use SchoolsManager\Entity\PostType;
 use SchoolsManager\PostColumn\PostColumn;
 use SchoolsManager\MetaBox\SchoolPagesMetaBox;
@@ -97,6 +98,7 @@ class App
         $imageProvider      = new ImageProvider($this->wpService);
         $apiFieldsRegistrar = new FieldsRegistrar([
             new SchoolPagesField($this->wpService),
+            new SchoolPagesEmbeddedField($this->wpService),
             new ImagesField($this->acfService, $imageProvider),
             new EmployeeField($this->acfService, $this->wpService, $imageProvider),
         ]);
