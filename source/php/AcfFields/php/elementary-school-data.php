@@ -158,14 +158,7 @@ if (function_exists('acf_add_local_field_group')) {
             'type'                 => 'taxonomy',
             'instructions'         => '',
             'required'             => 0,
-            'conditional_logic'    => array(
-                0 => array(
-                    0 => array(
-                        'field'    => 'field_651e694d7b36f',
-                        'operator' => '!=empty',
-                    ),
-                ),
-            ),
+            'conditional_logic'    => 0,
             'wrapper'              => array(
                 'width' => '',
                 'class' => '',
