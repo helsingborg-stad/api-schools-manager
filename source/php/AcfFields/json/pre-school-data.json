@@ -77,14 +77,7 @@
             "type": "repeater",
             "instructions": "Upload a maximum of 6 images in jpg\/landscape format that show different aspects of the activities for the chooser. Best displayed in 16:9 format. Add captions to explain the image to the visitor. Please note: The image gallery will only be available if the 'Video' field is empty.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_652663d62efd2",
-                        "operator": "==empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -131,21 +124,15 @@
             "type": "oembed",
             "instructions": "Embed 1 video that captures the chooser's interest. Please note: The video must be linked from an external service, such as YouTube or Vimeo.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_652960ba4161b",
-                        "operator": "==empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "width": "",
-            "height": ""
+            "height": "",
+            "allow_in_bindings": 1
         },
         {
             "key": "field_66ebdbf3f949d",
