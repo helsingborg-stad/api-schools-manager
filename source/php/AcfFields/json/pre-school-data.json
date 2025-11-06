@@ -220,15 +220,7 @@
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_651e66980968f",
-                        "operator": "==",
-                        "value": "pre_school"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -237,6 +229,7 @@
             "default_value": "",
             "min": "",
             "max": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "step": "",
             "prepend": "",
@@ -381,20 +374,14 @@
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_651e66980968f",
-                                "operator": "!=empty"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
+                    "allow_in_bindings": 1,
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
@@ -956,4 +943,4 @@
     "description": "",
     "show_in_rest": 1
 }]
-
+
