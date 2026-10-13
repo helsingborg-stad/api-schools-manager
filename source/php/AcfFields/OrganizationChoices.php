@@ -16,8 +16,8 @@ use WpService\Contracts\WpRemoteRetrieveResponseCode;
 class OrganizationChoices
 {
     private const ENDPOINT       = 'https://event.helsingborg.io/wp-json/wp/v2/organization/';
-    private const FRESH_CACHE    = 'schools_manager_event_organizations';
-    private const FALLBACK_CACHE = 'schools_manager_event_organizations_fallback';
+    private const FRESH_CACHE    = 'schools_manager_event_organizations_names';
+    private const FALLBACK_CACHE = 'schools_manager_event_organizations_names_fallback';
 
     private bool $resolved          = false;
     private ?array $resolvedChoices = null;
@@ -29,9 +29,9 @@ class OrganizationChoices
     }
 
     /**
-     * Returns ID-to-name choices, or null if neither the API nor a cache is available.
+    * Returns name-to-name choices, or null if neither the API nor a cache is available.
      *
-     * @return array<int, string>|null
+    * @return array<string, string>|null
      */
     public function getChoices(): ?array
     {
@@ -59,13 +59,13 @@ class OrganizationChoices
     /**
      * Fetches every page before making the choices available to callers.
      *
-     * @return array<int, string>|null
+    * @return array<string, string>|null
      */
     private function fetchChoices(): ?array
     {
         $choices = [];
         for ($page = 1; $page <= 100; $page++) {
-            $url      = self::ENDPOINT . '?per_page=100&hide_empty=false&_fields=id,name&page=' . $page;
+            $url      = self::ENDPOINT . '?per_page=100&hide_empty=false&_fields=name&page=' . $page;
             $response = $this->wpService->wpRemoteGet($url, ['timeout' => 10]);
             if (
                 $this->wpService->isWpError($response) ||
@@ -81,12 +81,12 @@ class OrganizationChoices
 
             foreach ($terms as $term) {
                 if (
-                    !is_array($term) || !isset($term['id'], $term['name']) ||
-                    !is_int($term['id']) || $term['id'] <= 0 || !is_string($term['name']) || $term['name'] === ''
+                    !is_array($term) || !isset($term['name']) ||
+                    !is_string($term['name']) || $term['name'] === ''
                 ) {
                     return null;
                 }
-                $choices[$term['id']] = $term['name'];
+                $choices[$term['name']] = $term['name'];
             }
 
             $totalPages = $this->wpService->wpRemoteRetrieveHeader($response, 'x-wp-totalpages');

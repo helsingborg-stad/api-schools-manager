@@ -47,10 +47,10 @@ class OrganizationField
     /**
      * Preserves a saved organization when its option list is unavailable.
      *
-     * @param mixed $value Submitted organization ID.
+    * @param mixed $value Submitted organization name.
      * @param int|string $postId ACF post identifier.
      * @param array $field ACF field configuration.
-     * @return mixed Organization ID to save.
+    * @return mixed Organization name to save.
      */
     public function updateValue(mixed $value, int|string $postId, array $field): mixed
     {

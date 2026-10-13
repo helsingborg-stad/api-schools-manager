@@ -16,7 +16,7 @@ use WpService\Contracts\WpRemoteRetrieveResponseCode;
 
 class OrganizationChoicesTest extends TestCase
 {
-    /** Tests that unused terms on later pages are offered by ID. */
+    /** Tests that unused terms on later pages are offered by name. */
     public function testLoadsEveryPageIncludingUnusedTerms(): void
     {
         $service            = new OrganizationHttpFake();
@@ -27,7 +27,7 @@ class OrganizationChoicesTest extends TestCase
 
         $choices = (new OrganizationChoices($service))->getChoices();
 
-        self::assertSame([9 => 'Alpha', 5 => 'Zeta'], $choices);
+        self::assertSame(['Alpha' => 'Alpha', 'Zeta' => 'Zeta'], $choices);
         self::assertCount(2, $service->requests);
         self::assertStringContainsString('hide_empty=false', $service->requests[0]);
     }
@@ -39,10 +39,12 @@ class OrganizationChoicesTest extends TestCase
         $service->responses = [1 => ['code' => 200, 'body' => '[{"id":2,"name":"School"}]', 'pages' => '1']];
         $provider           = new OrganizationChoices($service);
 
+        $service->transients['schools_manager_event_organizations'] = [2 => 'School'];
+
         $first  = $provider->getChoices();
         $second = $provider->getChoices();
 
-        self::assertSame([2 => 'School'], $first);
+        self::assertSame(['School' => 'School'], $first);
         self::assertSame($first, $second);
         self::assertCount(1, $service->requests);
     }
@@ -56,7 +58,7 @@ class OrganizationChoicesTest extends TestCase
         ];
         $provider           = new OrganizationChoices($service);
         $provider->getChoices();
-        unset($service->transients['schools_manager_event_organizations']);
+        unset($service->transients['schools_manager_event_organizations_names']);
         $service->responses = [
             1 => ['code' => 200, 'body' => '[{"id":3,"name":"Other"}]', 'pages' => '2'],
             2 => ['code' => 503, 'body' => '', 'pages' => '2'],
@@ -64,8 +66,11 @@ class OrganizationChoicesTest extends TestCase
 
         $choices = $provider->getChoices();
 
-        self::assertSame([2 => 'School'], $choices);
-        self::assertSame([2 => 'School'], $service->transients['schools_manager_event_organizations_fallback']);
+        self::assertSame(['School' => 'School'], $choices);
+        self::assertSame(
+            ['School' => 'School'],
+            $service->transients['schools_manager_event_organizations_names_fallback']
+        );
     }
 
     /** Tests that invalid JSON without a cache is reported as unavailable. */
@@ -111,6 +116,35 @@ class OrganizationChoicesTest extends TestCase
         }
 
         self::assertCount(2, array_unique($keys));
+    }
+
+    /** Tests that selected organization names are saved as names when choices are available. */
+    public function testRegisteredFieldSavesOrganizationNames(): void
+    {
+        $wpService = new FakeWpService([
+            'addAction'                    => true,
+            'addFilter'                    => true,
+            'getTransient'                 => false,
+            'setTransient'                 => true,
+            'wpRemoteGet'                  => ['code' => 200, 'body' => '[{"name":"School"}]', 'pages' => '1'],
+            'isWpError'                    => false,
+            'wpRemoteRetrieveResponseCode' => 200,
+            'wpRemoteRetrieveBody'         => '[{"name":"School"}]',
+            'wpRemoteRetrieveHeader'       => '1',
+        ]);
+        new App(new FakeAcfService(), $wpService);
+        $filters   = $wpService->methodCalls['addFilter'];
+        $hookNames = array_column($filters, 0);
+        $loadHook  = $filters[array_search('acf/load_field/name=event_organization', $hookNames, true)][1];
+        $saveHook  = $filters[array_search('acf/update_value/name=event_organization', $hookNames, true)][1];
+        $field     = ['name' => 'event_organization', 'instructions' => ''];
+
+        $loaded = $loadHook($field);
+        $saved  = $saveHook(['School'], 5, $field);
+
+        self::assertSame(['School' => 'School'], $loaded['choices']);
+        self::assertSame(['School'], $saved);
+        self::assertCount(1, $wpService->methodCalls['wpRemoteGet']);
     }
 
     /** Tests that an unrelated save during an outage retains all existing term IDs. */
