@@ -1,7 +1,9 @@
 <?php 
 
-if (function_exists('acf_add_local_field_group')) {
-    acf_add_local_field_group(array(
+
+if (function_exists('acf_add_local_field_group')) {
+
+    acf_add_local_field_group(array(
     'key' => 'group_651e694d7a010',
     'title' => __('Elementary school', 'api-schools-manager'),
     'fields' => array(
@@ -658,8 +660,8 @@
                 'class' => '',
                 'id' => '',
             ),
-            'message' => __('Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.    
-Person - you select the person\'s name and email here. 
+            'message' => __('Job title - please also specify the area of ​​responsibility, e.g. Deputy headmaster years 7-9.
+Person - you select the person\'s name and email here.
 
 If the information is missing, create a new contact via People in the menu. There you enter the name, e-mail, phone number and preferably a picture of the person.', 'api-schools-manager'),
             'new_lines' => 'wpautop',
@@ -923,6 +925,20 @@ Note! Always name the page with the name of the school.', 'api-schools-manager')
             'new_lines' => 'wpautop',
             'esc_html' => 0,
         ),
+        22 => array(
+            'key' => 'field_event_organization_elementary',
+            'label' => __('Event organization', 'api-schools-manager'),
+            'name' => 'event_organization',
+            'type' => 'select',
+            'instructions' => __('Select the matching organizations from the event site.', 'api-schools-manager'),
+            'required' => 0,
+            'choices' => array(),
+            'default_value' => array(),
+            'return_format' => 'value',
+            'allow_null' => 1,
+            'multiple' => 1,
+            'ui' => 1,
+        ),
     ),
     'location' => array(
         0 => array(
@@ -945,4 +961,5 @@ Note! Always name the page with the name of the school.', 'api-schools-manager')
     'description' => '',
     'show_in_rest' => 1,
 ));
-}
+
+}

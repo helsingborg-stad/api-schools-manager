@@ -3,6 +3,8 @@
 namespace SchoolsManager;
 
 use AcfService\AcfService;
+use SchoolsManager\AcfFields\OrganizationChoices;
+use SchoolsManager\AcfFields\OrganizationField;
 use SchoolsManager\API\Api;
 use SchoolsManager\API\DefaultValuesSetter;
 use SchoolsManager\API\Fields\EmployeeField;
@@ -51,6 +53,9 @@ class App
         ) {
             $this->wpService->addFilter(...$filter);
         }
+
+        $organizationField = new OrganizationField(new OrganizationChoices($wpService), $wpService);
+        $organizationField->addHooks();
     }
 
 
